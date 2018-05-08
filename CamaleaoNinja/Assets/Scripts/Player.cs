@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField]
-    float Velocidade = 2f;
+    public float Velocidade = 2f;
 
     private void Start()
     {
@@ -15,9 +15,16 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        
-        transform.Translate(Input.GetAxis("Horizontal") * Velocidade * Time.deltaTime, 0f, Input.GetAxis("Vertical") * Velocidade * Time.deltaTime);
+        Move();
+
     }
+
+    public void Move()
+    {
+        transform.Translate(-1 * Input.GetAxis("Vertical") * Velocidade * Time.deltaTime, 0f, Input.GetAxis("Horizontal") * Velocidade * Time.deltaTime);
+    }
+
+
 
 }
 

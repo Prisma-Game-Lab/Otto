@@ -21,7 +21,6 @@ public class Camera : MonoBehaviour {
 
     private void followPlayer()
     {
-        print(Player.transform.position);
         this.transform.position = Player.transform.position + _offset;
     }
 

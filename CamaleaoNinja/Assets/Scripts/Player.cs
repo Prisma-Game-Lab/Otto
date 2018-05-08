@@ -10,16 +10,16 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        
+
     }
 
     private void Update()
     {
-        Move();
+        move();
 
     }
 
-    public void Move()
+    public void move()
     {
         transform.Translate(-1 * Input.GetAxis("Vertical") * Velocidade * Time.deltaTime, 0f, Input.GetAxis("Horizontal") * Velocidade * Time.deltaTime);
     }

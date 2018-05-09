@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 
     public void move()
     {
-        transform.Translate(-1 * Input.GetAxis("Vertical") * velocity * Time.deltaTime, 0f, Input.GetAxis("Horizontal") * velocity * Time.deltaTime);
+        transform.Translate(Input.GetAxis("Horizontal") * velocity * Time.deltaTime, 0f, Input.GetAxis("Vertical") * velocity * Time.deltaTime);
     }
 
     private void addColor()

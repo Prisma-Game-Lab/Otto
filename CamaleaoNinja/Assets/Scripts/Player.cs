@@ -32,7 +32,25 @@ public class Player : MonoBehaviour
 
     public void move()
     {
-        transform.Translate(Input.GetAxis("Horizontal") * velocity * Time.deltaTime, 0f, Input.GetAxis("Vertical") * velocity * Time.deltaTime);
+        transform.Translate(-1*Input.GetAxis("Horizontal") * velocity * Time.deltaTime, 0f, -1*Input.GetAxis("Vertical") * velocity * Time.deltaTime);
+    }
+
+    public void cloak()
+    {
+
+    }
+
+    public void tongue(bool active)
+    {
+        Transform[] children = gameObject.transform.GetComponentsInChildren<Transform>(true);
+
+        foreach (Transform child in children)
+        {
+            if (child.tag == "Tongue")
+            {
+                child.GetComponent<Tongue>().ShowTongue(active);
+            }
+        }
     }
 
     private void addColor()
@@ -57,16 +75,6 @@ public class Player : MonoBehaviour
     }
 
     private void gainStamina()
-    {
-
-    }
-
-    private void cloak()
-    {
-
-    }
-
-    private void tongue()
     {
 
     }

@@ -19,7 +19,10 @@ public class Control : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            tongueControl();
+            tongueControl(true);
+        } else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            tongueControl(false);
         }
 
         if (Input.GetKeyDown(KeyCode.P))
@@ -40,10 +43,10 @@ public class Control : MonoBehaviour {
         Debug.Log("Estou camuflado");
     }
 
-    void tongueControl()
+    void tongueControl(bool show)
     {
         // chama a função no player
-        Debug.Log("Soltei a linguinha");
+        gameObject.GetComponent<Player>().tongue(show);
     }
 
     void pause()

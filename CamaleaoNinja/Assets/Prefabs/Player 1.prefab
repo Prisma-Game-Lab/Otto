@@ -22,13 +22,14 @@ GameObject:
   - component: {fileID: 33386742200341330}
   - component: {fileID: 23352139815906334}
   - component: {fileID: 65425573740290846}
+  - component: {fileID: 114045994713323226}
   m_Layer: 0
   m_Name: Lingua
-  m_TagString: Untagged
+  m_TagString: Tongue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1739852456058104
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,9 +43,10 @@ GameObject:
   - component: {fileID: 65943539989697600}
   - component: {fileID: 54426818442166218}
   - component: {fileID: 114924451364932512}
+  - component: {fileID: 114652265950243256}
   m_Layer: 0
   m_Name: Player 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +184,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1598556640155860}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -199,6 +201,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114045994713323226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1598556640155860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352ea14b3b2e61c4c88c3470b4e7633b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114652265950243256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739852456058104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9b68fd437db64aadbd4f84f69cf70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114924451364932512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9209bb488effbe4fa1c316c347cae0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 5
+  velocity: -5
   MaxStamina: 0
   TongueDistance: 0
   Lifes: 0

@@ -1853,7 +1853,7 @@ RectTransform:
   m_GameObject: {fileID: 695212388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1866268438}
   - {fileID: 824472907}
@@ -1862,8 +1862,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 78.405, y: -54}
-  m_SizeDelta: {x: 198.3, y: 76.5}
+  m_AnchoredPosition: {x: 15, y: 13}
+  m_SizeDelta: {x: 187.84, y: 26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695212390
 MonoBehaviour:
@@ -2328,8 +2328,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -17.82, y: 20.2}
-  m_SizeDelta: {x: -81.64, y: -44.4}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &824472908
 MonoBehaviour:
@@ -2363,7 +2363,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FULLSCREEN
+  m_Text: "\t\tFULLSCREEN"
 --- !u!222 &824472909
 CanvasRenderer:
   m_ObjectHideFlags: 0

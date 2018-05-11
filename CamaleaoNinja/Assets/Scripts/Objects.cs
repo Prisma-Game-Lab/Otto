@@ -12,7 +12,8 @@ public class Objects : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        // Tem que ser publica essa setagem
+        _currentColor = Colors.Green;
 	}
 	
 	// Update is called once per frame
@@ -20,6 +21,12 @@ public class Objects : MonoBehaviour {
 		
 	}
 
+    public string getCurrentColor()
+    {
+        if (_currentColor == Colors.Green)
+            return "Verde";
+        return "";
+    }
     void checkPlayerContact()
     {
 

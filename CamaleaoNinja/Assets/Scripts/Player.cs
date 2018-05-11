@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    enum Colors {Red, Green, Blue};
+    enum Colors { Nada, Red, Green, Blue};
 
     [SerializeField]
     public float velocity = 2f;
@@ -21,23 +21,22 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-
+        _allowedColors = new Colors[4];
     }
 
     private void Update()
     {
         move();
-
     }
 
     public void move()
     {
-        transform.Translate(-1*Input.GetAxis("Horizontal") * velocity * Time.deltaTime, 0f, -1*Input.GetAxis("Vertical") * velocity * Time.deltaTime);
+        transform.Translate(Input.GetAxis("Horizontal") * velocity * Time.deltaTime, 0f, Input.GetAxis("Vertical") * velocity * Time.deltaTime);
     }
 
     public void cloak()
     {
-
+        print("Estou invisível");
     }
 
     public void tongue(bool active)
@@ -53,9 +52,18 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void addColor()
+    public void addColor(string cor)
     {
-
+        if (cor == "Verde")
+        {
+            for (int i = 0; i < _allowedColors.Length; i++) {
+                if (_allowedColors[i] == Colors.Nada)
+                {
+                    _allowedColors[i] = Colors.Green;
+                    break;
+                }
+            }
+        }
     }
 
     private void loseLife()
@@ -83,7 +91,6 @@ public class Player : MonoBehaviour
     {
 
     }
-
 
 
 }

@@ -16,28 +16,37 @@ public class Cloak : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        print(other);
-        // entrou na camuflagem
-        if (other.tag == "Objeto Interagível")
-        {
-            // Falta garantir que o player tenha a cor da camuflagem
-             gameObject.GetComponentInParent<Player>().cloak();
-        }
+		Colored colScript = other.gameObject.GetComponent<Colored>();
+		ChangeColor changeColorScript = GetComponentInParent<ChangeColor>();
+		if (colScript != null)
+		{
+			print("cloak do item " + changeColorScript.gameObject.name + " encostou em " + colScript.gameObject.name);
+
+			if (colScript.ganhaCor)
+			{
+				changeColorScript.AddColor(colScript.cor);
+			}
+			else
+			{
+				changeColorScript.OnCollisionEnterCor(colScript);
+			}
+		}
         
     }
 
     private void OnTriggerStay(Collider other)
     {
-        // está camuflado
-        if (other.tag == "Objeto Interagível")
-        {
-            gameObject.GetComponentInParent<Player>().cloak();
-        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        // Saiu da camuflagem
+
+
+        Colored corScript = other.gameObject.GetComponent<Colored>();
+		if (corScript != null)
+		{
+			gameObject.GetComponentInParent<ChangeColor>().OnCollisionExitCor(corScript);
+		}
     }
 
 }

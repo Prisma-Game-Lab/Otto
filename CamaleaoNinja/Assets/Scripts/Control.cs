@@ -12,11 +12,17 @@ public class Control : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            cloakControl();
+			GetComponent<ChangeColor>().SetCamufla(true);
         }
 
+        
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            GetComponent<ChangeColor>().SetCamufla(false);
+        }
+        
         if (Input.GetKey(KeyCode.LeftShift))
         {
             tongueControl(true);
@@ -35,12 +41,6 @@ public class Control : MonoBehaviour {
             restart(); // será apagado depois que o desenvolvimento terminar, só está aqui para facilitar o Debug
         }
 
-    }
-
-    void cloakControl()
-    {
-        // Chama a função no player
-        Debug.Log("Estou camuflado");
     }
 
     void tongueControl(bool show)

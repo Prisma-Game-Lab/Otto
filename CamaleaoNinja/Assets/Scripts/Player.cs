@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
 
     public void move()
     {
-        transform.Translate(Input.GetAxis("Horizontal") * velocity * Time.deltaTime * -1, 0f, Input.GetAxis("Vertical") * velocity * Time.deltaTime * -1);
+        transform.Translate(-1*Input.GetAxis("Horizontal") * velocity * Time.deltaTime * -1, 0f,-1*Input.GetAxis("Vertical") * velocity * Time.deltaTime * -1);
     }
 
     public void cloak()

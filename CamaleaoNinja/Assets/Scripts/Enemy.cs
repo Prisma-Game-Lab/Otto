@@ -52,9 +52,9 @@ public class Enemy : MonoBehaviour {
     }
     public void OnTriggerEnter(Collider col)
     {
-		ChangeColor player = col.GetComponent<ChangeColor>();
-		if(player!=null)
-		    if (col.tag == "Player" && !player.IsCamuflado())
-                print("Player Morreu =(");
+		//ChangeColor player = col.GetComponent<ChangeColor>();
+		//if(player!=null)
+		  //  if (col.tag == "Player" && !player.IsCamuflado())
+              //  print("Player Morreu =(");
     }
 }

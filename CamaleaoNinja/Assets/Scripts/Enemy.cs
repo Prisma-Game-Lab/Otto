@@ -12,13 +12,16 @@ public class Enemy : MonoBehaviour {
     public int _Direction = 1;
     public float velocidade = 5;
 
+    private Rigidbody _rb;
+
     // Use this for initialization
     void Start () {
         transform.Rotate(0, 180, 0);
+        _rb = GetComponent<Rigidbody>();
     }
 	
-	// Update is called once per frame
-	void Update () {
+	// FixedUpdate para mover o inimigo com RigidBody
+	void FixedUpdate () {
         if (_Direction == 1)
         {
             transform.Translate(Vector3.right * velocidade * Time.deltaTime, Space.World);
@@ -46,9 +49,9 @@ public class Enemy : MonoBehaviour {
 
     }
 
-    void AttackPlayer()
+    public void AttackPlayer()
     {
-
+        print("Player Morreu =(");
     }
     public void OnTriggerEnter(Collider col)
     {

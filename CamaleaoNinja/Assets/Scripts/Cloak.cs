@@ -16,7 +16,7 @@ public class Cloak : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-		/*Colored colScript = other.gameObject.GetComponent<Colored>();
+		Colored colScript = other.gameObject.GetComponent<Colored>();
 		ChangeColor changeColorScript = GetComponentInParent<ChangeColor>();
 		if (colScript != null)
 		{
@@ -30,7 +30,7 @@ public class Cloak : MonoBehaviour {
 			{
 				changeColorScript.OnCollisionEnterCor(colScript);
 			}
-		}*/
+		}
         
     }
 
@@ -42,11 +42,11 @@ public class Cloak : MonoBehaviour {
     {
 
 
-       /* Colored corScript = other.gameObject.GetComponent<Colored>();
+        Colored corScript = other.gameObject.GetComponent<Colored>();
 		if (corScript != null)
 		{
 			gameObject.GetComponentInParent<ChangeColor>().OnCollisionExitCor(corScript);
-		}*/
+		}
     }
 
 }

@@ -51,7 +51,16 @@ public class Enemy : MonoBehaviour {
 
     public void AttackPlayer()
     {
-        print("Player Morreu =(");
+		Player[] components = FindObjectsOfType<Player>();
+		ChangeColor player ;
+		foreach (Player p in components)
+		{
+			player = p.GetComponent<ChangeColor>();
+			if (player.IsCamuflado())
+				print("Player esta camuflado :P");
+			else
+				print("Player Morreu =(");
+		}
     }
     public void OnTriggerEnter(Collider col)
     {

@@ -35,14 +35,9 @@ public class ChangeColor : MonoBehaviour {
         //verificar se estou encostado em alguem colorido
         //  se estou muda para a cor
         //  se nao estou volto para a cor default
-        if (_coresEmContato.Count == 0)
-        {
-			GetComponent<Renderer>().material = _defaultMaterial;
-        }
-        else
-        {
-            GetComponent<Renderer>().material = _coresEmContato[0];
-        }
+        //Se nao estava camuflado, entao nao passo a ficar
+		if(GetComponent<Renderer>().material != _defaultMaterial)
+		    SetCamufla(true);
 
         //preciso de uma forma de verificar todos os itens em colisao comigo e todos que sao colored
         //  encontrei uma forma de fazer o segundo mas nao o primeiro. Para fazer manualmente:
@@ -52,22 +47,26 @@ public class ChangeColor : MonoBehaviour {
 
 	public void SetCamufla(bool b)
 	{
+
+        /*
+         *  Passe b como verdadeiro para camuflar.
+         *  Passe b como falso para voltar a cor default
+         *  Se b for verdadeiro mas nao houver cor em contato que possa camuflar entao ele volta para a cor default.
+        */
+
 		if (b)
 		{
 			foreach (Material c in _coresEmContato)
 			{
-                print("procurando "+ c.name +" em cores disponiveis");
+				print("procurando " + c.name + " em cores disponiveis");
 				if (_coresDisponiveis.Contains(c))
 				{
 					GetComponent<Renderer>().material = c;
-					break;
+					return;
 				}
 			}
 		}
-		else
-		{
-            GetComponent<Renderer>().material = _defaultMaterial;
-		}
+        GetComponent<Renderer>().material = _defaultMaterial;
 	}
 
 	public void AddColor(Material mat)
@@ -80,6 +79,6 @@ public class ChangeColor : MonoBehaviour {
 	}
 	public bool IsCamuflado()
 	{
-		return GetComponent<Renderer>().material == _defaultMaterial; 
+		return GetComponent<Renderer>().material != _defaultMaterial; 
 	}
 }

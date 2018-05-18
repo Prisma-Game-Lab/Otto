@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.48458654, g: 0.7584191, b: 1.5604572, a: 1}
+  m_IndirectSpecularColor: {r: 0.5267786, g: 0.79504925, b: 1.5560248, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3674,6 +3674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cor: {fileID: 2100000, guid: f167a62cc07e1434c9a26795c7eafef1, type: 2}
+  ganhaCor: 0
 --- !u!1 &668986867
 GameObject:
   m_ObjectHideFlags: 0
@@ -4282,6 +4284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cor: {fileID: 2100000, guid: f167a62cc07e1434c9a26795c7eafef1, type: 2}
+  ganhaCor: 0
 --- !u!1 &795818987
 GameObject:
   m_ObjectHideFlags: 0
@@ -5539,7 +5543,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1207825094993292, guid: a837dbaa2e9df4c40969184e5dca3fcd, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1739852456058104, guid: a837dbaa2e9df4c40969184e5dca3fcd, type: 2}
       propertyPath: m_Layer
@@ -5552,6 +5556,22 @@ Prefab:
     - target: {fileID: 1207825094993292, guid: a837dbaa2e9df4c40969184e5dca3fcd, type: 2}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595546374390740, guid: a837dbaa2e9df4c40969184e5dca3fcd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595546374390740, guid: a837dbaa2e9df4c40969184e5dca3fcd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595546374390740, guid: a837dbaa2e9df4c40969184e5dca3fcd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595546374390740, guid: a837dbaa2e9df4c40969184e5dca3fcd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a837dbaa2e9df4c40969184e5dca3fcd, type: 2}
@@ -5825,6 +5845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cor: {fileID: 2100000, guid: f167a62cc07e1434c9a26795c7eafef1, type: 2}
+  ganhaCor: 0
 --- !u!1 &1084182417
 GameObject:
   m_ObjectHideFlags: 0
@@ -8241,6 +8263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cor: {fileID: 2100000, guid: f167a62cc07e1434c9a26795c7eafef1, type: 2}
+  ganhaCor: 0
 --- !u!1 &1521426842
 GameObject:
   m_ObjectHideFlags: 0
@@ -9377,6 +9401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cor: {fileID: 2100000, guid: f167a62cc07e1434c9a26795c7eafef1, type: 2}
+  ganhaCor: 0
 --- !u!1 &1673792520
 GameObject:
   m_ObjectHideFlags: 0
@@ -9729,6 +9755,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cor: {fileID: 2100000, guid: f167a62cc07e1434c9a26795c7eafef1, type: 2}
+  ganhaCor: 0
 --- !u!1 &1748337652
 GameObject:
   m_ObjectHideFlags: 0
@@ -10374,6 +10402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cor: {fileID: 2100000, guid: f167a62cc07e1434c9a26795c7eafef1, type: 2}
+  ganhaCor: 1
 --- !u!1 &1868401612
 GameObject:
   m_ObjectHideFlags: 0

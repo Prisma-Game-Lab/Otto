@@ -19,12 +19,14 @@ public class Colored : MonoBehaviour
 
 	private void OnCollisionEnter(Collision col)
     {
+		/*
 		Collider other = col.collider;
         if (ganhaCor && other.tag == "Tongue")
         {
 			other.GetComponent<ChangeColor>().AddColor(cor);
             this.gameObject.SetActive(false);
         }
+        */
     }
 
 	// Update is called once per frame

@@ -12,16 +12,18 @@ public class Control : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        /*if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
+			print("soltei espaco");
 			GetComponent<ChangeColor>().SetCamufla(true);
         }
 
         
         if (Input.GetKeyUp(KeyCode.Space))
-        {
+		{
+            print("soltei espaco");
             GetComponent<ChangeColor>().SetCamufla(false);
-        }*/
+        }
         
         if (Input.GetKey(KeyCode.LeftShift))
         {

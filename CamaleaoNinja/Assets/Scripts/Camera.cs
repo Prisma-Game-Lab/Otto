@@ -8,7 +8,8 @@ public class Camera : MonoBehaviour {
     //[Tooltip("Se for -1 ele usará a distância atual da camera")]
     //public Vector3 distanciaPlayer = new Vector3(-1,-1,-1);
 
-    private Vector3 _offset;        
+    private Vector3 _offset;
+    internal static object main;
 
     // Use this for initialization
     void Start () {

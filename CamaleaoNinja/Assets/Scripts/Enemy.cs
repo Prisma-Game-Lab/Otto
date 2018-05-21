@@ -16,32 +16,32 @@ public class Enemy : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        transform.Rotate(0, 180, 0);
+        //transform.Rotate(0, 180, 0);
         _rb = GetComponent<Rigidbody>();
     }
 	
 	// FixedUpdate para mover o inimigo com RigidBody
 	void FixedUpdate () {
-        if (_Direction == 1)
-        {
-            transform.Translate(Vector3.right * velocidade * Time.deltaTime, Space.World);
-            _Direction = 1;
-        }
-        if (this.transform.position.x > PontaEsquerda)
-        {
-            _Direction = 2;
-            transform.Rotate(0, 180, 0);
-        }
-        if (_Direction == 2)
-        {
-            transform.Translate(Vector3.right * -velocidade * Time.deltaTime, Space.World);
-            _Direction = 2;
-        }
-        if (this.transform.position.x < PontaDireita)
-        {
-            _Direction = 1;
-            transform.Rotate(0, 180, 0);
-        }
+        //    if (_Direction == 1)
+        //    {
+        //        transform.Translate(Vector3.right * velocidade * Time.deltaTime, Space.World);
+        //        _Direction = 1;
+        //    }
+        //    if (this.transform.position.x > PontaEsquerda)
+        //    {
+        //        _Direction = 2;
+        //        transform.Rotate(0, 180, 0);
+        //    }
+        //    if (_Direction == 2)
+        //    {
+        //        transform.Translate(Vector3.right * -velocidade * Time.deltaTime, Space.World);
+        //        _Direction = 2;
+        //    }
+        //    if (this.transform.position.x < PontaDireita)
+        //    {
+        //        _Direction = 1;
+        //        transform.Rotate(0, 180, 0);
+        //    }
     }
 
     void setPath()

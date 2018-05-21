@@ -1,18 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Tongue : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	} 
+    } 
 
     public void ShowTongue(bool active)
     {

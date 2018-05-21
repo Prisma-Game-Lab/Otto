@@ -8,27 +8,36 @@ public class Control : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-			print("soltei espaco");
-			GetComponent<ChangeColor>().SetCamufla(true);
+            print("soltei espaco");
+            GetComponent<ChangeColor>().SetCamufla(true);
         }
 
-        
+
         if (Input.GetKeyUp(KeyCode.Space))
-		{
+        {
             print("soltei espaco");
             GetComponent<ChangeColor>().SetCamufla(false);
         }
-        
-        if (Input.GetKey(KeyCode.LeftShift))
+
+        if (Input.GetKey(KeyCode.Q) )
         {
             tongueControl(true);
-        } else if (Input.GetKeyUp(KeyCode.LeftShift))
+        } else if (Input.GetKeyUp(KeyCode.Q))
+        {
+            tongueControl(false);
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            tongueControl(true);
+        }
+        else if (!Input.GetKey(KeyCode.Q))
         {
             tongueControl(false);
         }

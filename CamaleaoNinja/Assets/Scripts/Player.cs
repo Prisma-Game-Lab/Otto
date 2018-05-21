@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
 
     [SerializeField]
-    public float velocity = 2f;
-    public float velocityRotation = 0.15F;
+    public float velocity = 4f;
+    public float velocityRotation = 5F;
     public float MaxStamina;
     public float TongueDistance;
     public int Lifes;
@@ -18,13 +19,10 @@ public class Player : MonoBehaviour
     private Vector3 _lastCheckpoint;
     private Vector3 _controlRight;
     private Vector3 _controlForward;
-
-
+    private Quaternion tongue_direction;
 
     private void Start()
     {
-        _controlRight = Vector3.Cross(cam.up, cam.forward);
-        _controlForward = Vector3.Cross(cam.right, Vector3.up);
     }
 
     private void Update()
@@ -34,23 +32,38 @@ public class Player : MonoBehaviour
 
     public void move()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal") * velocity * Time.deltaTime * -1;
-        float moveVertical = Input.GetAxis("Vertical") * velocity * Time.deltaTime * -1;
+        //reading the input:
+        float horizontalAxis = CrossPlatformInputManager.GetAxis("Horizontal");
+        float verticalAxis = CrossPlatformInputManager.GetAxis("Vertical");
 
-        Vector3 movement = (_controlRight * moveHorizontal) + (_controlForward * moveVertical);
+        //camera forward and right vectors:
+        var forward = cam.forward;
+        var right = cam.right;
 
-        Vector3 targetDirection = new Vector3(moveHorizontal, 0f, moveVertical);
-        targetDirection = cam.transform.TransformDirection(targetDirection);
-        targetDirection.y = 0.0f;
+        //project forward and right vectors on the horizontal plane (y = 0)
+        forward.y = 0f;
+        right.y = 0f;
+        forward.Normalize();
+        right.Normalize();
 
-        //Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        // Quaternion.LookRotation(cam.forward,cam.up)
-        //transform.rotation = Quaternion.LookRotation(movement);
-        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15F);
-        //transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, cam.localEulerAngles.y, transform.localEulerAngles.z);
-        //  transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15F);
+        //this is the direction in the world space we want to move:
+        var desiredMoveDirection = forward * verticalAxis + right * horizontalAxis;
+        transform.Translate(desiredMoveDirection * velocity * Time.deltaTime, Space.World);
 
-        transform.Translate(movement);
+        if (desiredMoveDirection != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(desiredMoveDirection);
+        }
+
+
+        //if (desiredMoveDirection != Vector3.zero)
+        //{
+        //    transform.rotation = Quaternion.Slerp(
+        //        transform.rotation,
+        //        Quaternion.LookRotation(desiredMoveDirection),
+        //        Time.deltaTime * velocityRotation
+        //    );
+        //}
     }
 
     public void cloak()

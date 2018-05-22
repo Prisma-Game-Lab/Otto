@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.48505342, g: 0.75849533, b: 1.5604423, a: 1}
+  m_IndirectSpecularColor: {r: 0.4845488, g: 0.758407, b: 1.560466, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5424,6 +5424,16 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114924451364932512, guid: a837dbaa2e9df4c40969184e5dca3fcd,
+        type: 2}
+      propertyPath: MaxStamina
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114924451364932512, guid: a837dbaa2e9df4c40969184e5dca3fcd,
+        type: 2}
+      propertyPath: staminaTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 4ae3d7e8fbf646042b5edcde52e5bf8e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a837dbaa2e9df4c40969184e5dca3fcd, type: 2}
   m_IsPrefabParent: 0

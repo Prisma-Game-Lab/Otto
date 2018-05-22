@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
         var desiredMoveDirection = forward * verticalAxis + right * horizontalAxis;
         transform.Translate(desiredMoveDirection * velocity * Time.deltaTime, Space.World);
 
-        print("Só pra ter um commit");
+        print("AAAAAAAAAAAAAAAA");
         if (desiredMoveDirection != Vector3.zero)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(desiredMoveDirection),Time.deltaTime * velocityRotation);

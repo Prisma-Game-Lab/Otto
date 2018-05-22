@@ -52,18 +52,8 @@ public class Player : MonoBehaviour
 
         if (desiredMoveDirection != Vector3.zero)
         {
-            transform.rotation = Quaternion.LookRotation(desiredMoveDirection);
+            transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(desiredMoveDirection),Time.deltaTime * velocityRotation);
         }
-
-
-        //if (desiredMoveDirection != Vector3.zero)
-        //{
-        //    transform.rotation = Quaternion.Slerp(
-        //        transform.rotation,
-        //        Quaternion.LookRotation(desiredMoveDirection),
-        //        Time.deltaTime * velocityRotation
-        //    );
-        //}
     }
 
     public void cloak()

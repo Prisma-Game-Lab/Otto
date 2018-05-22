@@ -16,6 +16,7 @@ public class Control : MonoBehaviour {
         {
             print("soltei espaco");
             GetComponent<ChangeColor>().SetCamufla(true);
+            
         }
 
 
@@ -25,22 +26,14 @@ public class Control : MonoBehaviour {
             GetComponent<ChangeColor>().SetCamufla(false);
         }
 
-        if (Input.GetKey(KeyCode.Q) )
+        if (Input.GetKey(KeyCode.Q) || Input.GetMouseButton(0))
         {
             tongueControl(true);
-        } else if (Input.GetKeyUp(KeyCode.Q))
+        } else
         {
             tongueControl(false);
         }
 
-        if (Input.GetMouseButton(0))
-        {
-            tongueControl(true);
-        }
-        else if (!Input.GetKey(KeyCode.Q))
-        {
-            tongueControl(false);
-        }
 
         if (Input.GetKeyDown(KeyCode.P))
         {

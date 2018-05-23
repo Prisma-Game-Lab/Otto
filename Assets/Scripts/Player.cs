@@ -9,25 +9,35 @@ public class Player : MonoBehaviour
     [SerializeField]
     public float velocity = 4f;
     public float velocityRotation = 5F;
-    public float MaxStamina;
+    private float stamina;
+    public float MaxStamina = 20;
     public float TongueDistance;
     public int Lifes;
+    Rect staminaRect;
+    Texture2D staminaTexture;
+    //public Texture2D staminaTexture;
 
     public Transform cam;
 
     private float _currentStamina;
     private Vector3 _lastCheckpoint;
-    private Vector3 _controlRight;
-    private Vector3 _controlForward;
     private Quaternion tongue_direction;
+
 
     private void Start()
     {
+        stamina = MaxStamina;
+        staminaRect = new Rect(Screen.width / 10, Screen.height * 9 /10, Screen.width / 3, Screen.height / 20);
+        staminaTexture = new Texture2D(1, 1);
+        staminaTexture.SetPixel(0, 0, Color.green);
+        staminaTexture.Apply();
+       
     }
 
     private void Update()
     {
         move();
+        StaminaUpdate();
     }
 
     public void move()
@@ -50,11 +60,11 @@ public class Player : MonoBehaviour
         var desiredMoveDirection = forward * verticalAxis + right * horizontalAxis;
         transform.Translate(desiredMoveDirection * velocity * Time.deltaTime, Space.World);
 
-        print("AAAAAAAAAAAAAAAA");
         if (desiredMoveDirection != Vector3.zero)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(desiredMoveDirection),Time.deltaTime * velocityRotation);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection), Time.deltaTime * velocityRotation);
         }
+
     }
 
     public void cloak()
@@ -86,19 +96,34 @@ public class Player : MonoBehaviour
 
     }
 
-    private void loseStamina()
+    private void StaminaUpdate()
     {
-
-    }
-
-    private void gainStamina()
-    {
+        if (GetComponent<ChangeColor>().IsCamuflado())
+        {
+            stamina -= Time.deltaTime;
+            if (stamina < 0)
+            {
+                stamina = 0;
+                GetComponent<ChangeColor>().SetCamufla(false);
+            }
+        }else if (stamina < MaxStamina)
+        {
+            stamina += Time.deltaTime;
+        }
 
     }
 
     private void death()
     {
 
+    }
+    
+    void OnGUI()
+    {
+        float ratio = stamina / MaxStamina;
+        float rectWidth = ratio*Screen.width / 5;
+        staminaRect.width = rectWidth;
+        GUI.DrawTexture(staminaRect, staminaTexture);
     }
 
 

@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: LowPoly - Terrain 14
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+  m_ShaderKeywords: _EMISSION _NORMALMAP
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -59,25 +59,25 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BumpScale: 261.8
+    - _BumpScale: 3.2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 0
+    - _GlossMapScale: 0.465
     - _Glossiness: 0.44
     - _GlossyReflections: 1
     - _InvFade: 0.12
-    - _Metallic: 0.76
+    - _Metallic: 0.317
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 1
+    - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.4339623, g: 0.42885688, b: 0, a: 1}
+    - _Color: {r: 0.7735849, g: 0.7623421, b: 0.14960839, a: 1}
     - _EmissionColor: {r: 1.0592737, g: 0.86516595, b: 0, a: 1}
     - _SpecColor: {r: 0.24362315, g: 0.9716981, b: 0.1054201, a: 1}
     - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}

@@ -20,18 +20,16 @@ public class Cloak : MonoBehaviour {
 		ChangeColor changeColorScript = GetComponentInParent<ChangeColor>();
 		if (colScript != null)
 		{
-			print("cloak do item " + changeColorScript.gameObject.name + " encostou em " + colScript.gameObject.name);
-
 			if (colScript.ganhaCor)
 			{
 				changeColorScript.AddColor(colScript.cor);
-			}
+                colScript.gameObject.SetActive(false);
+            }
 			else
 			{
 				changeColorScript.OnCollisionEnterCor(colScript);
 			}
 		}
-        
     }
 
     private void OnTriggerStay(Collider other)

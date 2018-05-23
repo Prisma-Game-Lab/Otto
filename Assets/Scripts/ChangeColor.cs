@@ -73,7 +73,6 @@ public class ChangeColor : MonoBehaviour {
 	{
         if (!_coresDisponiveis.Contains(mat))
         {
-            print("peguei a cor de alguem colorido " + mat.name);
             _coresDisponiveis.Add(mat);
         }
 	}

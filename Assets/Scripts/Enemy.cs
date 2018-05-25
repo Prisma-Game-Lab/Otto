@@ -16,7 +16,15 @@ public class Enemy : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //transform.Rotate(0, 180, 0);
+		//transform.Rotate(0, 180, 0);
+		gameObject.layer = 11;
+        /*
+         * layer 9 e a do player quando nao esta camuflado
+         * layer 11 e a layer dos enemies
+         * layer 12 e a do player quando ele esta camuflado.
+         * essas duas layers nao colidem uma com a outra
+         * 
+         **/
         _rb = GetComponent<Rigidbody>();
     }
 	

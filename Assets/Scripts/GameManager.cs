@@ -25,9 +25,9 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene(scene.name);
     }
 
-    void Win()
+    public void Win()
     {
-        //UWinText.SetActive(true);
+        UWinText.SetActive(true);
         //Invoke("respawn", delayTime);
     }
 

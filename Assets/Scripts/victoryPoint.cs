@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class placa_vitoria : MonoBehaviour
-{
+public class victoryPoint : MonoBehaviour {
     void OnTriggerEnter()
     {
-        //GameManager.instance.Win();
+        GameManager.instance.Win();
     }
 }

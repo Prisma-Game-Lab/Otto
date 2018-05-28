@@ -31,9 +31,9 @@ public class GameManager : MonoBehaviour {
         //Invoke("respawn", delayTime);
     }
 
-    void Lose()
+    public void Lose()
     {
-        //ULoseText.SetActive(true);
+        ULoseText.SetActive(true);
         //Invoke("respawn", delayTime);
     }
 }

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class victoryPoint : MonoBehaviour {
-    void OnTriggerEnter(Collider other)
+public class DeathZone : MonoBehaviour {
+
+    private void OnTriggerEnter(Collider other)
     {
-        GameManager.instance.Win();
+        GameManager.instance.Lose();
         Destroy(other.gameObject);
     }
 }

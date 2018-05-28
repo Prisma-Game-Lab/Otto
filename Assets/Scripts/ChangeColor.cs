@@ -10,6 +10,14 @@ public class ChangeColor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		gameObject.layer = 9;
+        /*
+         * layer 9 e a do player quando nao esta camuflado
+         * layer 11 e a layer dos enemies
+         * layer 12 e a do player quando ele esta camuflado.
+         * essas duas layers nao colidem uma com a outra
+         * 
+         **/
 		_defaultMaterial = GetComponent<Renderer>().material;
 
 	}
@@ -62,10 +70,26 @@ public class ChangeColor : MonoBehaviour {
 				if (_coresDisponiveis.Contains(c))
 				{
 					GetComponent<Renderer>().material = c;
+					gameObject.layer = 12;
+                    /*
+                     * layer 9 e a do player quando nao esta camuflado
+                     * layer 11 e a layer dos enemies
+                     * layer 12 e a do player quando ele esta camuflado.
+                     * essas duas layers nao colidem uma com a outra
+                     * 
+                     **/
 					return;
 				}
 			}
 		}
+		gameObject.layer = 9;
+        /*
+         * layer 9 e a do player quando nao esta camuflado
+         * layer 11 e a layer dos enemies
+         * layer 12 e a do player quando ele esta camuflado.
+         * essas duas layers nao colidem uma com a outra
+         * 
+         **/
         GetComponent<Renderer>().material = _defaultMaterial;
 	}
 

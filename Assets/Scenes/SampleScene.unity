@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.48458654, g: 0.7584191, b: 1.5604572, a: 1}
+  m_IndirectSpecularColor: {r: 0.23827739, g: 0.6097028, b: 3.1407146, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3681,7 +3681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cor: {fileID: 2100000, guid: f167a62cc07e1434c9a26795c7eafef1, type: 2}
+  cor: {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
   ganhaCor: 0
 --- !u!1 &668986867
 GameObject:
@@ -4291,7 +4291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cor: {fileID: 2100000, guid: f167a62cc07e1434c9a26795c7eafef1, type: 2}
+  cor: {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
   ganhaCor: 0
 --- !u!1 &795818987
 GameObject:
@@ -4906,6 +4906,7 @@ GameObject:
   - component: {fileID: 942097161}
   - component: {fileID: 942097160}
   - component: {fileID: 942097159}
+  - component: {fileID: 942097162}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -4953,7 +4954,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d9f562e39fd2f5848ab341040f2481de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4980,6 +4981,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 942097157}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &942097162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 942097157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cor: {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
+  ganhaCor: 0
 --- !u!1 &961930301
 GameObject:
   m_ObjectHideFlags: 0
@@ -5434,6 +5448,11 @@ Prefab:
       propertyPath: staminaTexture
       value: 
       objectReference: {fileID: 2800000, guid: 4ae3d7e8fbf646042b5edcde52e5bf8e, type: 3}
+    - target: {fileID: 23227033968501208, guid: a837dbaa2e9df4c40969184e5dca3fcd,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fce73908115804b4883410ac8327fa5c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a837dbaa2e9df4c40969184e5dca3fcd, type: 2}
   m_IsPrefabParent: 0
@@ -5706,7 +5725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cor: {fileID: 2100000, guid: f167a62cc07e1434c9a26795c7eafef1, type: 2}
+  cor: {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
   ganhaCor: 0
 --- !u!1 &1084182417
 GameObject:
@@ -8124,7 +8143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cor: {fileID: 2100000, guid: f167a62cc07e1434c9a26795c7eafef1, type: 2}
+  cor: {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
   ganhaCor: 0
 --- !u!1 &1517106929
 GameObject:
@@ -8153,6 +8172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f560681fd84d45a57a755220b62c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UWinText: {fileID: 0}
+  ULoseText: {fileID: 0}
+  delayTime: 0
 --- !u!4 &1517106931
 Transform:
   m_ObjectHideFlags: 0
@@ -8943,7 +8965,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4992173661746342, guid: 38ee6e726465e204fa18d12c857718b8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 16.11
+      value: 2.86
       objectReference: {fileID: 0}
     - target: {fileID: 4992173661746342, guid: 38ee6e726465e204fa18d12c857718b8, type: 2}
       propertyPath: m_LocalPosition.y
@@ -8951,7 +8973,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4992173661746342, guid: 38ee6e726465e204fa18d12c857718b8, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -7.64
+      value: -13.16
       objectReference: {fileID: 0}
     - target: {fileID: 4992173661746342, guid: 38ee6e726465e204fa18d12c857718b8, type: 2}
       propertyPath: m_LocalRotation.x
@@ -8973,6 +8995,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114290667712866032, guid: 38ee6e726465e204fa18d12c857718b8,
+        type: 2}
+      propertyPath: cor
+      value: 
+      objectReference: {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38ee6e726465e204fa18d12c857718b8, type: 2}
   m_IsPrefabParent: 0
@@ -9243,7 +9270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cor: {fileID: 2100000, guid: f167a62cc07e1434c9a26795c7eafef1, type: 2}
+  cor: {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
   ganhaCor: 0
 --- !u!1 &1673792520
 GameObject:
@@ -9597,7 +9624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cor: {fileID: 2100000, guid: f167a62cc07e1434c9a26795c7eafef1, type: 2}
+  cor: {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
   ganhaCor: 0
 --- !u!1 &1748337652
 GameObject:

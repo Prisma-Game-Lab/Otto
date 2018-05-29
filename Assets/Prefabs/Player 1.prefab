@@ -302,7 +302,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 4
   velocityRotation: 2
-  MaxStamina: 0
+  stamina: 0
+  MaxStamina: 5
   TongueDistance: 0
   Lifes: 0
   cam: {fileID: 0}

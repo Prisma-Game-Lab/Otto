@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
-    public GameObject UWinText;
-    public GameObject ULoseText;
-    public float delayTime;
+    public GameObject UI_WinText;
+    public GameObject UI_LoseText;
+    public GameObject UI_menu;
+    public KeyCode pause_button;
+    float delayTime;
 
 	// Use this for initialization
 	void Start () {
@@ -16,8 +18,22 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (Input.GetKeyDown(pause_button))
+            if (Time.timeScale == 1)
+            {
+                Time.timeScale = 0;
+                UI_menu.SetActive(true);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                UI_menu.SetActive(false);
+            }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            Win();
+        }
+    }
 
     void respawn()
     {
@@ -27,13 +43,15 @@ public class GameManager : MonoBehaviour {
 
     public void Win()
     {
-        UWinText.SetActive(true);
-        //Invoke("respawn", delayTime);
+        Debug.Log("Entrou Win");
+        //UI_WinText.SetActive(true);
+        respawn();
     }
 
     public void Lose()
     {
-        ULoseText.SetActive(true);
-        //Invoke("respawn", delayTime);
+        Debug.Log("Entrou Lose");
+        //ULoseText.SetActive(true);
+        respawn();
     }
 }

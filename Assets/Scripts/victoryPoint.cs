@@ -5,7 +5,8 @@ using UnityEngine;
 public class victoryPoint : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
+        //Destroy(other.gameObject);
         GameManager.instance.Win();
-        Destroy(other.gameObject);
+
     }
 }

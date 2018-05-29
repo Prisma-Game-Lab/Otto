@@ -11,8 +11,21 @@ public class GameManager : MonoBehaviour {
     public KeyCode pause_button;
     float delayTime;
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else if (instance != null)
+            Destroy(gameObject);
+
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -29,10 +42,6 @@ public class GameManager : MonoBehaviour {
                 Time.timeScale = 1;
                 UI_menu.SetActive(false);
             }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Win();
-        }
     }
 
     void respawn()
@@ -44,14 +53,14 @@ public class GameManager : MonoBehaviour {
     public void Win()
     {
         Debug.Log("Entrou Win");
-        //UI_WinText.SetActive(true);
-        respawn();
+        UI_WinText.SetActive(true);
+        //respawn();
     }
 
     public void Lose()
     {
         Debug.Log("Entrou Lose");
-        //ULoseText.SetActive(true);
-        respawn();
+        UI_LoseText.SetActive(true);
+        //respawn();
     }
 }

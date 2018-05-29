@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     public float velocity = 4f;
     public float velocityRotation = 5F;
-    private float stamina;
+    public float stamina;
     public float MaxStamina = 20;
     public float TongueDistance;
     public int Lifes;

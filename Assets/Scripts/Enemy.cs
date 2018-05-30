@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        _playerScript = Player.GetComponent<Player>();
+        //_playerScript = Player.GetComponent<Player>();
 
 		//transform.Rotate(0, 180, 0);
 		gameObject.layer = 11;

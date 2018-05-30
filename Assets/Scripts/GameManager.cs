@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour {
             }
     }
 
-    void respawn()
+    public void respawn()
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);

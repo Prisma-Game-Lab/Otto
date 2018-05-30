@@ -12,6 +12,7 @@ public class Patrol : MonoBehaviour
     private NavMeshAgent agent;
     private Transform player;
 
+    public float normalSpeed = 3;
     public float chaseSpeed = 3;
     private bool chasingPlayer;
     private float timeSinceLastSighted;
@@ -28,7 +29,7 @@ public class Patrol : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-
+        agent.speed = normalSpeed;
         agent.updatePosition = !stationary;
 
         // Disabling auto-braking allows for continuous movement
@@ -88,6 +89,7 @@ public class Patrol : MonoBehaviour
         now = Time.time;
         if ( now> giveUpTime+ timeSinceLastSighted)
         {
+            agent.speed = normalSpeed;
             chasingPlayer = false;
         }
     }

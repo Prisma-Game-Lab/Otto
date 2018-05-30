@@ -13,15 +13,16 @@ public class GameManager : MonoBehaviour {
 
     private void Awake()
     {
-        if (instance == null)
-            instance = this;
-        else if (instance != null)
-            Destroy(gameObject);
+        //if (instance == null)
+        //    instance = this;
+        //else if (instance != null)
+        //    Destroy(gameObject);
 
-        if (Time.timeScale == 0)
-        {
-            Time.timeScale = 1;
-        }
+        //if (Time.timeScale == 0)
+        //{
+        //    Time.timeScale = 1;
+        //}
+        SceneManager.LoadScene("Menu");
     }
 
     // Use this for initialization
@@ -31,20 +32,20 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(pause_button))
-            if (Time.timeScale == 1)
-            {
-                Time.timeScale = 0;
-                UI_menu.SetActive(true);
-            }
-            else
-            {
-                Time.timeScale = 1;
-                UI_menu.SetActive(false);
-            }
+        //if (Input.GetKeyDown(pause_button))
+        //    if (Time.timeScale == 1)
+        //    {
+        //        Time.timeScale = 0;
+        //        UI_menu.SetActive(true);
+        //    }
+        //    else
+        //    {
+        //        Time.timeScale = 1;
+        //        UI_menu.SetActive(false);
+        //    }
     }
 
-    void respawn()
+    public static void respawn()
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);

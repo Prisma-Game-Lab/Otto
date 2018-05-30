@@ -87,11 +87,9 @@ public class ChangeColor : MonoBehaviour {
 				print("procurando " + c.name + " em cores disponiveis");
 				if (_coresDisponiveis.Contains(c))
 				{
-                    print("achei");
                     // ALTERAR ISSO
                     foreach (Transform child in model.GetComponentInChildren<Transform>())
                     {
-
                         child.GetComponent<Renderer>().material = c;
                     }
 					//GetComponent<Renderer>().material = c;

@@ -14,10 +14,7 @@ public class Colored : MonoBehaviour
     void Start()
 	{
 		if (cor == null)
-        {
-            cor = GetComponent<Renderer>().material;
-            print("cor");
-        }
+			cor = GetComponent<Renderer>().material;
 	}
 
 	private void OnCollisionEnter(Collision col)

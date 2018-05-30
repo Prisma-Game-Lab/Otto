@@ -12,7 +12,7 @@ public class Patrol : MonoBehaviour
     private NavMeshAgent agent;
     private Transform player;
 
-    private float chaseSpeed = 3;
+    public float chaseSpeed = 3;
     private bool chasingPlayer;
     private float timeSinceLastSighted;
     private float now;

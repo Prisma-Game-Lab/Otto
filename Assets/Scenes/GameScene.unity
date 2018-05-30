@@ -44129,6 +44129,11 @@ Prefab:
       propertyPath: giveUpTime
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 54383061394835190, guid: eb922e708987bba4f99752aac06c45f9,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb922e708987bba4f99752aac06c45f9, type: 2}
   m_IsPrefabParent: 0

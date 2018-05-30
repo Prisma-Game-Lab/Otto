@@ -25,7 +25,7 @@ MonoBehaviour:
         motionVectorsResolution: 24
         motionVectorsAmplitude: 64
   fog:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       excludeSkybox: 1
   antialiasing:
@@ -35,15 +35,15 @@ MonoBehaviour:
       fxaaSettings:
         preset: 3
       taaSettings:
-        jitterSpread: 0.781
-        sharpen: 0.27
+        jitterSpread: 0.799
+        sharpen: 0.15
         stationaryBlending: 0.86
         motionBlending: 0.878
   ambientOcclusion:
     m_Enabled: 1
     m_Settings:
-      intensity: 0.81
-      radius: 0.27
+      intensity: 1.23
+      radius: 0.4
       sampleCount: 16
       downsampling: 1
       forceForwardCompatibility: 1
@@ -71,10 +71,10 @@ MonoBehaviour:
   depthOfField:
     m_Enabled: 1
     m_Settings:
-      focusDistance: 23.7
-      aperture: 21.5
+      focusDistance: 22.21
+      aperture: 16.4
       focalLength: 6
-      useCameraFov: 0
+      useCameraFov: 1
       kernelSize: 0
   motionBlur:
     m_Enabled: 0
@@ -87,27 +87,27 @@ MonoBehaviour:
     m_Settings:
       lowPercent: 1
       highPercent: 4.563637
-      minLuminance: -6.64
-      maxLuminance: 412.02
+      minLuminance: -2.16
+      maxLuminance: 414.31
       keyValue: 0.3
       dynamicKeyValue: 0
       adaptationType: 0
       speedUp: 4.45
       speedDown: 10.92
-      logMin: -6
-      logMax: 11
+      logMin: -3
+      logMax: 16
   bloom:
     m_Enabled: 1
     m_Settings:
       bloom:
         intensity: 0.1
-        threshold: 1.31
-        softKnee: 0.201
-        radius: 4.03
+        threshold: 0.77
+        softKnee: 0.252
+        radius: 3.4
         antiFlicker: 1
       lensDirt:
         texture: {fileID: 2800000, guid: 4b8d081e9d114c7f1100f5ab44295342, type: 3}
-        intensity: 1.42
+        intensity: 1.17
   colorGrading:
     m_Enabled: 1
     m_Settings:
@@ -121,13 +121,13 @@ MonoBehaviour:
         neutralWhiteClip: 10
       basic:
         postExposure: 0.74
-        temperature: 14
-        tint: -7
+        temperature: 26
+        tint: 2
         hueShift: -3
-        saturation: 1.16
-        contrast: 1.13
+        saturation: 1.01
+        contrast: 0.89
       channelMixer:
-        red: {x: 0.86, y: 0.07, z: -0.11}
+        red: {x: 0.72, y: 0.05, z: -0.11}
         green: {x: 0, y: 1, z: 0}
         blue: {x: 0, y: 0, z: 1}
         currentEditingChannel: 0
@@ -322,8 +322,8 @@ MonoBehaviour:
       mode: 0
       color: {r: 0.23921567, g: 0.65763086, b: 1, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.395
-      smoothness: 0.35
+      intensity: 0.466
+      smoothness: 0.36
       roundness: 0.973
       mask: {fileID: 0}
       opacity: 1

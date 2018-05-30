@@ -104,8 +104,9 @@ public class Patrol : MonoBehaviour
         chasingPlayer = true;
         timeSinceLastSighted = Time.time;
         agent.speed = chaseSpeed;
-        if (agent.remainingDistance < 1.5f)
+        if (agent.remainingDistance < 1.3f)
         {
+            agent.speed = normalSpeed;
             print("DANO");
         }
 

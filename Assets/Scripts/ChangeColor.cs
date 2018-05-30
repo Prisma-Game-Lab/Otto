@@ -84,7 +84,7 @@ public class ChangeColor : MonoBehaviour {
 		{
 			foreach (Material c in _coresEmContato)
 			{
-				//print("procurando " + c.name + " em cores disponiveis");
+				print("procurando " + c.name + " em cores disponiveis");
 				if (_coresDisponiveis.Contains(c))
 				{
                     // ALTERAR ISSO

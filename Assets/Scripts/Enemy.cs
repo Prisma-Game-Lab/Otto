@@ -56,6 +56,31 @@ public class Enemy : MonoBehaviour {
 
 		}
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (Patrol.chasingPlayer)
+        {
+            Player.Lifes -= 1;
+            if (Player.Lifes == 0)
+                print("morreu");
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (Patrol.chasingPlayer)
+        {
+            Player.Lifes -= 1;
+            if (Player.Lifes == 0)
+                print("morreu");
+        }
+    }
     //public void OnTriggerEnter(Collider col)
     //{
     //    ChangeColor player = col.GetComponent<ChangeColor>();

@@ -8,6 +8,8 @@ public class ChangeColor : MonoBehaviour {
 	private List<Material> _coresDisponiveis = new List<Material>();
 	private Material _defaultMaterial;
 
+    public GameObject model;
+
 	// Use this for initialization
 	void Start () {
 		gameObject.layer = 9;

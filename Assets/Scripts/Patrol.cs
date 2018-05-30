@@ -107,7 +107,6 @@ public class Patrol : MonoBehaviour
         if (agent.remainingDistance < 1.3f)
         {
             agent.speed = normalSpeed;
-            GameManager.respawn();
             print("DANO");
         }
 

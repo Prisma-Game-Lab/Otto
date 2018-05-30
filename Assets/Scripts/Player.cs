@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public float stamina;
     public float MaxStamina = 20;
     public float TongueDistance;
-    public int Lifes;
+    public static int Lifes = 3;
     Rect staminaRect;
     Texture2D staminaTexture;
     //public Texture2D staminaTexture;

@@ -14,7 +14,7 @@ public class Patrol : MonoBehaviour
 
     public float normalSpeed = 3;
     public float chaseSpeed = 3;
-    private bool chasingPlayer;
+    public static bool chasingPlayer;
     private float timeSinceLastSighted;
     private float now;
     public float giveUpTime = 20;
@@ -104,9 +104,10 @@ public class Patrol : MonoBehaviour
         chasingPlayer = true;
         timeSinceLastSighted = Time.time;
         agent.speed = chaseSpeed;
-        if (agent.remainingDistance < 1.5f)
+        if (agent.remainingDistance < 1.3f)
         {
-            print("DANO");
+            agent.speed = normalSpeed;
+
         }
 
     }

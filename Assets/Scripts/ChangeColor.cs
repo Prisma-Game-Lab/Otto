@@ -6,7 +6,9 @@ public class ChangeColor : MonoBehaviour {
 
 	private List<Material> _coresEmContato = new List<Material>();
 	private List<Material> _coresDisponiveis = new List<Material>();
-	private Material _defaultMaterial;
+	private List<Material> _defaultMaterial = new List<Material>();
+
+    public GameObject model;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +20,13 @@ public class ChangeColor : MonoBehaviour {
          * essas duas layers nao colidem uma com a outra
          * 
          **/
-		_defaultMaterial = GetComponent<Renderer>().material;
+         // ALTERAR ISSO
+        foreach (Transform child in model.GetComponentInChildren<Transform>())
+        {
+            _defaultMaterial.Add(child.GetComponent<Renderer>().material);
+        }
+
+        //_defaultMaterial = GetComponent<Renderer>().material;
 
 	}
 	
@@ -44,8 +52,18 @@ public class ChangeColor : MonoBehaviour {
         //  se estou muda para a cor
         //  se nao estou volto para a cor default
         //Se nao estava camuflado, entao nao passo a ficar
-		if(GetComponent<Renderer>().material != _defaultMaterial)
-		    SetCamufla(true);
+        // ALTERAR ISSO
+        int i = 0;
+        foreach (Transform child in model.GetComponentInChildren<Transform>())
+        {
+            if (!(child.GetComponent<Renderer>().material == _defaultMaterial[i]))
+            {
+                SetCamufla(true);
+            }
+            i++;
+        }
+       // if (GetComponent<Renderer>().material != _defaultMaterial)
+		   // SetCamufla(true);
 
         //preciso de uma forma de verificar todos os itens em colisao comigo e todos que sao colored
         //  encontrei uma forma de fazer o segundo mas nao o primeiro. Para fazer manualmente:
@@ -69,7 +87,12 @@ public class ChangeColor : MonoBehaviour {
 				print("procurando " + c.name + " em cores disponiveis");
 				if (_coresDisponiveis.Contains(c))
 				{
-					GetComponent<Renderer>().material = c;
+                    // ALTERAR ISSO
+                    foreach (Transform child in model.GetComponentInChildren<Transform>())
+                    {
+                        child.GetComponent<Renderer>().material = c;
+                    }
+					//GetComponent<Renderer>().material = c;
 					gameObject.layer = 12;
                     /*
                      * layer 9 e a do player quando nao esta camuflado
@@ -90,7 +113,15 @@ public class ChangeColor : MonoBehaviour {
          * essas duas layers nao colidem uma com a outra
          * 
          **/
-        GetComponent<Renderer>().material = _defaultMaterial;
+
+        // ALTERAR ISSO
+        int i = 0;
+        foreach (Transform child in model.GetComponentInChildren<Transform>())
+        {
+            child.GetComponent<Renderer>().material = _defaultMaterial[i];
+            i++;
+        }
+        //GetComponent<Renderer>().material = _defaultMaterial;
 	}
 
 	public void AddColor(Material mat)
@@ -102,6 +133,17 @@ public class ChangeColor : MonoBehaviour {
 	}
 	public bool IsCamuflado()
 	{
-		return GetComponent<Renderer>().material != _defaultMaterial; 
+        // alterar aqui para mudar a cor do player quando camuflado
+        int i = 0;
+        foreach (Transform child in model.GetComponentInChildren<Transform>())
+        {
+            if (!(child.GetComponent<Renderer>().material == _defaultMaterial[i]))
+            {
+                return true;
+            }
+            i++;
+        }
+        return false;
+        //return GetComponent<Renderer>().material != _defaultMaterial; 
 	}
 }

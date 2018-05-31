@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Enemy : MonoBehaviour {
 
@@ -13,8 +15,14 @@ public class Enemy : MonoBehaviour {
 
     private Rigidbody _rb;
 
+    public GameObject Player;
+    private Player _playerScript;
+
     // Use this for initialization
     void Start () {
+
+        _playerScript = Player.GetComponent<Player>();
+
 		//transform.Rotate(0, 180, 0);
 		gameObject.layer = 11;
         /*
@@ -56,6 +64,33 @@ public class Enemy : MonoBehaviour {
 
 		}
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (Player != null)
+            if (other.tag == "Player" && !Player.GetComponent<ChangeColor>().IsCamuflado())
+            {
+                _playerScript.loseLife();
+                if (_playerScript.Lifes == 0)
+                {
+                    SceneManager.LoadScene("LoseScene");
+                }
+            }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        
+    }
+
+
+
+    
     //public void OnTriggerEnter(Collider col)
     //{
     //    ChangeColor player = col.GetComponent<ChangeColor>();

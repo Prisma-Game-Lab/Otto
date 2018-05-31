@@ -8,6 +8,9 @@ public class DeathZone : MonoBehaviour {
     {
         Destroy(other.gameObject);
         //GameManager.instance.Lose();
+<<<<<<< HEAD
         GameManager.instance.respawn();
+=======
+>>>>>>> 109b601e0819d12c13bfd9e6d21662e4d04d4822
     }
 }

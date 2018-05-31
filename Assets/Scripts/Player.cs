@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
@@ -12,11 +13,13 @@ public class Player : MonoBehaviour
     public float stamina;
     public float MaxStamina = 20;
     public float TongueDistance;
-    public int Lifes;
+    public int Lifes = 3;
     Rect staminaRect;
     Texture2D staminaTexture;
     //public Texture2D staminaTexture;
 
+
+    public Text vidasText;
     public Transform cam;
 
     private float _currentStamina;
@@ -31,6 +34,8 @@ public class Player : MonoBehaviour
         staminaTexture = new Texture2D(1, 1);
         staminaTexture.SetPixel(0, 0, Color.green);
         staminaTexture.Apply();
+
+        vidasText.text = "Vidas: " + Lifes;
        
     }
 
@@ -85,9 +90,10 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void loseLife()
+    public void loseLife()
     {
-
+        Lifes -= 1;
+        vidasText.text = "Vidas: " + Lifes;
     }
 
     // respawn até o ultimo respawn

@@ -9,46 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1798241490462264}
+  m_RootGameObject: {fileID: 1235496873003544}
   m_IsPrefabParent: 1
---- !u!1 &1798241490462264
+--- !u!1 &1235496873003544
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4020402555607404}
-  - component: {fileID: 33771131117988982}
-  - component: {fileID: 23696833882138900}
-  - component: {fileID: 65497752957159962}
-  - component: {fileID: 114842082599486538}
+  - component: {fileID: 4294055837612026}
+  - component: {fileID: 33613160188508886}
+  - component: {fileID: 23883802812403332}
+  - component: {fileID: 65090241869563072}
+  - component: {fileID: 114933035124915138}
   m_Layer: 0
-  m_Name: Parede Camuflavel
-  m_TagString: "Objeto Interag\xEDvel"
+  m_Name: Ganha Cor Verde 1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4020402555607404
+--- !u!4 &4294055837612026
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1798241490462264}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.135244, y: 6.183588, z: 44.351818}
-  m_LocalScale: {x: 3, y: 1, z: 1}
+  m_GameObject: {fileID: 1235496873003544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.86, y: -0.9, z: -13.16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23696833882138900
+--- !u!23 &23883802812403332
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1798241490462264}
+  m_GameObject: {fileID: 1235496873003544}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -78,34 +78,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33771131117988982
+--- !u!33 &33613160188508886
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1798241490462264}
+  m_GameObject: {fileID: 1235496873003544}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65497752957159962
+--- !u!65 &65090241869563072
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1798241490462264}
+  m_GameObject: {fileID: 1235496873003544}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114842082599486538
+--- !u!114 &114933035124915138
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1798241490462264}
+  m_GameObject: {fileID: 1235496873003544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e9139e62a0af1446b6375e499737ff2, type: 3}
+  m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  cor: {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
+  ganhaCor: 1

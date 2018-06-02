@@ -223,10 +223,12 @@ public class Visao : MonoBehaviour {
 
 
 
-	
+
     /*public void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Player")
             print("Player Morreu =(");
     }*/
+
+    
 }

@@ -7,8 +7,6 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public GameObject UI_WinText;
     public GameObject UI_LoseText;
-    public GameObject UI_menu;
-    public KeyCode pause_button;
     float delayTime;
 
     private void Awake()
@@ -31,7 +29,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(pause_button))
+       /* if (Input.GetKeyDown(pause_button))
             if (Time.timeScale == 1)
             {
                 Time.timeScale = 0;
@@ -41,7 +39,7 @@ public class GameManager : MonoBehaviour {
             {
                 Time.timeScale = 1;
                 UI_menu.SetActive(false);
-            }
+            }*/
     }
 
     public void respawn()
@@ -54,6 +52,7 @@ public class GameManager : MonoBehaviour {
     {
         Debug.Log("Entrou Win");
         UI_WinText.SetActive(true);
+        Time.timeScale = 0;
         //respawn();
     }
 
@@ -61,6 +60,7 @@ public class GameManager : MonoBehaviour {
     {
         Debug.Log("Entrou Lose");
         UI_LoseText.SetActive(true);
+        Time.timeScale = 0;
         //respawn();
     }
 }

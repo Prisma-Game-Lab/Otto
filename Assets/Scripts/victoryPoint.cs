@@ -5,8 +5,9 @@ using UnityEngine;
 public class victoryPoint : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
-        //Destroy(other.gameObject);
-        //GameManager.instance.Win();
+        if(other.name == "Player") // Checa se o Collider é o player
+            GameManager.instance.Win();
 
+        //Debug.Log(other.name);
     }
 }

@@ -52,4 +52,9 @@ public class PauseMenu1 : MonoBehaviour {
         Debug.Log("QUIT GAME");
         Application.Quit();
     }
+
+    public void Restart()
+    {
+        GameManager.instance.respawn();
+    }
 }

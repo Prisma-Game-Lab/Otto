@@ -24,6 +24,20 @@ public class Patrol : MonoBehaviour
     private Vector3 direction;
     private float angle;
 
+    /////////BEGIN  Alterações feitas por Gustavo Barros/////////////////////////
+    public Color _AlertColor;
+    private Color _stdColor = Color.yellow;
+        //Color.(255, 244, 0, 160);
+
+    private void change_view_color(Color change_color)
+    {
+        Renderer[] rend_child = GetComponentsInChildren<Renderer>();
+        foreach (Renderer child in rend_child)
+        {
+            child.GetComponent<Renderer>().material.color = change_color;
+        }
+    }
+    /////////END  Alterações feitas por Gustavo Barros/////////////////////////
 
     void Start()
     {
@@ -50,13 +64,14 @@ public class Patrol : MonoBehaviour
         if (!chasingPlayer)
         {
             agent.destination = points[destPoint].position;
-
+            //change_view_color(_stdColor); // Alteração Gustavo
             // Choose the next point in the array as the destination,
             // cycling to the start if necessary.
             destPoint = (destPoint + 1) % points.Length;
         }else
         {
             agent.destination = player.position;
+            
         }
 
     }
@@ -92,6 +107,7 @@ public class Patrol : MonoBehaviour
             agent.speed = normalSpeed;
             chasingPlayer = false;
         }
+
     }
 
 
@@ -104,10 +120,11 @@ public class Patrol : MonoBehaviour
         chasingPlayer = true;
         timeSinceLastSighted = Time.time;
         agent.speed = chaseSpeed;
+        
         if (agent.remainingDistance < 1.3f)
         {
             agent.speed = normalSpeed;
-
+            
         }
 
     }

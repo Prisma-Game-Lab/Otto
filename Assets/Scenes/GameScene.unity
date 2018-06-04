@@ -10495,6 +10495,7 @@ GameObject:
   - component: {fileID: 309956640}
   - component: {fileID: 309956639}
   - component: {fileID: 309956638}
+  - component: {fileID: 309956649}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -10535,6 +10536,7 @@ MonoBehaviour:
   chaseSpeed: 3
   giveUpTime: 5
   stationary: 0
+  _AlertColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!195 &309956640
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10703,6 +10705,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _AlertColor: {r: 1, g: 0, b: 0, a: 0}
+--- !u!114 &309956649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309956637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a131f92fb519f5409177c0596ee9b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &312080244
 Mesh:
   m_ObjectHideFlags: 0
@@ -57399,6 +57412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a274799e7599bf46b20d398320652f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chk_pt: {x: 0, y: 0, z: 0}
 --- !u!1001 &1373591816
 Prefab:
   m_ObjectHideFlags: 0
@@ -73436,6 +73450,7 @@ MonoBehaviour:
   chaseSpeed: 3
   giveUpTime: 20
   stationary: 0
+  _AlertColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!195 &1881760013
 NavMeshAgent:
   m_ObjectHideFlags: 0

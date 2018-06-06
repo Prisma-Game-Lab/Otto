@@ -63083,7 +63083,6 @@ Transform:
   - {fileID: 2038852403}
   - {fileID: 194135431}
   - {fileID: 920905323}
-  - {fileID: 1939061882}
   - {fileID: 1451190034}
   - {fileID: 1756360378}
   m_Father: {fileID: 0}
@@ -69767,7 +69766,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1563006058}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1757684954 stripped
 Transform:
@@ -76310,19 +76309,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1563006058}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4783795833303074, guid: fcf61026be828ae47b5117a6d63e84cb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -658.11536
+      value: -3.119995
       objectReference: {fileID: 0}
     - target: {fileID: 4783795833303074, guid: fcf61026be828ae47b5117a6d63e84cb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1227.2698
+      value: 0.10998535
       objectReference: {fileID: 0}
     - target: {fileID: 4783795833303074, guid: fcf61026be828ae47b5117a6d63e84cb, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1075.3958
+      value: -16.650024
       objectReference: {fileID: 0}
     - target: {fileID: 4783795833303074, guid: fcf61026be828ae47b5117a6d63e84cb, type: 2}
       propertyPath: m_LocalRotation.x
@@ -76342,7 +76341,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4783795833303074, guid: fcf61026be828ae47b5117a6d63e84cb, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114758518792303146, guid: fcf61026be828ae47b5117a6d63e84cb,
         type: 2}
@@ -76378,11 +76377,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fcf61026be828ae47b5117a6d63e84cb, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1939061882 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4783795833303074, guid: fcf61026be828ae47b5117a6d63e84cb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1939061881}
 --- !u!1 &1939732322
 GameObject:
   m_ObjectHideFlags: 0

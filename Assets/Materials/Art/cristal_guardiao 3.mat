@@ -60,7 +60,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ToonShade:
         m_Texture: {fileID: 8900000, guid: b995d4bd9d11078d11005b9844295342, type: 3}
-        m_Scale: {x: 3.3, y: 2.07}
+        m_Scale: {x: -0.71, y: -0.42}
         m_Offset: {x: 1.51, y: 0}
     m_Floats:
     - _BlendOp: 0
@@ -86,7 +86,7 @@ Material:
     - _Metallic: 0.796
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Outline: 0.0185
+    - _Outline: 0.0059
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SoftParticlesEnabled: 0
@@ -98,7 +98,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+    - _Color: {r: 0.7830189, g: 0.76455146, b: 0.76455146, a: 1}
     - _EmissionColor: {r: 0.8349056, g: 1, b: 0.94413877, a: 1}
     - _OutlineColor: {r: 0.4009434, g: 1, b: 0.9577029, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}

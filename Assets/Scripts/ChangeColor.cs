@@ -5,8 +5,9 @@ using UnityEngine;
 public class ChangeColor : MonoBehaviour {
 
 	private List<Material> _coresEmContato = new List<Material>();
-	private List<Material> _coresDisponiveis = new List<Material>();
 	private List<Material> _defaultMaterial = new List<Material>();
+    private List<Colored.Corenum> _coresDisponiveis = new List<Colored.Corenum>();
+    private List<Colored.Corenum> _corParede = new List<Colored.Corenum>();
 
     public GameObject model;
 
@@ -42,11 +43,14 @@ public class ChangeColor : MonoBehaviour {
 	{
         print("encostei em alguem colorido " + col.gameObject.name + " com cor " + col.cor.name);
         _coresEmContato.Add(col.cor);
-	}
+        _corParede.Add(col.corlist);
+
+    }
 	public void OnCollisionExitCor(Colored col)
 	{
         print("soltei de alguem colorido " + col.gameObject.name);
         _coresEmContato.Remove(col.cor);
+        _corParede.Remove(col.corlist);
 
         //verificar se estou encostado em alguem colorido
         //  se estou muda para a cor
@@ -62,8 +66,9 @@ public class ChangeColor : MonoBehaviour {
             }
             i++;
         }
-       // if (GetComponent<Renderer>().material != _defaultMaterial)
-		   // SetCamufla(true);
+
+        // if (GetComponent<Renderer>().material != _defaultMaterial)
+        // SetCamufla(true);
 
         //preciso de uma forma de verificar todos os itens em colisao comigo e todos que sao colored
         //  encontrei uma forma de fazer o segundo mas nao o primeiro. Para fazer manualmente:
@@ -85,7 +90,7 @@ public class ChangeColor : MonoBehaviour {
 			foreach (Material c in _coresEmContato)
 			{
 				print("procurando " + c.name + " em cores disponiveis");
-				if (_coresDisponiveis.Contains(c))
+				if (_coresDisponiveis.Contains(_corParede[0]))
 				{
                     // ALTERAR ISSO
                     foreach (Transform child in model.GetComponentInChildren<Transform>())
@@ -124,11 +129,11 @@ public class ChangeColor : MonoBehaviour {
         //GetComponent<Renderer>().material = _defaultMaterial;
 	}
 
-	public void AddColor(Material mat)
+	public void AddColor(Colored.Corenum c)
 	{
-        if (!_coresDisponiveis.Contains(mat))
+        if (!_coresDisponiveis.Contains(c))
         {
-            _coresDisponiveis.Add(mat);
+            _coresDisponiveis.Add(c);
         }
 	}
 	public bool IsCamuflado()

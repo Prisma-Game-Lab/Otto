@@ -10,7 +10,15 @@ public class Colored : MonoBehaviour
 	[Tooltip("Marque 'verdadeiro' se este objeto for capaz de dar ao camaleao uma nova cor")]
 	public bool ganhaCor = false;
 
-	// Use this for initialization
+    public enum Corenum
+    {
+        verde,
+        azul,
+        vermelho
+    };
+    public Corenum corlist;
+
+    // Use this for initialization
     void Start()
 	{
 		if (cor == null)

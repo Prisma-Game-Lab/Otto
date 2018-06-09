@@ -22,7 +22,7 @@ public class Cloak : MonoBehaviour {
 		{
 			if (colScript.ganhaCor)
 			{
-				changeColorScript.AddColor(colScript.corlist);
+				changeColorScript.AddColor(colScript.cores);
                 colScript.gameObject.SetActive(false);
             }
 			else

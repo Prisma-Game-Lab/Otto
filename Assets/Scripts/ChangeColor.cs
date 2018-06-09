@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ChangeColor : MonoBehaviour {
 
-	private List<Material> _coresEmContato = new List<Material>();
+
+    private List<Colored> _coloredEmContato = new List<Colored>();
 	private List<Material> _defaultMaterial = new List<Material>();
     private List<Colored.Corenum> _coresDisponiveis = new List<Colored.Corenum>();
-    private List<Colored.Corenum> _corParede = new List<Colored.Corenum>();
 
     public GameObject model;
 
@@ -42,15 +42,13 @@ public class ChangeColor : MonoBehaviour {
 	public void OnCollisionEnterCor(Colored col)
 	{
         print("encostei em alguem colorido " + col.gameObject.name + " com cor " + col.cor.name);
-        _coresEmContato.Add(col.cor);
-        _corParede.Add(col.corlist);
+        _coloredEmContato.Add(col);
 
     }
 	public void OnCollisionExitCor(Colored col)
 	{
         print("soltei de alguem colorido " + col.gameObject.name);
-        _coresEmContato.Remove(col.cor);
-        _corParede.Remove(col.corlist);
+        _coloredEmContato.Remove(col);
 
         //verificar se estou encostado em alguem colorido
         //  se estou muda para a cor
@@ -87,15 +85,15 @@ public class ChangeColor : MonoBehaviour {
 
 		if (b)
 		{
-			foreach (Material c in _coresEmContato)
-			{
-				print("procurando " + c.name + " em cores disponiveis");
-				if (_coresDisponiveis.Contains(_corParede[0]))
+            foreach (Colored c in _coloredEmContato)
+            {
+				print("procurando " + c.cores + " em cores disponiveis");
+				if (_coresDisponiveis.Contains(c.cores))
 				{
                     // ALTERAR ISSO
                     foreach (Transform child in model.GetComponentInChildren<Transform>())
                     {
-                        child.GetComponent<Renderer>().material = c;
+                        child.GetComponent<Renderer>().material = c.cor;
                     }
 					//GetComponent<Renderer>().material = c;
 					gameObject.layer = 12;

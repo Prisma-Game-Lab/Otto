@@ -16,7 +16,8 @@ public class Colored : MonoBehaviour
         azul,
         vermelho
     };
-    public Corenum corlist;
+    [Tooltip("essencia cor que o player precisa ter para se camuflar nesse objeto")]
+    public Corenum cores;
 
     // Use this for initialization
     void Start()

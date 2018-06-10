@@ -17,7 +17,7 @@ public class visao_color : MonoBehaviour {
             foreach (Renderer child in rend_child)
             {
                 //Debug.Log(child.name);
-                child.GetComponent<Renderer>().material.color = Color.red;
+                child.GetComponent<Renderer>().material.color = _AlertColor;
             }
 
         }

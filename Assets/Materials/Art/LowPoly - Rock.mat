@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: LowPoly - Rock
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: d84268709d11078d11005b9844295342, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -54,6 +54,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ToonShade:
+        m_Texture: {fileID: 8900000, guid: b995d4bd9d11078d11005b9844295342, type: 3}
+        m_Scale: {x: 0.32, y: 4.12}
+        m_Offset: {x: 2.64, y: 2.64}
     m_Floats:
     - _BottomColorPos: 0
     - _BumpScale: 1
@@ -66,6 +74,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Outline: 0.005
     - _Parallax: 0.02
     - _Smoothness: 0.3
     - _SmoothnessTextureChannel: 0
@@ -79,8 +88,9 @@ Material:
     - __dirty: 0
     m_Colors:
     - _BottomColor: {r: 0.63235295, g: 0.63235295, b: 0.63235295, a: 1}
-    - _Color: {r: 0.74509805, g: 0.854902, b: 0.8941177, a: 1}
+    - _Color: {r: 0.3679245, g: 0.3175952, b: 0.3282039, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _TopColor: {r: 0.46929064, g: 0.7286724, b: 0.9117647, a: 1}
     - _WindCycles: {r: 0, g: 0, b: 0, a: 0}
     - _WindMagnitude: {r: 0, g: 0, b: 0, a: 0}

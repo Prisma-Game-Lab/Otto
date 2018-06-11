@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class ChangeColor : MonoBehaviour {
 
-
-    private List<Colored> _coloredEmContato = new List<Colored>();
+	private List<Material> _coresEmContato = new List<Material>();
+	private List<Material> _coresDisponiveis = new List<Material>();
 	private List<Material> _defaultMaterial = new List<Material>();
-    private List<Colored.Corenum> _coresDisponiveis = new List<Colored.Corenum>();
 
     public GameObject model;
 
@@ -42,13 +41,12 @@ public class ChangeColor : MonoBehaviour {
 	public void OnCollisionEnterCor(Colored col)
 	{
         print("encostei em alguem colorido " + col.gameObject.name + " com cor " + col.cor.name);
-        _coloredEmContato.Add(col);
-
-    }
+        _coresEmContato.Add(col.cor);
+	}
 	public void OnCollisionExitCor(Colored col)
 	{
         print("soltei de alguem colorido " + col.gameObject.name);
-        _coloredEmContato.Remove(col);
+        _coresEmContato.Remove(col.cor);
 
         //verificar se estou encostado em alguem colorido
         //  se estou muda para a cor
@@ -64,9 +62,8 @@ public class ChangeColor : MonoBehaviour {
             }
             i++;
         }
-
-        // if (GetComponent<Renderer>().material != _defaultMaterial)
-        // SetCamufla(true);
+       // if (GetComponent<Renderer>().material != _defaultMaterial)
+		   // SetCamufla(true);
 
         //preciso de uma forma de verificar todos os itens em colisao comigo e todos que sao colored
         //  encontrei uma forma de fazer o segundo mas nao o primeiro. Para fazer manualmente:
@@ -85,15 +82,15 @@ public class ChangeColor : MonoBehaviour {
 
 		if (b)
 		{
-            foreach (Colored c in _coloredEmContato)
-            {
-				print("procurando " + c.cores + " em cores disponiveis");
-				if (_coresDisponiveis.Contains(c.cores))
+			foreach (Material c in _coresEmContato)
+			{
+				print("procurando " + c.name + " em cores disponiveis");
+				if (_coresDisponiveis.Contains(c))
 				{
                     // ALTERAR ISSO
                     foreach (Transform child in model.GetComponentInChildren<Transform>())
                     {
-                        child.GetComponent<Renderer>().material = c.cor;
+                        child.GetComponent<Renderer>().material = c;
                     }
 					//GetComponent<Renderer>().material = c;
 					gameObject.layer = 12;
@@ -127,11 +124,11 @@ public class ChangeColor : MonoBehaviour {
         //GetComponent<Renderer>().material = _defaultMaterial;
 	}
 
-	public void AddColor(Colored.Corenum c)
+	public void AddColor(Material mat)
 	{
-        if (!_coresDisponiveis.Contains(c))
+        if (!_coresDisponiveis.Contains(mat))
         {
-            _coresDisponiveis.Add(c);
+            _coresDisponiveis.Add(mat);
         }
 	}
 	public bool IsCamuflado()

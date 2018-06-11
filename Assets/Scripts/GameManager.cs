@@ -47,15 +47,10 @@ public class GameManager : MonoBehaviour {
     {
 
         plyr.transform.position = respawn_point;
-         
         if(UI_LoseText.active == true)
             UI_LoseText.SetActive(false);
         if (UI_WinText.active == true)
             UI_WinText.SetActive(false);
-        if (Time.timeScale == 0)
-        {
-            Time.timeScale = 1;
-        }
     }
 
     public void restart()

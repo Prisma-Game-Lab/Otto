@@ -38,15 +38,6 @@ public class Enemy : MonoBehaviour {
 	// FixedUpdate para mover o inimigo com RigidBody
 	void FixedUpdate () {
 
-        // Inimigo nao colide com player se ele estiver camuflado
-        if (Player.GetComponent<ChangeColor>().IsCamuflado())
-        {
-            _rb.detectCollisions = false;
-        } else
-        {
-            _rb.detectCollisions = true;
-        }
-
     }
 
     void setPath()

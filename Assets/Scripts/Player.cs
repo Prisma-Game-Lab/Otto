@@ -51,8 +51,6 @@ public class Player : MonoBehaviour
         float horizontalAxis = CrossPlatformInputManager.GetAxis("Horizontal");
         float verticalAxis = CrossPlatformInputManager.GetAxis("Vertical");
 
-        //print("vertical " + verticalAxis + " horizontal " + horizontalAxis);
-
         //camera forward and right vectors:
         var forward = cam.forward;
         var right = cam.right;
@@ -65,8 +63,6 @@ public class Player : MonoBehaviour
 
         //this is the direction in the world space we want to move:
         var desiredMoveDirection = forward * verticalAxis + right * horizontalAxis;
-        desiredMoveDirection.Normalize();
-        
         transform.Translate(desiredMoveDirection * velocity * Time.deltaTime, Space.World);
 
         if (desiredMoveDirection != Vector3.zero)
@@ -108,15 +104,15 @@ public class Player : MonoBehaviour
 
     private void StaminaUpdate()
     {
-        if (GetComponent<ChangeColor>().IsCamuflado())  //stamina sendo gasta pois esta camuflado
+        if (GetComponent<ChangeColor>().IsCamuflado())
         {
             stamina -= Time.deltaTime;
-            if (stamina < 0)  //stamina nao pode ser negativa
+            if (stamina < 0)
             {
                 stamina = 0;
                 GetComponent<ChangeColor>().SetCamufla(false);
             }
-        }else if (stamina < MaxStamina) //stamina recuperando
+        }else if (stamina < MaxStamina)
         {
             stamina += Time.deltaTime;
         }

@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
     private Vector3 _lastCheckpoint;
     private Quaternion tongue_direction;
 
-
     private void Start()
     {
         stamina = MaxStamina;
@@ -41,7 +40,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        move();
+        if(!GetComponent<ChangeColor>().IsCamuflado()) //Verifica se o player está camuflado. Se estiver ele não se move
+            move();
         StaminaUpdate();
     }
 

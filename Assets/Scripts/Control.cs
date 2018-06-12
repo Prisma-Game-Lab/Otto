@@ -51,6 +51,7 @@ public class Control : MonoBehaviour {
     {
         // chama a função no player
         gameObject.GetComponent<Player>().tongue(show);
+        show = false;
     }
 
     void pause()

@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PauseMenu1 : MonoBehaviour {
 
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
-	// Use this for initialization
-	void Start () {
+    public GameObject MainMenuUI;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -43,8 +44,7 @@ public class PauseMenu1 : MonoBehaviour {
 
     public void LoadMenu()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        MainMenuUI.SetActive(true);
     }
 
     public void QuitGame()

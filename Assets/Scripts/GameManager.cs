@@ -19,10 +19,11 @@ public class GameManager : MonoBehaviour {
         else if (instance != null)
             Destroy(gameObject);
 
-        if (Time.timeScale == 0)
-        {
-            Time.timeScale = 1;
-        }
+        Time.timeScale = 0;
+        //if (Time.timeScale == 0)
+        //{
+        //    Time.timeScale = 1;
+        //}
 
         plyr = GameObject.FindWithTag("Player");
     }

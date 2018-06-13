@@ -34,7 +34,6 @@ public class Cloak : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-
     }
 
     private void OnTriggerExit(Collider other)

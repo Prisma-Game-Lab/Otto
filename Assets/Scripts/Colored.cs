@@ -10,7 +10,16 @@ public class Colored : MonoBehaviour
 	[Tooltip("Marque 'verdadeiro' se este objeto for capaz de dar ao camaleao uma nova cor")]
 	public bool ganhaCor = false;
 
-	// Use this for initialization
+    public enum Corenum
+    {
+        verde,
+        azul,
+        vermelho
+    };
+    [Tooltip("essencia cor que o player precisa ter para se camuflar nesse objeto")]
+    public Corenum cores;
+
+    // Use this for initialization
     void Start()
 	{
 		if (cor == null)

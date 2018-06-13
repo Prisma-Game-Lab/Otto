@@ -122,11 +122,11 @@ GameObject:
   - component: {fileID: 4783795833303074}
   - component: {fileID: 33735684155955890}
   - component: {fileID: 23103730537137338}
-  - component: {fileID: 65512937165282336}
   - component: {fileID: 54487029041207686}
   - component: {fileID: 114758518792303146}
   - component: {fileID: 114916967710552812}
   - component: {fileID: 114141689546430654}
+  - component: {fileID: 136056262137404646}
   m_Layer: 9
   m_Name: Player 2
   m_TagString: Player
@@ -348,8 +348,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1615407103622860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.78, y: 0.7, z: -14.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.12, y: 0.11, z: -16.353}
+  m_LocalScale: {x: 0.5248523, y: 0.5248522, z: 0.5248522}
   m_Children:
   - {fileID: 4769571324584634}
   - {fileID: 4133750771918370}
@@ -762,18 +762,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6917369, y: 2.9441793, z: 2.235619}
   m_Center: {x: 0.008587936, y: 0.97208977, z: -0.18079121}
---- !u!65 &65512937165282336
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1615407103622860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6678019, y: 3.4478312, z: 2.19656}
-  m_Center: {x: 0.028246641, y: 1.2239156, z: -1.0298252}
 --- !u!65 &65776012152128650
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -843,6 +831,8 @@ MonoBehaviour:
   stamina: 0
   MaxStamina: 5
   TongueDistance: 0
+  Lifes: 3
+  vidasText: {fileID: 0}
   cam: {fileID: 0}
 --- !u!114 &114916967710552812
 MonoBehaviour:
@@ -866,3 +856,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f1ef82d167fb6449c40a1a45408d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &136056262137404646
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1615407103622860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.95225155
+  m_Height: 3.2771742
+  m_Direction: 1
+  m_Center: {x: 0.013088549, y: 1.4231265, z: -0.9758872}

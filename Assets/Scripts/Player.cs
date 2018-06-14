@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public float MaxStamina = 20;
     public float TongueDistance;
     public int Lifes = 3;
+    public float AttackCooldown = 3.0f;
+    public float BlinkingCooldown = 0.5f;
     Rect staminaRect;
     Texture2D staminaTexture;
     //public Texture2D staminaTexture;
@@ -25,6 +27,8 @@ public class Player : MonoBehaviour
     private float _currentStamina;
     private Vector3 _lastCheckpoint;
     private Quaternion tongue_direction;
+    private bool _wasAttacked = false;
+    private bool _opaque = true;
 
 
     private void Start()
@@ -97,14 +101,15 @@ public class Player : MonoBehaviour
 
     public void loseLife()
     {
-        Lifes -= 1;
-        vidasText.text = "Vidas: " + Lifes;
-    }
+        if (!_wasAttacked)
+        {
+            Lifes -= 1;
+            vidasText.text = "Vidas: " + Lifes;
 
-    // respawn até o ultimo respawn
-    private void respawn()
-    {
-
+            // Se o Player for atacado ele vai dar um salto para trás e piscar durante x segundos
+            _wasAttacked = true;
+            StartCoroutine("BlinkingPlayer");
+        }
     }
 
     private void StaminaUpdate()
@@ -124,17 +129,80 @@ public class Player : MonoBehaviour
 
     }
 
-    private void death()
-    {
-
-    }
-    
     void OnGUI()
     {
         float ratio = stamina / MaxStamina;
         float rectWidth = ratio*Screen.width / 5;
         staminaRect.width = rectWidth;
         GUI.DrawTexture(staminaRect, staminaTexture);
+    }
+
+
+    // IEnumerator funciona a parte do tempo de compilação e nesse caso ele vai fazer o plyaer piscar quando for atacado
+    IEnumerator BlinkingPlayer()
+    {
+        print("ENTREI NA COROTINA");
+        Color alphaColor = this.GetComponent<MeshRenderer>().material.color;
+
+        // Roda esse código até o tempo de AttackCooldown acabar
+        for (float j = AttackCooldown; j >= 0; j -= Time.deltaTime)
+        {
+            alphaColor.a = 0;
+            this.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, alphaColor, BlinkingCooldown * Time.deltaTime);
+            yield return new WaitForSeconds(BlinkingCooldown);
+            alphaColor.a = 1;
+            this.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, alphaColor, BlinkingCooldown * Time.deltaTime);
+            yield return new WaitForSeconds(BlinkingCooldown);
+
+            /*
+
+            print("TO RODANDO A COROTINA");
+            if (_opaque)
+            {
+                alphaColor.a = 0;
+
+                // Diminui o alpha aos poucos
+                for (float i = BlinkingCooldown; i >= 0; i -= Time.deltaTime)
+                {
+                    this.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, i);
+                }
+
+                yield return new WaitForSeconds(BlinkingCooldown);
+                //yield WaitForSeconds(0.2);
+
+
+                _opaque = true;
+
+                // faz essa transformação durante o BlinkingCooldown
+                for (float i = BlinkingCooldown; i >= 0; i -= Time.deltaTime)
+                {
+                    // set color with i as alpha
+                    this.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, 0, BlinkingCooldown * Time.deltaTime);
+                    img.color = new Color(1, 1, 1, i);
+                    yield return null;
+                }
+
+            }
+            else // Coloca cor no player
+            { 
+
+                // Aumenta o alpha aos poucos
+                for (float i = 0; i >= BlinkingCooldown; i -= Time.deltaTime)
+                {
+                    this.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, i);
+                }
+
+                _opaque = false;
+                alphaColor.a = 1;
+                this.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, alphaColor, BlinkingCooldown * Time.deltaTime);
+                yield return null;
+            }*/
+        }
+
+        _wasAttacked = false;
+        print("SAI DA COROTINA");
+        yield return null;
+
     }
 
 

@@ -74,9 +74,19 @@ public class Enemy : MonoBehaviour {
 		}
     }
 
+
+    /* OnCollision... - Verifica se algum objeto tocou no collider do inimigo */
+
     private void OnCollisionEnter(Collision collision)
     {
+        /* Se existe gameObject na variável publica "Player" do inimigo,
+        * verifica se o GameObject do colider que encostou no inimigo (collision) possui a tag Player (para ver se foi o Player que encostou nele),
+        * caso seja o player verifica se ele não está camuflado, se ele estiver camuflado ele não pode sofrer um ataque. 
+        * Caso tudo seja verdade, o player perde uma vida e seja a ultima vida do player, chama a tela de gameOver  
+        */
+
         if (Player != null)
+        {
             if (collision.gameObject.tag == "Player" && !Player.GetComponent<ChangeColor>().IsCamuflado())
             {
                 _playerScript.loseLife();
@@ -85,38 +95,11 @@ public class Enemy : MonoBehaviour {
                     SceneManager.LoadScene("LoseScene");
                 }
             }
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
+        }
         
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        
-    }
+    private void OnCollisionStay(Collision collision){}
 
-   /* private void OnTriggerEnter(Collider other)
-    {
-        if (Player != null)
-            if (other.tag == "Player" && !Player.GetComponent<ChangeColor>().IsCamuflado())
-            {
-                _playerScript.loseLife();
-                if (_playerScript.Lifes == 0)
-                {
-                    SceneManager.LoadScene("LoseScene");
-                }
-            }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        
-    }*/
+    private void OnCollisionExit(Collision collision){}
 }

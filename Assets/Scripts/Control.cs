@@ -14,6 +14,7 @@ public class Control : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            print("soltei espaco");
             GetComponent<ChangeColor>().SetCamufla(true);
             
         }
@@ -21,6 +22,7 @@ public class Control : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
+            print("soltei espaco");
             GetComponent<ChangeColor>().SetCamufla(false);
         }
 
@@ -49,7 +51,6 @@ public class Control : MonoBehaviour {
     {
         // chama a função no player
         gameObject.GetComponent<Player>().tongue(show);
-
     }
 
     void pause()

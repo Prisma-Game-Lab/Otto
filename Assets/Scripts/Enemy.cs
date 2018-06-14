@@ -74,7 +74,30 @@ public class Enemy : MonoBehaviour {
 		}
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (Player != null)
+            if (collision.gameObject.tag == "Player" && !Player.GetComponent<ChangeColor>().IsCamuflado())
+            {
+                _playerScript.loseLife();
+                if (_playerScript.Lifes == 0)
+                {
+                    SceneManager.LoadScene("LoseScene");
+                }
+            }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        
+    }
+
+   /* private void OnTriggerEnter(Collider other)
     {
         if (Player != null)
             if (other.tag == "Player" && !Player.GetComponent<ChangeColor>().IsCamuflado())
@@ -95,18 +118,5 @@ public class Enemy : MonoBehaviour {
     private void OnTriggerStay(Collider other)
     {
         
-    }
-
-
-
-    
-    //public void OnTriggerEnter(Collider col)
-    //{
-    //    ChangeColor player = col.GetComponent<ChangeColor>();
-    //    if (player != null)
-    //        if (col.tag == "Player" && !player.IsCamuflado())
-    //        {
-    //            print("Colidiu");
-    //        }
-    //}
+    }*/
 }

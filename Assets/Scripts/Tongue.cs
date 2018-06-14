@@ -6,8 +6,12 @@ using UnityStandardAssets.CrossPlatformInput;
 public class Tongue : MonoBehaviour {
 
     // Use this for initialization
-    void Start () {
+    void Awake()
+    {
 
+    }
+    void Start () {
+        GetComponent<AudioSource>().Play();
     }
 	
 	// Update is called once per frame

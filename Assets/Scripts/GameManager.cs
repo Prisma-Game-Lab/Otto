@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public GameObject UI_WinText;
     public GameObject UI_LoseText;
+    public GameObject MenuCanvas;
     public static Vector3 respawn_point = new Vector3(-3.12f, 0.11f, -16.65f);
     private GameObject plyr;
     public static int lifePoints;
@@ -29,18 +30,24 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-       /* if (Input.GetKeyDown(pause_button))
-            if (Time.timeScale == 1)
-            {
-                Time.timeScale = 0;
-                UI_menu.SetActive(true);
-            }
-            else
-            {
-                Time.timeScale = 1;
-                UI_menu.SetActive(false);
-            }*/
- 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Time.timeScale == 1f)
+                Pause();
+            else Resume();
+        }
+    }
+
+    public void Resume()
+    {
+        MenuCanvas.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    void Pause()
+    {
+        MenuCanvas.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void respawn()

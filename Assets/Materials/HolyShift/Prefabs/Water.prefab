@@ -122,7 +122,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1332961122091336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25, y: 0, z: 25.2}
+  m_LocalPosition: {x: -24.2, y: 0, z: 24.8}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4738923781260352}
@@ -160,8 +160,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1939477270973900}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7, y: -1.3, z: 9.6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.1394832, y: 0, z: 19.48972}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4583580542739222}
@@ -414,9 +414,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reflectionMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294966989
   reflectSkybox: 1
-  clearColor: {r: 1, g: 1, b: 1, a: 1}
+  clearColor: {r: 0.6556604, g: 0.96053404, b: 1, a: 1}
   reflectionSampler: _ReflectionTex
   clipPlaneOffset: 0.07
 --- !u!114 &114837165811533896

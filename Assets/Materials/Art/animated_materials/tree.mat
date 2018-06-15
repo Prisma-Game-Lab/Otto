@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: swaygreen 3
+  m_Name: tree
   m_Shader: {fileID: 4800000, guid: 282c886103a4dc2429f097437208849a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -77,13 +77,13 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Rigidness: 1.1
+    - _Rigidness: 43.4
     - _RimMax: 1
     - _RimMin: 0.5
     - _Smoothness: 0.2
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 33.5
+    - _Speed: 28.7
     - _SrcBlend: 1
     - _SwayMax: 0.1
     - _TopColorPos: 8
@@ -95,7 +95,7 @@ Material:
     - __dirty: 0
     m_Colors:
     - _BottomColor: {r: 0, g: 0.53676474, b: 0.07033476, a: 1}
-    - _Color: {r: 0.7830189, g: 0.30655926, b: 0.5572704, a: 1}
+    - _Color: {r: 0.6792453, g: 0.28515485, b: 0.39969984, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HColor: {r: 0.8679245, g: 0.46938884, b: 0.25792095, a: 1}
     - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}

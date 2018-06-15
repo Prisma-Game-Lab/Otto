@@ -42,8 +42,17 @@ public class Colored : MonoBehaviour
 	void Update()
 	{}
 
+    /* 
+     * Retorna a cor correspondente a partir do enum que esta no topo deste codigo. 
+     * Esta funcao é usada no script que controla a stamina
+     * 
+    */
 	public static Color GetColor(Corenum cor)
     {
+        /*
+         * O construtor de Color recebe um valor entre 0 e 1, por isso estou divindo por 255 
+        */
+
         switch (cor)
         {
             case Corenum.vermelho:

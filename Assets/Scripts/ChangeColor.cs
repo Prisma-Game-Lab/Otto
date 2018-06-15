@@ -98,6 +98,7 @@ public class ChangeColor : MonoBehaviour
                         child.GetComponent<Renderer>().material = c.cor;
                     }
 
+                    //Avisa o ColorRing que a cor do centro precisa ser mudada
                     GetComponent<Player>().staminaHandler.setCentralColor(c.cores);
 
                     //GetComponent<Renderer>().material = c;
@@ -122,6 +123,7 @@ public class ChangeColor : MonoBehaviour
          * 
          **/
 
+        //Avisa o ColorRing que o centro deve sumir
         GetComponent<Player>().staminaHandler.setCentralColorToNull();
         // ALTERAR ISSO
         int i = 0;
@@ -138,6 +140,7 @@ public class ChangeColor : MonoBehaviour
         if (!_coresDisponiveis.Contains(c))
         {
             _coresDisponiveis.Add(c);
+            //Avisa o ColorRing que a uma cor foi adicionada, para que ele possa se remanejar
             GetComponentInParent<Player>().staminaHandler.ganhaCor(_coresDisponiveis);
         }
     }

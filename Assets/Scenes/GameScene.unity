@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.23820615, g: 0.60967743, b: 3.1407197, a: 1}
+  m_IndirectSpecularColor: {r: 0.2383093, g: 0.6097206, b: 3.1403809, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -442,8 +442,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 12094470}
-  m_LocalRotation: {x: 0.7064682, y: 0.24057621, z: -0.0073181316, w: -0.6655616}
-  m_LocalPosition: {x: -2.5011797, y: -3.71835, z: 58.152145}
+  m_LocalRotation: {x: -0.046396114, y: 0.9582724, z: -0.28010765, w: 0.033183772}
+  m_LocalPosition: {x: -4.3133016, y: 15.809823, z: 89.33083}
   m_LocalScale: {x: 1.1610693, y: 1.3671392, z: 1.1939516}
   m_Children: []
   m_Father: {fileID: 194135431}
@@ -3688,7 +3688,8 @@ MonoBehaviour:
   chaseSpeed: 3
   giveUpTime: 20
   stationary: 0
-  _AlertColor: {r: 0, g: 0, b: 0, a: 0}
+  AlertEyeMaterial: {fileID: 0}
+  AlertVisionMaterial: {fileID: 0}
 --- !u!195 &129340708
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9685,7 +9686,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0f74119e82d3b3a4d9b2842dbaa2a6ee, type: 2}
+      objectReference: {fileID: 2100000, guid: dd75b307cab7d3f4bb70224477a34c2a, type: 2}
     - target: {fileID: 114335044981448934, guid: 932559f3909f75a4e807fde0c7d2d527,
         type: 2}
       propertyPath: cor
@@ -39536,7 +39537,8 @@ MonoBehaviour:
   chaseSpeed: 3
   giveUpTime: 20
   stationary: 0
-  _AlertColor: {r: 0, g: 0, b: 0, a: 0}
+  AlertEyeMaterial: {fileID: 0}
+  AlertVisionMaterial: {fileID: 0}
 --- !u!195 &711015699
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -50642,7 +50644,8 @@ MonoBehaviour:
   chaseSpeed: 3
   giveUpTime: 5
   stationary: 0
-  _AlertColor: {r: 0, g: 0, b: 0, a: 0}
+  AlertEyeMaterial: {fileID: 0}
+  AlertVisionMaterial: {fileID: 0}
 --- !u!195 &849772440
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -53628,7 +53631,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0f74119e82d3b3a4d9b2842dbaa2a6ee, type: 2}
+      objectReference: {fileID: 2100000, guid: 14523f0d5857ed74984bc91420a9ee3d, type: 2}
     - target: {fileID: 114335044981448934, guid: 932559f3909f75a4e807fde0c7d2d527,
         type: 2}
       propertyPath: cor
@@ -71153,7 +71156,8 @@ MonoBehaviour:
   chaseSpeed: 3
   giveUpTime: 5
   stationary: 0
-  _AlertColor: {r: 0, g: 0, b: 0, a: 0}
+  AlertEyeMaterial: {fileID: 0}
+  AlertVisionMaterial: {fileID: 0}
 --- !u!195 &1271095563
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -71660,6 +71664,54 @@ Prefab:
         type: 2}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114023410239903694, guid: e541016ed461d174eb59383408326c5e,
+        type: 2}
+      propertyPath: AlertEyeColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114023410239903694, guid: e541016ed461d174eb59383408326c5e,
+        type: 2}
+      propertyPath: AlertEyeColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114023410239903694, guid: e541016ed461d174eb59383408326c5e,
+        type: 2}
+      propertyPath: AlertEyeColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114023410239903694, guid: e541016ed461d174eb59383408326c5e,
+        type: 2}
+      propertyPath: AlertVisionColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114023410239903694, guid: e541016ed461d174eb59383408326c5e,
+        type: 2}
+      propertyPath: AlertVisionColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114023410239903694, guid: e541016ed461d174eb59383408326c5e,
+        type: 2}
+      propertyPath: AlertVisionColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114023410239903694, guid: e541016ed461d174eb59383408326c5e,
+        type: 2}
+      propertyPath: AlertVisionColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114023410239903694, guid: e541016ed461d174eb59383408326c5e,
+        type: 2}
+      propertyPath: AlertEyeColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456945888875058, guid: e541016ed461d174eb59383408326c5e, type: 2}
+      propertyPath: m_TagString
+      value: Visao Inimigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869899214622116, guid: e541016ed461d174eb59383408326c5e, type: 2}
+      propertyPath: m_TagString
+      value: Olhos Inimigo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e541016ed461d174eb59383408326c5e, type: 2}
@@ -82607,12 +82659,12 @@ Prefab:
     - target: {fileID: 224680541251354534, guid: 483f963c2d7344802ae06f7b5cb549e6,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -317.6
+      value: -421
       objectReference: {fileID: 0}
     - target: {fileID: 224680541251354534, guid: 483f963c2d7344802ae06f7b5cb549e6,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -96.4
+      value: -202
       objectReference: {fileID: 0}
     - target: {fileID: 224680541251354534, guid: 483f963c2d7344802ae06f7b5cb549e6,
         type: 2}
@@ -83850,7 +83902,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0f74119e82d3b3a4d9b2842dbaa2a6ee, type: 2}
+      objectReference: {fileID: 2100000, guid: d9f562e39fd2f5848ab341040f2481de, type: 2}
     - target: {fileID: 114335044981448934, guid: 932559f3909f75a4e807fde0c7d2d527,
         type: 2}
       propertyPath: cor
@@ -94625,7 +94677,8 @@ MonoBehaviour:
   chaseSpeed: 3
   giveUpTime: 5
   stationary: 0
-  _AlertColor: {r: 0, g: 0, b: 0, a: 0}
+  AlertEyeMaterial: {fileID: 0}
+  AlertVisionMaterial: {fileID: 0}
 --- !u!195 &1629533084
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -109669,7 +109722,8 @@ MonoBehaviour:
   chaseSpeed: 3
   giveUpTime: 20
   stationary: 0
-  _AlertColor: {r: 0, g: 0, b: 0, a: 0}
+  AlertEyeMaterial: {fileID: 0}
+  AlertVisionMaterial: {fileID: 0}
 --- !u!195 &1995141147
 NavMeshAgent:
   m_ObjectHideFlags: 0

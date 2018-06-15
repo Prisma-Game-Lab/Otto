@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2383093, g: 0.6097206, b: 3.1403809, a: 1}
+  m_IndirectSpecularColor: {r: 0.23829004, g: 0.60985637, b: 3.1440384, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -442,8 +442,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 12094470}
-  m_LocalRotation: {x: -0.046396114, y: 0.9582724, z: -0.28010765, w: 0.033183772}
-  m_LocalPosition: {x: -10.224379, y: 14.383733, z: 79.8921}
+  m_LocalRotation: {x: -0.6737759, y: -0.049479004, z: 0.00000008568168, w: 0.7372773}
+  m_LocalPosition: {x: 2.86921, y: -39.071247, z: 45.235233}
   m_LocalScale: {x: 1.1610693, y: 1.3671392, z: 1.1939516}
   m_Children: []
   m_Father: {fileID: 194135431}
@@ -44041,10 +44041,10 @@ RectTransform:
   m_Father: {fileID: 48875578}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 732, y: 336}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &816495133
 MonoBehaviour:
@@ -55776,10 +55776,10 @@ RectTransform:
   m_Father: {fileID: 48875578}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 732, y: 336}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &956368506
 MonoBehaviour:
@@ -107333,6 +107333,16 @@ Prefab:
     - target: {fileID: 1615407103622860, guid: fcf61026be828ae47b5117a6d63e84cb, type: 2}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 65512937165282336, guid: fcf61026be828ae47b5117a6d63e84cb,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65512937165282336, guid: fcf61026be828ae47b5117a6d63e84cb,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fcf61026be828ae47b5117a6d63e84cb, type: 2}

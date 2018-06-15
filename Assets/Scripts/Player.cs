@@ -14,8 +14,8 @@ public class Player : MonoBehaviour
     public float MaxStamina = 20;
     public float TongueDistance;
     public int Lifes = 3;
-    public float AttackCooldown = 3.0f;
-    public float BlinkingCooldown = 0.5f;
+    public int AttackSeconds = 5;
+    public float BlinkingCooldown = 1f;
     Rect staminaRect;
     Texture2D staminaTexture;
     //public Texture2D staminaTexture;
@@ -144,59 +144,77 @@ public class Player : MonoBehaviour
         print("ENTREI NA COROTINA");
         Color alphaColor = this.GetComponent<MeshRenderer>().material.color;
 
-        // Roda esse código até o tempo de AttackCooldown acabar
-        for (float j = AttackCooldown; j >= 0; j -= Time.deltaTime)
+        for (int t = 0; t < AttackSeconds; t += (int)(2 * BlinkingCooldown))
         {
+            print(Time.deltaTime);
+
             alphaColor.a = 0;
-            this.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, alphaColor, BlinkingCooldown * Time.deltaTime);
+            foreach (Transform child in this.GetComponentInChildren<Transform>())
+            {
+                if (child.tag == "Player Model")
+                {
+                    foreach (Transform mr in child.GetComponentInChildren<Transform>())
+                    {
+                        mr.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, alphaColor, BlinkingCooldown * Time.deltaTime);
+                    }
+                }
+            }
+            //this.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, alphaColor, BlinkingCooldown * Time.deltaTime);
             yield return new WaitForSeconds(BlinkingCooldown);
+            print("apaguei");
             alphaColor.a = 1;
-            this.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, alphaColor, BlinkingCooldown * Time.deltaTime);
+            foreach (Transform child in this.GetComponentInChildren<Transform>())
+            {
+                if (child.tag == "Player Model")
+                {
+                    foreach (Transform mr in child.GetComponentInChildren<Transform>())
+                    {
+                        mr.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, alphaColor, BlinkingCooldown * Time.deltaTime);
+                    }
+                }
+                //this.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, alphaColor, BlinkingCooldown * Time.deltaTime);=
+            }
             yield return new WaitForSeconds(BlinkingCooldown);
-
-            /*
-
-            print("TO RODANDO A COROTINA");
-            if (_opaque)
+            print("acendi");
+            // Roda esse código até o tempo de AttackCooldown acabar
+            /*for (float j = AttackCooldown; j >= 0; j -= Time.deltaTime)
             {
                 alphaColor.a = 0;
-
-                // Diminui o alpha aos poucos
-                for (float i = BlinkingCooldown; i >= 0; i -= Time.deltaTime)
-                {
-                    this.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, i);
-                }
-
-                yield return new WaitForSeconds(BlinkingCooldown);
-                //yield WaitForSeconds(0.2);
-
-
-                _opaque = true;
-
-                // faz essa transformação durante o BlinkingCooldown
-                for (float i = BlinkingCooldown; i >= 0; i -= Time.deltaTime)
-                {
-                    // set color with i as alpha
-                    this.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, 0, BlinkingCooldown * Time.deltaTime);
-                    img.color = new Color(1, 1, 1, i);
-                    yield return null;
-                }
-
-            }
-            else // Coloca cor no player
-            { 
-
-                // Aumenta o alpha aos poucos
-                for (float i = 0; i >= BlinkingCooldown; i -= Time.deltaTime)
-                {
-                    this.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, i);
-                }
-
-                _opaque = false;
+                this.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, alphaColor, BlinkingCooldown * Time.deltaTime);
+                new WaitForSeconds(BlinkingCooldown);
                 alphaColor.a = 1;
                 this.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, alphaColor, BlinkingCooldown * Time.deltaTime);
-                yield return null;
-            }*/
+                new WaitForSeconds(BlinkingCooldown);
+
+
+
+                print("TO RODANDO A COROTINA");
+                if (_opaque)
+                {
+                    alphaColor.a = 0;
+
+                    // Diminui o alpha aos poucos
+                    for (float i = BlinkingCooldown; i >= 0; i -= Time.deltaTime)
+                    {
+                        this.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, i);
+                    }
+
+                }
+                else // Coloca cor no player
+                { 
+
+                    // Aumenta o alpha aos poucos
+                    for (float i = 0; i >= BlinkingCooldown; i -= Time.deltaTime)
+                    {
+                        this.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, i);
+                    }
+
+                    _opaque = false;
+                    alphaColor.a = 1;
+                    this.GetComponent<MeshRenderer>().material.color = Color.Lerp(this.GetComponent<MeshRenderer>().material.color, alphaColor, BlinkingCooldown * Time.deltaTime);
+                    yield return null;
+                }*/
+
         }
 
         _wasAttacked = false;

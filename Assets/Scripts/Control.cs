@@ -14,7 +14,7 @@ public class Control : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            print("soltei espaco");
+            //print("apertei espaco");
             GetComponent<ChangeColor>().SetCamufla(true);
             
         }
@@ -22,7 +22,7 @@ public class Control : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            print("soltei espaco");
+            //print("soltei espaco");
             GetComponent<ChangeColor>().SetCamufla(false);
         }
 

@@ -13,12 +13,12 @@ public class visao_color : MonoBehaviour {
             /*Renderer rend = GetComponent<Renderer>();
             rend.material.color = Color.red;*/
 
-            Renderer[] rend_child = GetComponentsInChildren<Renderer>();
+            /*Renderer[] rend_child = GetComponentsInChildren<Renderer>();
             foreach (Renderer child in rend_child)
             {
                 //Debug.Log(child.name);
                 child.GetComponent<Renderer>().material.color = _AlertColor;
-            }
+            }*/
 
         }
     }

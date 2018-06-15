@@ -24,20 +24,13 @@ public class Patrol : MonoBehaviour
     private Vector3 direction;
     private float angle;
 
-    /////////BEGIN  Alterações feitas por Gustavo Barros/////////////////////////
-    public Color _AlertColor;
-    private Color _stdColor = Color.yellow;
+    public Material AlertEyeMaterial;
+    public Material AlertVisionMaterial;
+    private Material _stdEyeMaterial;
+    private Material _stdVisionMaterial;
+
     //Color.(255, 244, 0, 160);
 
-    private void change_view_color(Color change_color)
-    {
-        Renderer[] rend_child = GetComponentsInChildren<Renderer>();
-        foreach (Renderer child in rend_child)
-        {
-            child.GetComponent<Renderer>().material.color = change_color;
-        }
-    }
-    /////////END  Alterações feitas por Gustavo Barros/////////////////////////
 
     void Start()
     {
@@ -45,6 +38,20 @@ public class Patrol : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.speed = normalSpeed;
         agent.updatePosition = !stationary;
+
+        // Pega todos os filhos do inimigo e salva aas cores originais dos olhos e da visão
+        Renderer[] rend_child = GetComponentsInChildren<Renderer>();
+        foreach (Renderer child in rend_child)
+        {
+            if (child.CompareTag("Visao Inimigo"))
+            {
+                _stdVisionMaterial = child.GetComponent<Renderer>().material;
+            } else if (child.CompareTag("Olhos Inimigo"))
+            {
+                _stdEyeMaterial = child.GetComponent<Renderer>().material;
+            }
+        }
+
 
 
         // Disabling auto-braking allows for continuous movement
@@ -107,6 +114,7 @@ public class Patrol : MonoBehaviour
         if (now > giveUpTime + timeSinceLastSighted)
         {
             agent.speed = normalSpeed;
+            returnViewColor();
             chasingPlayer = false;
         }
 
@@ -123,11 +131,47 @@ public class Patrol : MonoBehaviour
         chasingPlayer = true;
         timeSinceLastSighted = Time.time;
         agent.speed = chaseSpeed;
+        changeViewColor();
+
 
         if (agent.remainingDistance < 1.3f)
         {
             agent.speed = normalSpeed;
         }
 
+    }
+
+    // Muda para as cores de perseguição 
+    private void changeViewColor()
+    {
+        Renderer[] rend_child = GetComponentsInChildren<Renderer>();
+        foreach (Renderer child in rend_child)
+        {
+            if (child.CompareTag("Visao Inimigo"))
+            {
+                child.GetComponent<Renderer>().material = AlertVisionMaterial;
+            }
+            else if (child.CompareTag("Olhos Inimigo"))
+            {
+                child.GetComponent<Renderer>().material = AlertEyeMaterial;
+            }
+        }
+    }
+
+    // Muda para as cores originais
+    private void returnViewColor()
+    {
+        Renderer[] rend_child = GetComponentsInChildren<Renderer>();
+        foreach (Renderer child in rend_child)
+        {
+            if (child.CompareTag("Visao Inimigo"))
+            {
+                child.GetComponent<Renderer>().material = _stdVisionMaterial;
+            }
+            else if (child.CompareTag("Olhos Inimigo"))
+            {
+                child.GetComponent<Renderer>().material = _stdEyeMaterial;
+            }
+        }
     }
 }

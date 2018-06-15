@@ -41,4 +41,18 @@ public class Colored : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{}
+
+	public static Color GetColor(Corenum cor)
+    {
+        switch (cor)
+        {
+            case Corenum.vermelho:
+                return new Color((float)193 / 255, (float)39 / 255, (float)64 / 255);
+            case Corenum.verde:
+                return new Color(0, (float)205 / 255, (float)7 / 255);
+            case Corenum.azul:
+                return new Color((float)39 / 255, (float)64 / 255, (float)193 / 255);
+        }
+        return Color.black;
+    }
 }

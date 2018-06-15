@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeColor : MonoBehaviour {
+public class ChangeColor : MonoBehaviour
+{
 
 
     private List<Colored> _coloredEmContato = new List<Colored>();
-	private List<Material> _defaultMaterial = new List<Material>();
+    private List<Material> _defaultMaterial = new List<Material>();
     private List<Colored.Corenum> _coresDisponiveis = new List<Colored.Corenum>();
 
     public GameObject model;
 
-	// Use this for initialization
-	void Start () {
-		gameObject.layer = 9;
+    // Use this for initialization
+    void Start()
+    {
+        gameObject.layer = 9;
         /*
          * layer 9 e a do player quando nao esta camuflado
          * layer 11 e a layer dos enemies
@@ -21,7 +23,7 @@ public class ChangeColor : MonoBehaviour {
          * essas duas layers nao colidem uma com a outra
          * 
          **/
-         // ALTERAR ISSO
+        // ALTERAR ISSO
         foreach (Transform child in model.GetComponentInChildren<Transform>())
         {
             _defaultMaterial.Add(child.GetComponent<Renderer>().material);
@@ -29,24 +31,24 @@ public class ChangeColor : MonoBehaviour {
 
         //_defaultMaterial = GetComponent<Renderer>().material;
 
-	}
-	
-	// Update is called once per frame
-	void Update()
-    {}
+    }
 
-	void OnCollisionEnter(Collision col){}
-	void OnCollisionExit(Collision col){}
-	void OnCollisionStay(Collision col){}
-    
-	public void OnCollisionEnterCor(Colored col)
-	{
+    // Update is called once per frame
+    void Update()
+    { }
+
+    void OnCollisionEnter(Collision col) { }
+    void OnCollisionExit(Collision col) { }
+    void OnCollisionStay(Collision col) { }
+
+    public void OnCollisionEnterCor(Colored col)
+    {
         print("encostei em alguem colorido " + col.gameObject.name + " com cor " + col.cor.name);
         _coloredEmContato.Add(col);
 
     }
-	public void OnCollisionExitCor(Colored col)
-	{
+    public void OnCollisionExitCor(Colored col)
+    {
         print("soltei de alguem colorido " + col.gameObject.name);
         _coloredEmContato.Remove(col);
 
@@ -74,8 +76,8 @@ public class ChangeColor : MonoBehaviour {
         //      dai e so checar essa lista
     }
 
-	public void SetCamufla(bool b)
-	{
+    public void SetCamufla(bool b)
+    {
 
         /*
          *  Passe b como verdadeiro para camuflar.
@@ -83,20 +85,23 @@ public class ChangeColor : MonoBehaviour {
          *  Se b for verdadeiro mas nao houver cor em contato que possa camuflar entao ele volta para a cor default.
         */
 
-		if (b)
-		{
+        if (b)
+        {
             foreach (Colored c in _coloredEmContato)
             {
-				print("procurando " + c.cores + " em cores disponiveis");
-				if (_coresDisponiveis.Contains(c.cores))
-				{
+                //print("procurando " + c.cores + " em cores disponiveis");
+                if (_coresDisponiveis.Contains(c.cores))
+                {
                     // ALTERAR ISSO
                     foreach (Transform child in model.GetComponentInChildren<Transform>())
                     {
                         child.GetComponent<Renderer>().material = c.cor;
                     }
-					//GetComponent<Renderer>().material = c;
-					gameObject.layer = 12;
+
+                    GetComponent<Player>().staminaHandler.setCentralColor(c.cores);
+
+                    //GetComponent<Renderer>().material = c;
+                    gameObject.layer = 12;
                     /*
                      * layer 9 e a do player quando nao esta camuflado
                      * layer 11 e a layer dos enemies
@@ -104,11 +109,11 @@ public class ChangeColor : MonoBehaviour {
                      * essas duas layers nao colidem uma com a outra
                      * 
                      **/
-					return;
-				}
-			}
-		}
-		gameObject.layer = 9;
+                    return;
+                }
+            }
+        }
+        gameObject.layer = 9;
         /*
          * layer 9 e a do player quando nao esta camuflado
          * layer 11 e a layer dos enemies
@@ -117,6 +122,7 @@ public class ChangeColor : MonoBehaviour {
          * 
          **/
 
+        GetComponent<Player>().staminaHandler.setCentralColorToNull();
         // ALTERAR ISSO
         int i = 0;
         foreach (Transform child in model.GetComponentInChildren<Transform>())
@@ -125,17 +131,20 @@ public class ChangeColor : MonoBehaviour {
             i++;
         }
         //GetComponent<Renderer>().material = _defaultMaterial;
-	}
+    }
 
-	public void AddColor(Colored.Corenum c)
-	{
+    public void AddColor(Colored.Corenum c)
+    {
         if (!_coresDisponiveis.Contains(c))
         {
             _coresDisponiveis.Add(c);
+            GetComponentInParent<Player>().staminaHandler.ganhaCor(_coresDisponiveis);
         }
-	}
-	public bool IsCamuflado()
-	{
+    }
+    public bool IsCamuflado()
+    {
+        //TODO colocar uma boolean para melhorar a eficiencia disso
+
         // alterar aqui para mudar a cor do player quando camuflado
         int i = 0;
         foreach (Transform child in model.GetComponentInChildren<Transform>())
@@ -148,5 +157,5 @@ public class ChangeColor : MonoBehaviour {
         }
         return false;
         //return GetComponent<Renderer>().material != _defaultMaterial; 
-	}
+    }
 }

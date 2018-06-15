@@ -30,6 +30,9 @@ public class Player : MonoBehaviour
     private bool _wasAttacked = false;
     private bool _opaque = true;
 
+    private GameObject plyr;
+    private Rigidbody rb_std;
+    public float rb_new = 100000;
 
     private void Start()
     {
@@ -40,12 +43,19 @@ public class Player : MonoBehaviour
         staminaTexture.Apply();
 
         vidasText.text = "Vidas: " + Lifes;
-       
+
+        plyr = GameObject.FindWithTag("Player");
+        rb_std = GetComponent<Rigidbody>();
+
     }
 
     private void Update()
     {
-        move();
+        if (GetComponent<ChangeColor>().IsCamuflado())
+        {
+            rb_std.mass = rb_new;
+        }else
+            move();
         StaminaUpdate();
     }
 

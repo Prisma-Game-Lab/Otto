@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour {
 
     void Start()
     {
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
     // Update is called once per frame
     void Update()
@@ -18,8 +18,9 @@ public class MainMenu : MonoBehaviour {
     }
     public void PlayGame()
     {
-        this.gameObject.SetActive(false);
         Time.timeScale = 1f;
+        this.gameObject.SetActive(false);
+
     }
     public void QuitGame()
     {

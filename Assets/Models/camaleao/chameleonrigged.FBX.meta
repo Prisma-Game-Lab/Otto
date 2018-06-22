@@ -71,7 +71,7 @@ ModelImporter:
     2100006: 20 - Default
     2100008: 21 - Default
     4300000: Box008
-    7400000: Take 001
+    7400000: chameleo
     9500000: //RootNode
     13700000: Box008
   externalObjects: {}
@@ -83,7 +83,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 0
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: Box008
     rigImportErrors: 
@@ -94,7 +94,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 1
-    animationCompression: 0
+    animationCompression: 3
     animationRotationError: 0
     animationPositionError: 0
     animationScaleError: 0
@@ -103,7 +103,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: chameleo
       takeName: Take 001
       firstFrame: 0
       lastFrame: 73
@@ -141,7 +141,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -155,7 +155,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1

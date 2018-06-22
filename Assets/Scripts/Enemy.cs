@@ -39,13 +39,13 @@ public class Enemy : MonoBehaviour {
 	void FixedUpdate () {
 
         // Inimigo nao colide com player se ele estiver camuflado
-        if (Player.GetComponent<ChangeColor>().IsCamuflado())
-        {
-            _rb.detectCollisions = false;
-        } else
-        {
-            _rb.detectCollisions = true;
-        }
+        //if (Player.GetComponent<ChangeColor>().IsCamuflado())
+        //{
+        //    _rb.detectCollisions = false;
+        //} else
+        //{
+        //    _rb.detectCollisions = true;
+        //}
 
     }
 

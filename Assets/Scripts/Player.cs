@@ -47,10 +47,11 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        //if (GetComponent<ChangeColor>().IsCamuflado())
-        //{
-        //    rb_std.mass = rb_new;
-        //}else
+        if (GetComponent<ChangeColor>().IsCamuflado())
+        {
+            rb_std.mass = rb_new;
+        }
+        else
             move();
         StaminaUpdate();
     }

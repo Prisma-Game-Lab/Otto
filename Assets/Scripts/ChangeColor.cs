@@ -7,7 +7,17 @@ public class ChangeColor : MonoBehaviour
 
 
     private List<Colored> _coloredEmContato = new List<Colored>();
-    private List<Material> _defaultMaterial = new List<Material>();
+                      /* A forma como trocamos a cor foi mudada
+                    * Troca a cor atraves de um material:
+                    * Essa e a cor forma nova
+                    * */
+    private Color _defaultMaterial;
+                      /*
+                    * A forma como trocamos a cor foi mudada
+                    * Troca a cor atraves de um material:
+                    * Essa e a cor forma antiga
+                    * */
+   // private List<Material> _defaultMaterial = new List<Material>();
     private List<Colored.Corenum> _coresDisponiveis = new List<Colored.Corenum>();
 
     public GameObject model;
@@ -15,6 +25,9 @@ public class ChangeColor : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
+
+
         gameObject.layer = 9;
         /*
          * layer 9 e a do player quando nao esta camuflado
@@ -23,12 +36,29 @@ public class ChangeColor : MonoBehaviour
          * essas duas layers nao colidem uma com a outra
          * 
          **/
-        // ALTERAR ISSO
-        foreach (Transform child in model.GetComponentInChildren<Transform>())
-        {
-            _defaultMaterial.Add(child.GetComponent<Renderer>().material);
-        }
+        /* A forma como trocamos a cor foi mudada
+                   * Troca a cor atraves de um material:
+                   * Essa e a cor forma nova
+                   * */
+        Renderer rend;
+        rend = model.GetComponent<Renderer>();
 
+        rend.material.shader = Shader.Find("_Color");
+        rend.material.SetColor("_Color", Color.magenta);
+
+        rend.material.shader = Shader.Find("Specular");
+        rend.material.SetColor("_SpecColor", Color.magenta);
+        /*
+      * A forma como trocamos a cor foi mudada
+      * Troca a cor atraves de um material:
+      * Essa e a cor forma antiga
+      * */
+        /*
+foreach (Transform child in model.GetComponentInChildren<Transform>())
+{
+_defaultMaterial.Add(child.GetComponent<Renderer>().material);
+}
+*/
         //_defaultMaterial = GetComponent<Renderer>().material;
 
     }
@@ -78,6 +108,7 @@ public class ChangeColor : MonoBehaviour
 
     public void SetCamufla(bool b)
     {
+        Renderer rend;
 
         /*
          *  Passe b como verdadeiro para camuflar.
@@ -92,12 +123,30 @@ public class ChangeColor : MonoBehaviour
                 //print("procurando " + c.cores + " em cores disponiveis");
                 if (_coresDisponiveis.Contains(c.cores))
                 {
-                    // ALTERAR ISSO
+                    /* A forma como trocamos a cor foi mudada
+                     * Essa e a nova forma, trocamos a cor do shader
+                     * */
+
+                    rend = model.GetComponent<Renderer>();
+
+                    rend.material.shader = Shader.Find("_Color");
+                    rend.material.SetColor("_Color", Color.magenta);
+
+                    rend.material.shader = Shader.Find("Specular");
+                    rend.material.SetColor("_SpecColor", Color.magenta);
+
+
+                    /*
+                     * A forma como trocamos a cor foi mudada
+                     * Troca a cor atraves de um material:
+                     * Essa e a cor forma antiga
+                     * */
+                     /*
                     foreach (Transform child in model.GetComponentInChildren<Transform>())
                     {
                         child.GetComponent<Renderer>().material = c.cor;
                     }
-
+                    */
                     //Avisa o ColorRing que a cor do centro precisa ser mudada
                     GetComponent<Player>().staminaHandler.setCentralColor(c.cores);
 
@@ -125,14 +174,33 @@ public class ChangeColor : MonoBehaviour
 
         //Avisa o ColorRing que o centro deve sumir
         GetComponent<Player>().staminaHandler.setCentralColorToNull();
-        // ALTERAR ISSO
-        int i = 0;
-        foreach (Transform child in model.GetComponentInChildren<Transform>())
-        {
-            child.GetComponent<Renderer>().material = _defaultMaterial[i];
-            i++;
-        }
-        //GetComponent<Renderer>().material = _defaultMaterial;
+        /* A forma como trocamos a cor foi mudada
+         * Essa e a nova forma, trocamos a cor do shader
+         * */
+        rend = model.GetComponent<Renderer>();
+
+        rend.material.shader = Shader.Find("_Color");
+        rend.material.SetColor("_Color", Color.magenta);
+
+        rend.material.shader = Shader.Find("Specular");
+        rend.material.SetColor("_SpecColor", Color.magenta);
+
+
+        /*
+         * A forma como trocamos a cor foi mudada
+         * Troca a cor atraves de um material:
+         * Essa e a cor forma antiga
+         * */
+        /*
+         *  int i = 0;
+       foreach (Transform child in model.GetComponentInChildren<Transform>())
+       {
+          // child.GetComponent<Renderer>().material = _defaultMaterial[i];
+           child.GetComponent<Renderer>().material.SetColor("_Color", Color.magenta);
+           i++;
+       }
+       //GetComponent<Renderer>().material = _defaultMaterial;
+       */
     }
 
     public void AddColor(Colored.Corenum c)

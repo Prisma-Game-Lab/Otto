@@ -153,9 +153,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1061804631097984}
-  m_LocalRotation: {x: -0.11737801, y: -0.8793473, z: 0.36423758, w: 0.2833756}
-  m_LocalPosition: {x: -12.180012, y: 40.333363, z: 52.849174}
-  m_LocalScale: {x: 0.0757767, y: 0.07577664, z: 0.07577667}
+  m_LocalRotation: {x: -0.006202087, y: -0.80302644, z: -0.04476594, w: -0.5942273}
+  m_LocalPosition: {x: 11.51, y: 0.9, z: -9.79}
+  m_LocalScale: {x: 0.07578001, y: 0.07578001, z: 0.07578}
   m_Children:
   - {fileID: 4242316326822528}
   - {fileID: 4044009079827132}
@@ -163,7 +163,7 @@ Transform:
   - {fileID: 4017296187225988}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 35.724003, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.7000003, y: -253.11899, z: 3.6290002}
 --- !u!23 &23029227328440846
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -179,7 +179,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0c115313acee84b47a80c18a82bc407b, type: 2}
+  - {fileID: 2100000, guid: de0a8c827702f204a99ff1ba33858958, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -214,7 +214,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0c115313acee84b47a80c18a82bc407b, type: 2}
+  - {fileID: 2100000, guid: de0a8c827702f204a99ff1ba33858958, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -249,7 +249,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0c115313acee84b47a80c18a82bc407b, type: 2}
+  - {fileID: 2100000, guid: de0a8c827702f204a99ff1ba33858958, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -342,5 +342,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 19.3, y: 115.2, z: 22.8}
+  m_Center: {x: -40.2, y: 31.8, z: -60.7}

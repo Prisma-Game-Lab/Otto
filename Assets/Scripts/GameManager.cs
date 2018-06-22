@@ -59,10 +59,10 @@ public class GameManager : MonoBehaviour {
             else Resume();
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            respawn();
-        }
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    respawn();
+        //}
     }
 
     public void Resume()

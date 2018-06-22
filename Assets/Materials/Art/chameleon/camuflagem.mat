@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: chameleonskin
-  m_Shader: {fileID: 4800000, guid: 9ce107479d11178d11005b9844295342, type: 3}
+  m_Name: camuflagem
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -73,13 +73,16 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.2
     - _GlossyReflections: 1
+    - _InvFade: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Outline: 0.002
-    - _Parallax: 0.02
+    - _Outline: 0.007
+    - _OutlineWidth: 0
+    - _Parallax: 0.0129
     - _RimMax: 1
     - _RimMin: 0.5
+    - _Shininess: 0.078125
     - _Smoothness: 0.2
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -88,16 +91,20 @@ Material:
     - _UVSec: 0
     - _WindAmplitude: 2
     - _WindSpeed: 100
+    - _ZTest: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
+    - _BaseScale: {r: 0.78, g: 1, b: 1, a: 0}
     - _BottomColor: {r: 0, g: 0.53676474, b: 0.07033476, a: 1}
-    - _Color: {r: 0.31910825, g: 0.9528302, b: 0.45124406, a: 1}
+    - _Color: {r: 0.3176471, g: 0.9529412, b: 0.35151517, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HColor: {r: 0.8679245, g: 0.46938884, b: 0.25792095, a: 1}
     - _OutlineColor: {r: 0.7924528, g: 0.15792052, b: 0.04111784, a: 1}
     - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
     - _SColor: {r: 0.13585795, g: 0.5842922, b: 0.6698113, a: 1}
+    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
     - _TopColor: {r: 0.31417936, g: 0.7205882, b: 0.28081742, a: 1}
     - _Vector1: {r: 0, g: 0, b: 0, a: 0}
     - _WindCycles: {r: 0, g: 0, b: 0.5, a: 0}

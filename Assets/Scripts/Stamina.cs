@@ -183,7 +183,7 @@ public class Stamina : MonoBehaviour {
 		float rotacaoArco = 360/coresDisponiveis.Count;
 		double tamArco = 1.0 / coresDisponiveis.Count;
 		float rotacao = 0;
-		print("oba nova cor");
+		//print("oba nova cor");
 		for (int i = 0; i < _rings.Length;i++){
 			Image r = _rings[i];
 			Image rImage = null;
@@ -191,21 +191,21 @@ public class Stamina : MonoBehaviour {
 			{
 				rImage = t.GetComponent<Image>();
 			}
-			print("coresDisponiveis agora sao " + coresDisponiveis.Count);
+			//print("coresDisponiveis agora sao " + coresDisponiveis.Count);
 
 			if (i < coresDisponiveis.Count)
 			{
-				print(rImage.name);
+				//print(rImage.name);
 				rImage.color = Colored.GetColor(coresDisponiveis[i]);
-				print("vou pintar o anel de nome " + rImage.name + "com cor " + rImage.color.ToString());
+				//print("vou pintar o anel de nome " + rImage.name + "com cor " + rImage.color.ToString());
 			}
 			else
 			{
-                print("deixei o anel de id " + i + " transparente");
+                //print("deixei o anel de id " + i + " transparente");
 				rImage.color = new Color(0, 0, 0, 0);
 			}
 
-			print(r.name + " vai ter uma rotacao " + rotacao + " e vai preencher " + tamArco);
+			//print(r.name + " vai ter uma rotacao " + rotacao + " e vai preencher " + tamArco);
           
             //Euler angles sao graus de 0 ate 360
             //é para usar euler angles e nao rotation

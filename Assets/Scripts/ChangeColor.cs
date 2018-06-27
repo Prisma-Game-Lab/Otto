@@ -42,12 +42,14 @@ public class ChangeColor : MonoBehaviour
                    * */
         Renderer rend;
         rend = model.GetComponent<Renderer>();
+        
+       // rend.material.shader = Shader.Find("_Color");
+		_defaultMaterial = rend.material.GetColor("_Color");
+		print("cor default: " + _defaultMaterial.ToString());
+      //  rend.material.SetColor("_Color", Color.grey);
 
-        rend.material.shader = Shader.Find("_Color");
-        rend.material.SetColor("_Color", Color.magenta);
-
-        rend.material.shader = Shader.Find("Specular");
-        rend.material.SetColor("_SpecColor", Color.magenta);
+//        rend.material.shader = Shader.Find("Specular");
+//        rend.material.SetColor("_SpecColor", Color.magenta);
         /*
       * A forma como trocamos a cor foi mudada
       * Troca a cor atraves de um material:
@@ -86,19 +88,11 @@ _defaultMaterial.Add(child.GetComponent<Renderer>().material);
         //  se estou muda para a cor
         //  se nao estou volto para a cor default
         //Se nao estava camuflado, entao nao passo a ficar
-        // ALTERAR ISSO
-        int i = 0;
-        foreach (Transform child in model.GetComponentInChildren<Transform>())
-        {
-            if (!(child.GetComponent<Renderer>().material == _defaultMaterial[i]))
-            {
-                SetCamufla(true);
-            }
-            i++;
-        }
 
-        // if (GetComponent<Renderer>().material != _defaultMaterial)
-        // SetCamufla(true);
+		if (IsCamuflado())
+		{
+			SetCamufla(true);
+		}
 
         //preciso de uma forma de verificar todos os itens em colisao comigo e todos que sao colored
         //  encontrei uma forma de fazer o segundo mas nao o primeiro. Para fazer manualmente:
@@ -123,17 +117,18 @@ _defaultMaterial.Add(child.GetComponent<Renderer>().material);
                 //print("procurando " + c.cores + " em cores disponiveis");
                 if (_coresDisponiveis.Contains(c.cores))
                 {
-                    /* A forma como trocamos a cor foi mudada
+					/* A forma como trocamos a cor foi mudada
                      * Essa e a nova forma, trocamos a cor do shader
                      * */
 
+					//print("trocando cor para " + c.cores.ToString());
                     rend = model.GetComponent<Renderer>();
 
-                    rend.material.shader = Shader.Find("_Color");
-                    rend.material.SetColor("_Color", Color.magenta);
+                    //rend.material.shader = Shader.Find("_Color");
+					rend.material.SetColor("_Color", Colored.GetColor(c.cores));
 
-                    rend.material.shader = Shader.Find("Specular");
-                    rend.material.SetColor("_SpecColor", Color.magenta);
+                    //rend.material.shader = Shader.Find("Specular");
+                    //rend.material.SetColor("_SpecColor", c.cores);
 
 
                     /*
@@ -179,11 +174,11 @@ _defaultMaterial.Add(child.GetComponent<Renderer>().material);
          * */
         rend = model.GetComponent<Renderer>();
 
-        rend.material.shader = Shader.Find("_Color");
-        rend.material.SetColor("_Color", Color.magenta);
+        //rend.material.shader = Shader.Find("_Color");
+		rend.material.SetColor("_Color", _defaultMaterial);
 
-        rend.material.shader = Shader.Find("Specular");
-        rend.material.SetColor("_SpecColor", Color.magenta);
+        //rend.material.shader = Shader.Find("Specular");
+		//rend.material.SetColor("_SpecColor", _defaultMaterial);
 
 
         /*
@@ -214,19 +209,10 @@ _defaultMaterial.Add(child.GetComponent<Renderer>().material);
     }
     public bool IsCamuflado()
     {
-        //TODO colocar uma boolean para melhorar a eficiencia disso
-
-        // alterar aqui para mudar a cor do player quando camuflado
-        int i = 0;
-        foreach (Transform child in model.GetComponentInChildren<Transform>())
-        {
-            if (!(child.GetComponent<Renderer>().material == _defaultMaterial[i]))
-            {
-                return true;
-            }
-            i++;
-        }
-        return false;
-        //return GetComponent<Renderer>().material != _defaultMaterial; 
+		
+		Renderer rend;
+        rend = model.GetComponent<Renderer>();
+		//rend.material.shader = Shader.Find("_Color");
+		return rend.material.GetColor("_Color") != _defaultMaterial;
     }
 }

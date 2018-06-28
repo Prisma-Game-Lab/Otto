@@ -124,8 +124,9 @@ public class Player : MonoBehaviour
         if (GetComponent<ChangeColor>().IsCamuflado())  //stamina sendo gasta pois esta camuflado
         {
             stamina -= Time.deltaTime;
-            if (stamina < 0)  //stamina nao pode ser negativa
+            if (stamina <= 0)  //stamina nao pode ser negativa
             {
+				print("ih! acabou a tinta");
                 stamina = 0;
                 GetComponent<ChangeColor>().SetCamufla(false);
             }

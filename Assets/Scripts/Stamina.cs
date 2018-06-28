@@ -83,8 +83,10 @@ public class Stamina : MonoBehaviour {
         //print(_centralColorMask.rectTransform.localPosition.ToString());
 
         //Guardando os valores iniciais das posicoes para referencias futuras
-        _baseY = _centralColor.rectTransform.localPosition.y;
-        _baseHeight = _centralColor.rectTransform.sizeDelta.y;
+        _baseY = _centralColorMask.rectTransform.localPosition.y;
+        _baseHeight = _centralColorMask.rectTransform.sizeDelta.y;
+		print("bY: " + _baseY);
+		print("bHeight: " + _baseHeight);
 
         //Isso faz o circulo central sumir, so queremos ve-lo quando o camaleao estiver camuflado
 		setCentralColorToNull();
@@ -97,7 +99,7 @@ public class Stamina : MonoBehaviour {
 	{
 		//print("stamina / maxStamina => " + stamina + " / " + maxStamina + " = " + (stamina / maxStamina));
 
-        /*
+		/*
          * O circulo central funciona usando um quadrado que é uma mascara para um circulo.
          * Temos de lentamente mover o quandrado (mascara), para cima e para baixo para revelar mais ou menos do circulo.
          * Fazemos isso de acordo com a stamina. Até ai tudo bem.
@@ -110,9 +112,8 @@ public class Stamina : MonoBehaviour {
          * E bem, isso é muito merda.
          * 
          */
-
-		_centralColorMask.rectTransform.localPosition = new Vector3(0, -_baseY - _baseHeight + (stamina / maxStamina * _baseHeight), 0);
-		_centralColor.rectTransform.localPosition = new Vector3(0, _baseY + _baseHeight - (stamina/maxStamina * _baseHeight)  , 0);    
+		_centralColorMask.rectTransform.localPosition = new Vector3(0, _baseY - _baseHeight + (stamina/maxStamina *_baseHeight), 0);
+		_centralColor.rectTransform.localPosition = new Vector3(0, -_baseY + _baseHeight - (stamina / maxStamina * _baseHeight), 0);   
 	}
     /*
      * Troca a cor central para a cor desejada

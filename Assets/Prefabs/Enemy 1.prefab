@@ -503,7 +503,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481417812722502}
   m_LocalRotation: {x: 0.72149056, y: -0.0983395, z: -0.07484859, w: 0.6813065}
-  m_LocalPosition: {x: 382.43, y: -116.19, z: 19.98}
+  m_LocalPosition: {x: 371.11, y: -107.29, z: 20}
   m_LocalScale: {x: 0.9962083, y: 0.9878023, z: 0.98766595}
   m_Children:
   - {fileID: 4000119422767768}
@@ -711,13 +711,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1137984178841078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.00000008940697, y: -0.725168, z: -0.00000017881393, w: 0.68857205}
+  m_LocalPosition: {x: -1.05, y: 0, z: -0.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4281083192100786}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -92.966, z: 0}
 --- !u!4 &4930041682557794
 Transform:
   m_ObjectHideFlags: 1
@@ -976,7 +976,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481417812722502}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!33 &33993500267967570
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DistanciaVisao: 4.85
-  AnguloVisao: 87
+  AnguloVisao: 85
   TempoReacaoInimigo: 0.2
   playerLayer:
     serializedVersion: 2
@@ -1054,6 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

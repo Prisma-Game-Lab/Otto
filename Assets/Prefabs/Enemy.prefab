@@ -401,8 +401,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1978629265383184}
-  m_LocalRotation: {x: 0.028600197, y: -0.84304774, z: 0.044457205, w: 0.5352345}
-  m_LocalPosition: {x: 301.13, y: 10.9, z: 105.27}
+  m_LocalRotation: {x: -0.017577495, y: -0.094216235, z: 0.049854297, w: 0.9941473}
+  m_LocalPosition: {x: 31.02, y: -33.89, z: -314.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4068816158179446}
@@ -416,7 +416,7 @@ Transform:
   - {fileID: 4312272391767600}
   m_Father: {fileID: 4281083192100786}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 6.0600004, y: -115.18101, z: -0.036000002}
+  m_LocalEulerAnglesHint: {x: -1.4640001, y: -10.903001, z: 5.881}
 --- !u!4 &4035256342287566
 Transform:
   m_ObjectHideFlags: 1
@@ -503,7 +503,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481417812722502}
   m_LocalRotation: {x: 0.72149056, y: -0.0983395, z: -0.07484859, w: 0.6813065}
-  m_LocalPosition: {x: 371.11, y: -107.29, z: 20}
+  m_LocalPosition: {x: 375.98, y: -101.95, z: 19.27}
   m_LocalScale: {x: 0.9962083, y: 0.9878023, z: 0.98766595}
   m_Children:
   - {fileID: 4000119422767768}
@@ -711,13 +711,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1137984178841078}
-  m_LocalRotation: {x: 0.00000008940697, y: -0.725168, z: -0.00000017881393, w: 0.68857205}
-  m_LocalPosition: {x: -1.05, y: 0, z: -0.69}
+  m_LocalRotation: {x: 0.00000020861627, y: -0.13687675, z: -0.000000089406974, w: 0.9905881}
+  m_LocalPosition: {x: 2.12, y: -0, z: 2.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4281083192100786}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -92.966, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -15.734001, z: 0}
 --- !u!4 &4930041682557794
 Transform:
   m_ObjectHideFlags: 1
@@ -1011,7 +1011,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 2b62aaaa08bedbe44961179e847fb7ad, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1

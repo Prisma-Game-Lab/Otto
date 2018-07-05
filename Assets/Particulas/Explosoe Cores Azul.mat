@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Explosoe Cores Azul
-  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -66,6 +66,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.102
     - _GlossyReflections: 1
+    - _InvFade: 2.72
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -79,3 +80,4 @@ Material:
     - _Color: {r: 0.16249736, g: 0.08627452, b: 0.8117647, a: 1}
     - _EmissionColor: {r: 0.15022044, g: 0.12019401, b: 0.6886792, a: 1}
     - _SpecColor: {r: 0.03203986, g: 0.052736837, b: 0.754717, a: 1}
+    - _TintColor: {r: 0.55695975, g: 0.7387643, b: 0.7924528, a: 0.5}

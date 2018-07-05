@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour {
 
     void Start()
     {
-        //Time.timeScale = 0f;
+        Time.timeScale = 0f;
     }
     // Update is called once per frame
     void Update()

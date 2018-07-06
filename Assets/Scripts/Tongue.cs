@@ -5,6 +5,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Tongue : MonoBehaviour {
 
+    Transform intObject;
+
     // Use this for initialization
     void Awake()
     {
@@ -21,10 +23,26 @@ public class Tongue : MonoBehaviour {
     public void ShowTongue(bool active)
     {
         gameObject.SetActive(active);
+        if (active == false){
+            freeTongue();
+        }
+    }
+
+    private void freeTongue() {
+        if (intObject.tag == "Objeto Interagível")
+        {
+            InteragibleObjects obj = intObject.GetComponent<InteragibleObjects>();
+
+            if (obj.Fixed == false && obj.isFollowingPlayer)
+            {
+                obj.freeObjectFromtongue();
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        intObject = other.transform;
         checkObject(other);
     }
 
@@ -32,7 +50,7 @@ public class Tongue : MonoBehaviour {
     // Se ele largar fora do objeto nada acontece
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Saí de objeto");
+        intObject = null; 
     }
 
     private void OnTriggerStay(Collider other)
@@ -52,7 +70,7 @@ public class Tongue : MonoBehaviour {
             }
             else if (obj.Fixed == true)
             {
-                obj.pullPlayer(this.transform.parent);
+                //obj.pullPlayer(this.transform.parent);
             }
         }
     }

@@ -8,12 +8,19 @@ public class InteragibleObjects : Objects {
     public float SpeedObject = 5f;
     public float SpeedPlayer = 5f;
 
+    [HideInInspector]
+    public bool isFollowingPlayer = false;
+
+    private Transform originalParent;
+
     // Use this for initialization
     void Start () {
 		if (Fixed == true)
         {
             gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         }
+
+        originalParent = this.transform.parent;
     }
 	
 	// Update is called once per frame
@@ -21,15 +28,23 @@ public class InteragibleObjects : Objects {
 		
 	}
 
-    public void pullPlayer(Transform player)
+    /*public void pullPlayer(Transform player)
     {
         // fazer ele parar de puxar quando tocar no player
         player.transform.position = Vector3.MoveTowards(player.position, transform.position, SpeedPlayer * Time.deltaTime);
-    }
+    }*/
 
     public void pullObject(Transform player)
     {
-        // Fazer parar quando tocar no player
-        transform.position = Vector3.MoveTowards(transform.position, player.position, SpeedObject * Time.deltaTime);
+        // Objeto fica preso na lingua do player
+        isFollowingPlayer = true;
+        this.transform.parent = player.transform;
+    }
+
+    // solta o objeto da lingua
+    public void freeObjectFromtongue()
+    {
+        isFollowingPlayer = false;
+        this.transform.parent = originalParent;
     }
 }

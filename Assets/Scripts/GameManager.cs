@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour {
     public GameObject UI_WinText;
     public GameObject UI_LoseText;
     public GameObject MenuCanvas;
-    public static Vector3 respawn_point = new Vector3(-3.12f, 0.10f, -16.65f);
+    //public static Vector3 respawn_point = new Vector3(-3.12f, 0.10f, -16.65f);
+    public static Vector3 respawn_point = new Vector3(-254.778f, 0.58f, -16.65002f);
     private GameObject plyr;
     public static int lifePoints;
     float delayTime;
@@ -39,14 +40,17 @@ public class GameManager : MonoBehaviour {
         enem1 = GameObject.Find("Enemy");
         enemy_chkpt1 = enem1.transform.position;
 
-        enem2 = GameObject.Find("Enemy (1)");
-        enemy_chkpt2 = enem2.transform.position;
+        /*enem2 = GameObject.Find("Enemy (1)");
+        enemy_chkpt2 = enem2.transform.position;*/
 
-        enem3 = GameObject.Find("Enemy (2)");
+        enem3 = GameObject.Find("Enemy (4)");
         enemy_chkpt3 = enem3.transform.position;
 
-        enem4 = GameObject.Find("Enemy (3)");
+        enem4 = GameObject.Find("Enemy (4)");
         enemy_chkpt4 = enem4.transform.position;
+
+        //UI_WinText = GameObject.Find("VictoryScreen");
+        //UI_LoseText = GameObject.Find("DeathScreen");
 
     }
 	
@@ -59,10 +63,10 @@ public class GameManager : MonoBehaviour {
             else Resume();
         }
 
-        //if (Input.GetKeyDown(KeyCode.R))
-        //{
-        //    respawn();
-        //}
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Win();
+        }
     }
 
     public void Resume()
@@ -79,10 +83,14 @@ public class GameManager : MonoBehaviour {
 
     public void respawn()
     {
+        /*lifePoints -= 1;
+
+        if (lifePoints <= 0)
+            restart();*/
 
         plyr.transform.position = respawn_point;
         enem1.transform.position = enemy_chkpt1;
-        enem2.transform.position = enemy_chkpt2;
+        //enem2.transform.position = enemy_chkpt2;
         enem3.transform.position = enemy_chkpt3;
         enem4.transform.position = enemy_chkpt4;
 
@@ -91,9 +99,10 @@ public class GameManager : MonoBehaviour {
             UI_LoseText.SetActive(false);
         if (UI_WinText.active == true)
             UI_WinText.SetActive(false);
-        if (Time.timeScale == 0)
+
+        if (Time.timeScale == 0f)
         {
-            Time.timeScale = 1;
+            Time.timeScale = 1f;
         }
     }
 
@@ -107,13 +116,12 @@ public class GameManager : MonoBehaviour {
     {
         //Debug.Log("Entrou Win");
         UI_WinText.SetActive(true);
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
     }
 
     public void Lose()
     {
         UI_LoseText.SetActive(true);
-        Time.timeScale = 0;
-        //respawn();
+        Time.timeScale = 0f;
     }
 }

@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 23675934993574482}
   - component: {fileID: 95769619556416420}
   - component: {fileID: 65354667120708940}
-  - component: {fileID: 114981042300515346}
   - component: {fileID: 114465496433048226}
   m_Layer: 0
   m_Name: cristal_verde
@@ -306,20 +305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cor: {fileID: 2100000, guid: d9f562e39fd2f5848ab341040f2481de, type: 2}
-  ganhaCor: 1
-  cores: 0
---- !u!114 &114981042300515346
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1956852907057582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   cor: {fileID: 2100000, guid: 0c5a4177cdad0c5419d9ff49c7258a13, type: 2}
   ganhaCor: 1
-  cores: 1
+  cores: 0

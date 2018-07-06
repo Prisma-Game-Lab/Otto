@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23214093351070112}
   - component: {fileID: 95436078419259206}
   - component: {fileID: 65689419150091862}
-  - component: {fileID: 114347232546548334}
   - component: {fileID: 114846948318290332}
   m_Layer: 0
   m_Name: cristal_amarelo
@@ -295,20 +294,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114347232546548334
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1139580341066980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cor: {fileID: 2100000, guid: 0c5a4177cdad0c5419d9ff49c7258a13, type: 2}
-  ganhaCor: 1
-  cores: 1
 --- !u!114 &114846948318290332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -320,6 +305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d496b74b2730948f3a506d03298e2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cor: {fileID: 2100000, guid: d9f562e39fd2f5848ab341040f2481de, type: 2}
+  cor: {fileID: 2100000, guid: 0c5a4177cdad0c5419d9ff49c7258a13, type: 2}
   ganhaCor: 1
   cores: 2

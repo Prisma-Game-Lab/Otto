@@ -21,11 +21,11 @@ public class InteragibleObjects : Objects {
 		
 	}
 
-    public void pullPlayer(Transform player)
+    /*public void pullPlayer(Transform player)
     {
         // fazer ele parar de puxar quando tocar no player
         player.transform.position = Vector3.MoveTowards(player.position, transform.position, SpeedPlayer * Time.deltaTime);
-    }
+    }*/
 
     public void pullObject(Transform player)
     {

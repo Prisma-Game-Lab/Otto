@@ -52,7 +52,7 @@ public class Tongue : MonoBehaviour {
             }
             else if (obj.Fixed == true)
             {
-                obj.pullPlayer(this.transform.parent);
+                //obj.pullPlayer(this.transform.parent);
             }
         }
     }

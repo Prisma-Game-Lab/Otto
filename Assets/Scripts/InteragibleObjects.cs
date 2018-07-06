@@ -29,7 +29,7 @@ public class InteragibleObjects : Objects {
 
     public void pullObject(Transform player)
     {
-        // Fazer parar quando tocar no player
-        transform.position = Vector3.MoveTowards(transform.position, player.position, SpeedObject * Time.deltaTime);
+        // Objeto fica preso na lingua do player
+        this.transform.parent = player.transform;
     }
 }

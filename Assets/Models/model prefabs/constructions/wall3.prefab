@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1520795084995922}
   m_LocalRotation: {x: -0.6725132, y: 0.21846327, z: 0.21846321, w: 0.672513}
-  m_LocalPosition: {x: 6.46, y: 0.93, z: 35.25}
-  m_LocalScale: {x: 3.3690534, y: 3.3690536, z: 1.6691102}
+  m_LocalPosition: {x: 6.580017, y: 2.8499756, z: 35.109985}
+  m_LocalScale: {x: 3.4972937, y: 2.003697, z: 1.6691111}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 36304d0b14b571844bfe9efaeb12918b, type: 2}
+  - {fileID: 2100000, guid: 38aa446f0a62cb54fa7b707c25f3d277, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,7 +99,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &65589449594121258
 BoxCollider:
@@ -128,3 +128,4 @@ MonoBehaviour:
   Fixed: 0
   SpeedObject: 5
   SpeedPlayer: 5
+  isFollowingPlayer: 0

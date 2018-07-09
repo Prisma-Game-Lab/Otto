@@ -38,6 +38,7 @@ public class InteragibleObjects : Objects {
     {
         // Objeto fica preso na lingua do player
         isFollowingPlayer = true;
+        //this.GetComponent<Rigidbody>().isKinematic = true;
         this.transform.parent = player.transform;
     }
 
@@ -45,6 +46,7 @@ public class InteragibleObjects : Objects {
     public void freeObjectFromtongue()
     {
         isFollowingPlayer = false;
+        //this.GetComponent<Rigidbody>().isKinematic = false;
         this.transform.parent = originalParent;
     }
 }

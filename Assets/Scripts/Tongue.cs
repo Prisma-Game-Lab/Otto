@@ -7,6 +7,9 @@ public class Tongue : MonoBehaviour {
 
     Transform intObject = null;
 
+    [HideInInspector]
+    public static bool Agarrado;
+
     // Use this for initialization
     void Awake()
     {
@@ -14,6 +17,7 @@ public class Tongue : MonoBehaviour {
     }
     void Start () {
         GetComponent<AudioSource>().Play();
+        Agarrado = false;
     }
 	
 	// Update is called once per frame
@@ -47,6 +51,7 @@ public class Tongue : MonoBehaviour {
                 {
                     obj.freeObjectFromtongue();
                     intObject = null;
+                    Agarrado = false;
                 }
             }
         }
@@ -57,6 +62,7 @@ public class Tongue : MonoBehaviour {
         if (other.tag == "Objeto Interagível"){
             intObject = other.transform;
             checkObject(other);
+            Agarrado = true;
         }
     }
 
@@ -65,11 +71,13 @@ public class Tongue : MonoBehaviour {
     private void OnTriggerExit(Collider other)
     {
         //intObject = null; 
+
     }
 
     private void OnTriggerStay(Collider other)
     {
         checkObject(other);
+        Agarrado = true;
     }
 
     private void checkObject(Collider other)

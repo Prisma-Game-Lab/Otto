@@ -77,7 +77,7 @@ public class Tongue : MonoBehaviour {
     private void OnTriggerStay(Collider other)
     {
         checkObject(other);
-        Agarrado = true;
+        //Agarrado = true;
     }
 
     private void checkObject(Collider other)

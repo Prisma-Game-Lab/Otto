@@ -15,12 +15,12 @@ public class Enemy : MonoBehaviour {
 
     private Rigidbody _rb;
 
-    public GameObject Player;
+    private GameObject Player;
     private Player _playerScript;
 
     // Use this for initialization
     void Start () {
-
+        Player=GameObject.FindGameObjectsWithTag("Player")[0];
         _playerScript = Player.GetComponent<Player>();
 
 		//transform.Rotate(0, 180, 0);

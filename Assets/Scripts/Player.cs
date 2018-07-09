@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
 
     public Text vidasText;
     public Transform cam;
+    public Animator playerAnim;
 
     private float _currentStamina;
     private Vector3 _lastCheckpoint;
@@ -83,8 +84,11 @@ public class Player : MonoBehaviour
 
         if (desiredMoveDirection != Vector3.zero)
         {
+            playerAnim.SetBool("moving", true);
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection), Time.deltaTime * velocityRotation);
         }
+        else
+            playerAnim.SetBool("moving", false);
 
     }
 

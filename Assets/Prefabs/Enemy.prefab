@@ -502,16 +502,16 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481417812722502}
-  m_LocalRotation: {x: 0.72149056, y: -0.0983395, z: -0.07484859, w: 0.6813065}
-  m_LocalPosition: {x: 375.98, y: -101.95, z: 19.27}
-  m_LocalScale: {x: 0.9962083, y: 0.9878023, z: 0.98766595}
+  m_LocalRotation: {x: -0.65037394, y: -0.30898058, z: -0.1667428, w: -0.6736035}
+  m_LocalPosition: {x: 384.65768, y: -186.9614, z: 38.112118}
+  m_LocalScale: {x: 0.99626493, y: 0.9878012, z: 0.9877175}
   m_Children:
   - {fileID: 4000119422767768}
   - {fileID: 4877261658999542}
   - {fileID: 4765401189301216}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 75.55601, y: -104.022, z: -102.104004}
+  m_LocalEulerAnglesHint: {x: -230.637, y: -446.664, z: -98.927}
 --- !u!4 &4301195226210894
 Transform:
   m_ObjectHideFlags: 1
@@ -1028,7 +1028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f180e8000497a8a4daebfaed69aa1140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DistanciaVisao: 4.85
+  DistanciaVisao: 8
   AnguloVisao: 85
   TempoReacaoInimigo: 0.2
   playerLayer:

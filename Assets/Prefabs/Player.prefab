@@ -316,10 +316,8 @@ GameObject:
   - component: {fileID: 114141689546430654}
   - component: {fileID: 82729465575694668}
   - component: {fileID: 65459008746866514}
-  - component: {fileID: 135956708501821086}
-  - component: {fileID: 135435615809407216}
-  - component: {fileID: 135851848227722776}
   - component: {fileID: 64498188938394324}
+  - component: {fileID: 64532217954037092}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -1206,12 +1204,26 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 12
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!64 &64498188938394324
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1615407103622860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
+--- !u!64 &64532217954037092
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1482,7 +1494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acfe4ff74305740bd97ae3bc3be40426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  model: {fileID: 0}
+  model: {fileID: 1463590808136908}
 --- !u!114 &114569140286087010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1539,42 +1551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f1ef82d167fb6449c40a1a45408d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &135435615809407216
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1615407103622860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135851848227722776
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1615407103622860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135956708501821086
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1615407103622860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137938330892117692
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

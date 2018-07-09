@@ -6,21 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour {
 
-    public float VisionDistance;
-    public float TimeReaction;
-    public float Attackvelocity;
-    public float PontaEsquerda = 14;
-    public float PontaDireita = -14.71f;
-    public int _Direction = 1;
-
     private Rigidbody _rb;
 
-    public GameObject Player;
+    private GameObject Player;
     private Player _playerScript;
 
     // Use this for initialization
     void Start () {
 
+        Player = GameObject.FindGameObjectsWithTag("Player")[0];
         _playerScript = Player.GetComponent<Player>();
 
 		//transform.Rotate(0, 180, 0);

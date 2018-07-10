@@ -86,13 +86,16 @@ public class Player : MonoBehaviour
         transform.Translate(desiredMoveDirection * velocity * Time.deltaTime, Space.World);
         
 
-        if (desiredMoveDirection != Vector3.zero && Tongue.Agarrado == false)
+        if (desiredMoveDirection != Vector3.zero)
         {
             playerAnim.SetBool("moving", true);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection), Time.deltaTime * velocityRotation);
-        }
-        else
-            playerAnim.SetBool("moving", false);
+            if (Tongue.Agarrado == false)
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection), Time.deltaTime * velocityRotation);
+            }   
+        } else playerAnim.SetBool("moving", false);
+
+
 
     }
 

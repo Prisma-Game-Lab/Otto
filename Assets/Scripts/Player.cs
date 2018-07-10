@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
     private GameObject plyr;
     private Rigidbody rb_std;
     public float rb_new = 100000;
+    public GameObject gameManager;
+    public GameManager _gameManagerScript;
 
     private void Start()
     {
@@ -43,6 +45,8 @@ public class Player : MonoBehaviour
 
         plyr = GameObject.FindWithTag("Player");
         rb_std = GetComponent<Rigidbody>();
+        gameManager = GameObject.Find("GameManager");
+        _gameManagerScript = gameManager.GetComponent<GameManager>();
 
     }
 
@@ -82,13 +86,16 @@ public class Player : MonoBehaviour
         transform.Translate(desiredMoveDirection * velocity * Time.deltaTime, Space.World);
         
 
-        if (desiredMoveDirection != Vector3.zero && Tongue.Agarrado == false)
+        if (desiredMoveDirection != Vector3.zero)
         {
             playerAnim.SetBool("moving", true);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection), Time.deltaTime * velocityRotation);
-        }
-        else
-            playerAnim.SetBool("moving", false);
+            if (Tongue.Agarrado == false)
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection), Time.deltaTime * velocityRotation);
+            }   
+        } else playerAnim.SetBool("moving", false);
+
+
 
     }
 
@@ -120,6 +127,7 @@ public class Player : MonoBehaviour
             // Se o Player for atacado ele vai dar um salto para trás e piscar durante x segundos
             _wasAttacked = true;
             StartCoroutine("BlinkingPlayer");
+            _gameManagerScript.respawn();
         }
     }
 

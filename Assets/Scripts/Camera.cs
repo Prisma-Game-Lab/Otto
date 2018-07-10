@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour {
 
-    public GameObject Player;
+    private GameObject Player;
     //[Tooltip("Se for -1 ele usará a distância atual da camera")]
     //public Vector3 distanciaPlayer = new Vector3(-1,-1,-1);
 
@@ -13,8 +13,9 @@ public class Camera : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
+        Player = GameObject.Find("Player");
         _offset = transform.position - Player.transform.position;
+        this.GetComponent<Animator>().enabled = false;
 
     }
 

@@ -449,7 +449,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1771647351367632}
-  m_LocalRotation: {x: 0.6083406, y: 0.28923038, z: 0.007597298, w: 0.73906016}
+  m_LocalRotation: {x: 0.60834056, y: 0.28923035, z: 0.007597297, w: 0.7390601}
   m_LocalPosition: {x: 32.181133, y: 21.780556, z: 314.80447}
   m_LocalScale: {x: 0.15071647, y: 0.20082697, z: 0.16317454}
   m_Children: []
@@ -502,16 +502,16 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481417812722502}
-  m_LocalRotation: {x: 0.72149056, y: -0.0983395, z: -0.07484859, w: 0.6813065}
-  m_LocalPosition: {x: 378.66, y: -102.61, z: 19.34}
-  m_LocalScale: {x: 0.99621814, y: 0.9878013, z: 0.98767364}
+  m_LocalRotation: {x: -0.67762715, y: 0.27109665, z: 0.25879052, w: -0.6327366}
+  m_LocalPosition: {x: 452, y: -126.32, z: 31.27}
+  m_LocalScale: {x: 0.9962394, y: 0.98780113, z: 0.9876976}
   m_Children:
   - {fileID: 4000119422767768}
   - {fileID: 4877261658999542}
   - {fileID: 4765401189301216}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 42.124, y: -95.005005, z: -94.04401}
+  m_LocalEulerAnglesHint: {x: -225.824, y: -275.38, z: -274.30402}
 --- !u!4 &4301195226210894
 Transform:
   m_ObjectHideFlags: 1
@@ -611,7 +611,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1482883895148206}
-  m_LocalRotation: {x: 0.34734917, y: -0.5265072, z: 0.76399744, w: -0.13581848}
+  m_LocalRotation: {x: -0.34734917, y: 0.5265072, z: -0.76399744, w: 0.13581848}
   m_LocalPosition: {x: 33.49589, y: 22.273552, z: 314.83932}
   m_LocalScale: {x: 0.14284723, y: 0.2752177, z: 0.19148521}
   m_Children: []
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DistanciaVisao: 8
-  AnguloVisao: 79
+  AnguloVisao: 85
   TempoReacaoInimigo: 0.2
   playerLayer:
     serializedVersion: 2
@@ -1056,11 +1056,8 @@ MonoBehaviour:
   points:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   normalSpeed: 3
-  chaseSpeed: 3
+  chaseSpeed: 5
   giveUpTime: 5
   stationary: 0
   AlertEyeMaterial: {fileID: 0}
@@ -1088,6 +1085,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21603b1ce316b9b44875c32d62714769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VisionDistance: 0
+  TimeReaction: 0
+  Attackvelocity: 0
+  PontaEsquerda: 14
+  PontaDireita: -14.71
+  _Direction: 1
 --- !u!137 &137113165074962160
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1157,8 +1160,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 4
+  m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0

@@ -14,14 +14,8 @@ public class GameManager : MonoBehaviour {
     public static int lifePoints;
     float delayTime;
 
-    GameObject enem1;
-    Vector3 enemy_chkpt1;
-    GameObject enem2;
-    Vector3 enemy_chkpt2;
-    GameObject enem3;
-    Vector3 enemy_chkpt3;
-    GameObject enem4;
-    Vector3 enemy_chkpt4;
+    GameObject[] enemyV;
+    Vector3[] enemy_chkpt;
 
     private void Awake()
     {
@@ -36,18 +30,12 @@ public class GameManager : MonoBehaviour {
         }
 
         plyr = GameObject.FindWithTag("Player");
+        enemyV = GameObject.FindGameObjectsWithTag("Enemy");
+        enemy_chkpt = new Vector3[enemyV.Length];
 
-        enem1 = GameObject.Find("Enemy");
-        enemy_chkpt1 = enem1.transform.position;
-
-        /*enem2 = GameObject.Find("Enemy (1)");
-        enemy_chkpt2 = enem2.transform.position;*/
-
-        enem3 = GameObject.Find("Enemy (4)");
-        enemy_chkpt3 = enem3.transform.position;
-
-        enem4 = GameObject.Find("Enemy (4)");
-        enemy_chkpt4 = enem4.transform.position;
+        for (int i=0;i<enemyV.Length;i++){
+          enemy_chkpt[i] = enemyV[i].transform.position;
+        }
 
         //UI_WinText = GameObject.Find("VictoryScreen");
         //UI_LoseText = GameObject.Find("DeathScreen");
@@ -89,10 +77,10 @@ public class GameManager : MonoBehaviour {
             restart();*/
 
         plyr.transform.position = respawn_point;
-        enem1.transform.position = enemy_chkpt1;
-        //enem2.transform.position = enemy_chkpt2;
-        enem3.transform.position = enemy_chkpt3;
-        enem4.transform.position = enemy_chkpt4;
+        for (int i = 0; i < enemyV.Length; i++)
+        {
+            enemyV[i].transform.position = enemy_chkpt[i];
+        }
 
 
         if (UI_LoseText.active == true)

@@ -25,7 +25,7 @@ MonoBehaviour:
         motionVectorsResolution: 24
         motionVectorsAmplitude: 64
   fog:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       excludeSkybox: 1
   antialiasing:
@@ -42,9 +42,9 @@ MonoBehaviour:
   ambientOcclusion:
     m_Enabled: 1
     m_Settings:
-      intensity: 1.98
-      radius: 0.54
-      sampleCount: 6
+      intensity: 0.86
+      radius: 0.87
+      sampleCount: 10
       downsampling: 1
       forceForwardCompatibility: 0
       ambientOnly: 0
@@ -100,14 +100,14 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.15
+        intensity: 0.25
         threshold: 0.69
         softKnee: 0.19
         radius: 1.7
         antiFlicker: 1
       lensDirt:
-        texture: {fileID: 2800000, guid: 4b8d081e9d114c7f1100f5ab44295342, type: 3}
-        intensity: 2.81
+        texture: {fileID: 0}
+        intensity: 0
   colorGrading:
     m_Enabled: 1
     m_Settings:
@@ -121,16 +121,16 @@ MonoBehaviour:
         neutralWhiteClip: 10
       basic:
         postExposure: 0
-        temperature: 4.5
-        tint: 2.6
-        hueShift: -11
-        saturation: 0.953
-        contrast: 0.887
+        temperature: 3
+        tint: 6
+        hueShift: -12
+        saturation: 0.98
+        contrast: 0.91
       channelMixer:
         red: {x: 0.97, y: 0.09, z: -0.11}
         green: {x: 0, y: 1.07, z: 0}
-        blue: {x: 0.04, y: -0.09, z: 0.74}
-        currentEditingChannel: 2
+        blue: {x: 0.02, y: -0.05, z: 0.78}
+        currentEditingChannel: 1
       colorWheels:
         mode: 0
         log:
@@ -320,11 +320,11 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       mode: 0
-      color: {r: 0.0993236, g: 0.27065495, b: 0.6792453, a: 1}
+      color: {r: 0.7264151, g: 0.6833218, b: 0.5242524, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.462
-      smoothness: 0.779
-      roundness: 0.845
+      intensity: 0.341
+      smoothness: 0.888
+      roundness: 0.78
       mask: {fileID: 0}
       opacity: 1
       rounded: 0

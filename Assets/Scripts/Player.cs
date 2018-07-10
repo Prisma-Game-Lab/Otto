@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
 
     public Text vidasText;
     public Transform cam;
+    public Animator playerAnim;
 
     private float _currentStamina;
     private Vector3 _lastCheckpoint;
@@ -81,10 +82,13 @@ public class Player : MonoBehaviour
         transform.Translate(desiredMoveDirection * velocity * Time.deltaTime, Space.World);
         
 
-        if (desiredMoveDirection != Vector3.zero)
+        if (desiredMoveDirection != Vector3.zero && Tongue.Agarrado == false)
         {
+            playerAnim.SetBool("moving", true);
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection), Time.deltaTime * velocityRotation);
         }
+        else
+            playerAnim.SetBool("moving", false);
 
     }
 
@@ -142,7 +146,6 @@ public class Player : MonoBehaviour
     // IEnumerator funciona a parte do tempo de compilação e nesse caso ele vai fazer o plyaer piscar quando for atacado
     IEnumerator BlinkingPlayer()
     {
-        print("ENTREI NA COROTINA");
         Color alphaColor = this.GetComponent<MeshRenderer>().material.color;
 
         for (int t = 0; t < AttackSeconds; t += (int)(2 * BlinkingCooldown))

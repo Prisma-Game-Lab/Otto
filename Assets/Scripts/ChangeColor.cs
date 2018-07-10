@@ -11,7 +11,7 @@ public class ChangeColor : MonoBehaviour
                     * Troca a cor atraves de um material:
                     * Essa e a cor forma nova
                     * */
-    private Color _defaultMaterial;
+    private Material _defaultMaterial;
                       /*
                     * A forma como trocamos a cor foi mudada
                     * Troca a cor atraves de um material:
@@ -44,7 +44,7 @@ public class ChangeColor : MonoBehaviour
         rend = model.GetComponent<Renderer>();
         
        // rend.material.shader = Shader.Find("_Color");
-		_defaultMaterial = rend.material.GetColor("_Color");
+		_defaultMaterial = rend.material;
 		print("cor default: " + _defaultMaterial.ToString());
       //  rend.material.SetColor("_Color", Color.grey);
 
@@ -125,7 +125,7 @@ _defaultMaterial.Add(child.GetComponent<Renderer>().material);
                     rend = model.GetComponent<Renderer>();
 
                     //rend.material.shader = Shader.Find("_Color");
-					rend.material.SetColor("_Color", Colored.GetColor(c.cores));
+					rend.material =  c.cor;
 
                     //rend.material.shader = Shader.Find("Specular");
                     //rend.material.SetColor("_SpecColor", c.cores);
@@ -175,7 +175,7 @@ _defaultMaterial.Add(child.GetComponent<Renderer>().material);
         rend = model.GetComponent<Renderer>();
 
         //rend.material.shader = Shader.Find("_Color");
-		rend.material.SetColor("_Color", _defaultMaterial);
+		rend.material = _defaultMaterial;
 
         //rend.material.shader = Shader.Find("Specular");
 		//rend.material.SetColor("_SpecColor", _defaultMaterial);
@@ -213,6 +213,6 @@ _defaultMaterial.Add(child.GetComponent<Renderer>().material);
 		Renderer rend;
         rend = model.GetComponent<Renderer>();
 		//rend.material.shader = Shader.Find("_Color");
-		return rend.material.GetColor("_Color") != _defaultMaterial;
+		return rend.material != _defaultMaterial;
     }
 }

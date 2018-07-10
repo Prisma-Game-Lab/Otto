@@ -5,7 +5,10 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Tongue : MonoBehaviour {
 
-    Transform intObject;
+    Transform intObject = null;
+
+    [HideInInspector]
+    public static bool Agarrado;
 
     // Use this for initialization
     void Awake()
@@ -14,48 +17,67 @@ public class Tongue : MonoBehaviour {
     }
     void Start () {
         GetComponent<AudioSource>().Play();
+        Agarrado = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
+        if (intObject != null){
+            print(intObject);   
+        } else {
+            print("NAO EXISTE ISSO");
+        }
     } 
 
     public void ShowTongue(bool active)
     {
         gameObject.SetActive(active);
-        if (active == false){
+        if (active == false)
+        {
             freeTongue();
         }
     }
 
     private void freeTongue() {
-        if (intObject.tag == "Objeto Interagível")
+        
+        if (intObject != null)
         {
-            InteragibleObjects obj = intObject.GetComponent<InteragibleObjects>();
-
-            if (obj.Fixed == false && obj.isFollowingPlayer)
+            print("NUMXISTE");
+            if (intObject.tag == "Objeto Interagível")
             {
-                obj.freeObjectFromtongue();
+                InteragibleObjects obj = intObject.GetComponent<InteragibleObjects>();
+
+                if (obj.Fixed == false && obj.isFollowingPlayer)
+                {
+                    obj.freeObjectFromtongue();
+                    intObject = null;
+                    Agarrado = false;
+                }
             }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        intObject = other.transform;
-        checkObject(other);
+        if (other.tag == "Objeto Interagível"){
+            intObject = other.transform;
+            checkObject(other);
+            Agarrado = true;
+        }
     }
 
     // Se soltar o botão enquanto estiver tocando o objeto ele irá puxar o objeto ou ser puxado
     // Se ele largar fora do objeto nada acontece
     private void OnTriggerExit(Collider other)
     {
-        intObject = null; 
+        //intObject = null; 
+
     }
 
     private void OnTriggerStay(Collider other)
     {
         checkObject(other);
+        //Agarrado = true;
     }
 
     private void checkObject(Collider other)

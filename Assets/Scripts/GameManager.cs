@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public GameObject UI_WinText;
     public GameObject UI_LoseText;
-    public GameObject MenuCanvas;
+    private GameObject MenuCanvas;
     //public static Vector3 respawn_point = new Vector3(-3.12f, 0.10f, -16.65f);
     public static Vector3 respawn_point = new Vector3(-254.778f, 0.58f, -16.65002f);
     private GameObject plyr;
@@ -28,8 +28,8 @@ public class GameManager : MonoBehaviour {
         {
             Time.timeScale = 1;
         }
-
-        plyr = GameObject.FindWithTag("Player");
+        MenuCanvas= GameObject.Find("CanvasMenu");
+        plyr = GameObject.Find("Player");
         enemyV = GameObject.FindGameObjectsWithTag("Enemy");
         enemy_chkpt = new Vector3[enemyV.Length];
 
@@ -59,14 +59,18 @@ public class GameManager : MonoBehaviour {
 
     public void Resume()
     {
+        Cursor.visible = false;
         MenuCanvas.SetActive(false);
         Time.timeScale = 1f;
+       
     }
 
     void Pause()
     {
+        Cursor.visible = true;
         MenuCanvas.SetActive(true);
         Time.timeScale = 0f;
+        
     }
 
     public void respawn()
@@ -106,6 +110,7 @@ public class GameManager : MonoBehaviour {
 
     public void Win()
     {
+        Cursor.visible = true;
         //Debug.Log("Entrou Win");
         UI_WinText.SetActive(true);
         Time.timeScale = 0f;
@@ -113,6 +118,7 @@ public class GameManager : MonoBehaviour {
 
     public void Lose()
     {
+        Cursor.visible = true;
         UI_LoseText.SetActive(true);
         Time.timeScale = 0f;
     }

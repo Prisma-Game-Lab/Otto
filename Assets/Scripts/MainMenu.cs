@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour {
 
+    // pegar pela tag os inimigos
+
     public GameObject playerawake;
-    public GameObject enemy01;
-    public GameObject enemy02;
-    public GameObject enemy03;
-    public GameObject enemy04;
-    public GameObject enemy05;
-    public GameObject enemy06;
-    public GameObject enemy07;
-    public GameObject enemy08;
+    public GameObject inimigos;
+
     public Animator StartGame;
 
 
 
     void Start()
     {
-      //  Time.timeScale = 0f;
+        //  Time.timeScale = 0f;
+        Cursor.visible = true;
     }
     // Update is called once per frame
     void Update()
@@ -32,23 +29,34 @@ public class MainMenu : MonoBehaviour {
     public void PlayGame()
     {
         Cursor.visible = false;
-        //Time.timeScale = 1f;
+        Time.timeScale = 1f;
         this.gameObject.SetActive(false);
-        Debug.Log("Comecou");
 
         playerawake.SetActive(true);
-        enemy01.SetActive(true);
-        enemy02.SetActive(true);
-        enemy03.SetActive(true);
-        enemy04.SetActive(true);
-        enemy05.SetActive(true);
-        enemy06.SetActive(true);
-        enemy07.SetActive(true);
-        enemy08.SetActive(true);
+
+        foreach(Transform child in inimigos.GetComponentInChildren<Transform>()){
+            child.gameObject.SetActive(true);
+        }
+
         StartGame.SetTrigger("StartGame");
-
-
     }
+
+    public void ResetGame(){
+        
+        Cursor.visible = false;
+        Time.timeScale = 1f;
+        this.gameObject.SetActive(false);
+
+        playerawake.SetActive(true);
+
+        foreach (Transform child in inimigos.GetComponentInChildren<Transform>())
+        {
+            child.gameObject.SetActive(true);
+        }
+
+        //StartGame.SetTrigger("StartGame");
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quit");

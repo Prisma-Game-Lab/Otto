@@ -46,9 +46,14 @@ public class GameManager : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Time.timeScale == 1f)
+            if (Time.timeScale == 1f){
                 Pause();
-            else Resume();
+            }
+            else{
+                Cursor.visible = false;
+                Resume();
+
+            } 
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -75,6 +80,7 @@ public class GameManager : MonoBehaviour {
 
     public void respawn()
     {
+        Cursor.visible = true;
         /*lifePoints -= 1;
 
         if (lifePoints <= 0)
@@ -108,7 +114,13 @@ public class GameManager : MonoBehaviour {
        // SceneManager.LoadScene("GameScene");
     }
 
-    public void Win()
+	public void Reset()
+	{
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        MenuCanvas.GetComponent<MainMenu>().ResetGame();
+	}
+
+	public void Win()
     {
         Cursor.visible = true;
         //Debug.Log("Entrou Win");

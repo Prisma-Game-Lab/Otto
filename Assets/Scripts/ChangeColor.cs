@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ChangeColor : MonoBehaviour
 {
-
+    public Animator animAmarelo;
+    public Animator animAzul;
+    public Animator animVerde;
 
     private List<Colored> _coloredEmContato = new List<Colored>();
                       /* A forma como trocamos a cor foi mudada
@@ -75,13 +77,13 @@ _defaultMaterial.Add(child.GetComponent<Renderer>().material);
 
     public void OnCollisionEnterCor(Colored col)
     {
-        print("encostei em alguem colorido " + col.gameObject.name + " com cor " + col.cor.name);
+        //print("encostei em alguem colorido " + col.gameObject.name + " com cor " + col.cor.name);
         _coloredEmContato.Add(col);
 
     }
     public void OnCollisionExitCor(Colored col)
     {
-        print("soltei de alguem colorido " + col.gameObject.name);
+        //print("soltei de alguem colorido " + col.gameObject.name);
         _coloredEmContato.Remove(col);
 
         //verificar se estou encostado em alguem colorido
@@ -203,6 +205,19 @@ _defaultMaterial.Add(child.GetComponent<Renderer>().material);
         if (!_coresDisponiveis.Contains(c))
         {
             _coresDisponiveis.Add(c);
+
+            /*switch(c){
+                case (Colored.Corenum)3: // vermelho
+                    animAmarelo.SetTrigger("ActivateYellow");
+                    break;
+                case (Colored.Corenum)2: // azul
+                    animAzul.SetTrigger("IniciaAzul");
+                    break;
+                case (Colored.Corenum)1: // verde"
+                    animVerde.SetTrigger("IniciaAzul");
+                    break;
+            }*/
+
             //Avisa o ColorRing que a uma cor foi adicionada, para que ele possa se remanejar
             GetComponentInParent<Player>().staminaHandler.ganhaCor(_coresDisponiveis);
         }

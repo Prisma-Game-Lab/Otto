@@ -7,21 +7,23 @@ public class Tongue : MonoBehaviour {
 
     Transform intObject = null;
 
+    public Animator anim;
+
     [HideInInspector]
     public static bool Agarrado;
 
     // Use this for initialization
     void Awake()
     {
-
+        //anim.SetBool("dentroBoca", false);
     }
     void Start () {
         
         Agarrado = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
+    
+    // Update is called once per frame
+    void Update () {
         if (intObject != null){
             print(intObject);   
         } else {
@@ -33,8 +35,11 @@ public class Tongue : MonoBehaviour {
         gameObject.SetActive(active);
         if (active == false)
         {
+            anim.SetBool("dentroBoca", false);
             freeTongue();
         } else {
+
+            anim.SetBool("dentroBoca", true);
             GetComponent<AudioSource>().Play();
         }
     }

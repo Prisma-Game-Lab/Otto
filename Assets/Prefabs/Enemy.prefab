@@ -504,8 +504,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481417812722502}
-  m_LocalRotation: {x: 0.72149056, y: -0.0983395, z: -0.07484859, w: 0.6813065}
-  m_LocalPosition: {x: 378.66, y: -102.61, z: 19.34}
+  m_LocalRotation: {x: -0.07444112, y: -0.7763773, z: -0.6037473, w: -0.16488186}
+  m_LocalPosition: {x: 361.9, y: -195.2, z: 39}
   m_LocalScale: {x: 0.9962794, y: 0.98780185, z: 0.98772687}
   m_Children:
   - {fileID: 4000119422767768}
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f180e8000497a8a4daebfaed69aa1140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DistanciaVisao: 12
+  DistanciaVisao: 10
   AnguloVisao: 60
   TempoReacaoInimigo: 0.2
   playerLayer:
@@ -1081,9 +1081,15 @@ MonoBehaviour:
   points:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   player: {fileID: 0}
   normalSpeed: 7
-  chaseSpeed: 10
+  chaseSpeed: 8
   giveUpTime: 5
   stationary: 0
   AlertEyeMaterial: {fileID: 2100000, guid: 161ddba3ba250e8489193ff7dec0c6a7, type: 2}

@@ -25,7 +25,7 @@ public class Tongue : MonoBehaviour {
         if (intObject != null){
             print(intObject);   
         } else {
-            print("NAO EXISTE ISSO");
+            //print("NAO EXISTE ISSO");
         }
     } 
 
@@ -42,7 +42,7 @@ public class Tongue : MonoBehaviour {
         
         if (intObject != null)
         {
-            print("NUMXISTE");
+            //print("NUMXISTE");
             if (intObject.tag == "Objeto Interagível")
             {
                 InteragibleObjects obj = intObject.GetComponent<InteragibleObjects>();

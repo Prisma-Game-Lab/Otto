@@ -68,7 +68,7 @@ public class Stamina : MonoBehaviour {
 		{
 			if(t.name == "CentralImage")
 			_centralColor = t.GetComponent<Image>();
-			print("encontrei CentralImage " + _centralColor.name);
+			//print("encontrei CentralImage " + _centralColor.name);
         }
 
         /* fill amount determina a secao de circulo da mascara que sera exibida,7

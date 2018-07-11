@@ -11,6 +11,8 @@ public class MainMenu : MonoBehaviour {
 
     public Animator StartGame;
 
+
+
     void Start()
     {
         //  Time.timeScale = 0f;
@@ -19,7 +21,6 @@ public class MainMenu : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
     }
     public void Awake()
     {
@@ -56,13 +57,13 @@ public class MainMenu : MonoBehaviour {
         //StartGame.SetTrigger("StartGame");
     }
 
+    public void QuitGame()
+    {
+        Debug.Log("Quit");
+        Application.Quit();
+    }
     public void Restart()
     {
         GameManager.instance.respawn();
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
     }
 }

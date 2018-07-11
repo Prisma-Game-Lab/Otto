@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: chameleoneye
+  m_Name: chameleontongue 1
   m_Shader: {fileID: 4800000, guid: 9ce107479d11178d11005b9844295342, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -39,9 +39,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b217a69930f53dc489f80523f1dc623e, type: 3}
-        m_Scale: {x: -0.36, y: 0.46}
-        m_Offset: {x: -0.18, y: 1.25}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -76,7 +76,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Outline: 0.0022
+    - _Outline: 0.002
     - _Parallax: 0.02
     - _RimMax: 1
     - _RimMin: 0.5
@@ -92,7 +92,7 @@ Material:
     - __dirty: 0
     m_Colors:
     - _BottomColor: {r: 0, g: 0.53676474, b: 0.07033476, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.8784314, g: 0.4509804, b: 0.51542443, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HColor: {r: 0.8679245, g: 0.46938884, b: 0.25792095, a: 1}
     - _OutlineColor: {r: 0.7924528, g: 0.15792052, b: 0.04111784, a: 1}

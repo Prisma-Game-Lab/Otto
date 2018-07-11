@@ -16,7 +16,7 @@ public class Tongue : MonoBehaviour {
 
     }
     void Start () {
-        GetComponent<AudioSource>().Play();
+        
         Agarrado = false;
     }
 	
@@ -25,7 +25,6 @@ public class Tongue : MonoBehaviour {
         if (intObject != null){
             print(intObject);   
         } else {
-            //print("NAO EXISTE ISSO");
         }
     } 
 
@@ -35,6 +34,8 @@ public class Tongue : MonoBehaviour {
         if (active == false)
         {
             freeTongue();
+        } else {
+            GetComponent<AudioSource>().Play();
         }
     }
 
@@ -42,7 +43,6 @@ public class Tongue : MonoBehaviour {
         
         if (intObject != null)
         {
-            //print("NUMXISTE");
             if (intObject.tag == "Objeto Interagível")
             {
                 InteragibleObjects obj = intObject.GetComponent<InteragibleObjects>();
@@ -77,7 +77,6 @@ public class Tongue : MonoBehaviour {
     private void OnTriggerStay(Collider other)
     {
         checkObject(other);
-        //Agarrado = true;
     }
 
     private void checkObject(Collider other)

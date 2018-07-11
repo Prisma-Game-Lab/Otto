@@ -127,7 +127,8 @@ public class Player : MonoBehaviour
             // Se o Player for atacado ele vai dar um salto para trás e piscar durante x segundos
             _wasAttacked = true;
             StartCoroutine("BlinkingPlayer");
-            _gameManagerScript.respawn();
+            _gameManagerScript.Lose();
+            //_gameManagerScript.respawn();
         }
     }
 

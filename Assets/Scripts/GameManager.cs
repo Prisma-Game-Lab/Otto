@@ -76,12 +76,12 @@ public class GameManager : MonoBehaviour {
         if (lifePoints <= 0)
             restart();*/
 
-        plyr.transform.position = respawn_point;
-        for (int i = 0; i < enemyV.Length; i++)
+       // plyr.transform.position = respawn_point;
+        /*for (int i = 0; i < enemyV.Length; i++)
         {
             enemyV[i].transform.position = enemy_chkpt[i];
-        }
-
+        }*/
+        restart();
 
         if (UI_LoseText.active == true)
             UI_LoseText.SetActive(false);
@@ -96,8 +96,12 @@ public class GameManager : MonoBehaviour {
 
     public void restart()
     {
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+        //Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        MenuCanvas.GetComponent<MainMenu>().PlayGame();
+       // Time.timeScale = 1f;
+       // MenuCanvas.active = false;
+       // SceneManager.LoadScene("GameScene");
     }
 
     public void Win()

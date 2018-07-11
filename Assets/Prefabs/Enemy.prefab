@@ -502,8 +502,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481417812722502}
-  m_LocalRotation: {x: -0.07444112, y: -0.7763773, z: -0.6037473, w: -0.16488186}
-  m_LocalPosition: {x: 361.9, y: -195.2, z: 39}
+  m_LocalRotation: {x: -0.41332963, y: -0.6303777, z: -0.5122855, w: -0.41151702}
+  m_LocalPosition: {x: 374.17, y: -193.07, z: 38.08}
   m_LocalScale: {x: 0.9962794, y: 0.98780185, z: 0.98772687}
   m_Children:
   - {fileID: 4000119422767768}
@@ -511,7 +511,7 @@ Transform:
   - {fileID: 4765401189301216}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -114.087, y: -417.945, z: -129.553}
+  m_LocalEulerAnglesHint: {x: -162.201, y: -441.762, z: -98.05701}
 --- !u!4 &4301195226210894
 Transform:
   m_ObjectHideFlags: 1
@@ -1056,14 +1056,8 @@ MonoBehaviour:
   points:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  normalSpeed: 3
-  chaseSpeed: 5
+  normalSpeed: 7
+  chaseSpeed: 10
   giveUpTime: 5
   stationary: 0
   AlertEyeMaterial: {fileID: 0}

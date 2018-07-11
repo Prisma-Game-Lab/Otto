@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4889944309786714}
   - component: {fileID: 33456007669123600}
   - component: {fileID: 23049820960127972}
+  - component: {fileID: 65747387249467568}
   m_Layer: 0
   m_Name: boulder
   m_TagString: Untagged
@@ -34,13 +35,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443315522028134}
-  m_LocalRotation: {x: 0.92196715, y: -0.073019095, z: -0.04843504, w: -0.37722516}
-  m_LocalPosition: {x: 40.17, y: -7.46, z: 15.44}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.7169484, y: -0.011155326, z: -0.044871226, w: -0.6955913}
+  m_LocalPosition: {x: 2.880005, y: 0.08996582, z: 2.3499756}
+  m_LocalScale: {x: 2.19754, y: 2.197541, z: 3.1650617}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -44.640003, y: -177.24301, z: -172.07501}
+  m_LocalEulerAnglesHint: {x: -86.76601, y: -480.081, z: 124.62301}
 --- !u!23 &23049820960127972
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -50,7 +51,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443315522028134}
   m_Mesh: {fileID: 4300000, guid: 9929b1587c4999a47ada3656b1759d39, type: 3}
+--- !u!65 &65747387249467568
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443315522028134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.25, y: 2.9, z: 2.48}
+  m_Center: {x: -0.016730485, y: 0.007487596, z: 0.0022785133}

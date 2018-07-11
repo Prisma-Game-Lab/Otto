@@ -114,9 +114,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1359129293825750}
-  m_LocalRotation: {x: -0, y: -0.92387956, z: 0.38268343, w: 0}
-  m_LocalPosition: {x: -28.41, y: -36.99, z: -14.47}
-  m_LocalScale: {x: 0.09691489, y: 0.09691486, z: 0.09691487}
+  m_LocalRotation: {x: -0.036045786, y: 0.95360976, z: 0.013050004, w: -0.2985948}
+  m_LocalPosition: {x: 8.045959, y: 1.2723389, z: -26.116577}
+  m_LocalScale: {x: 0.09691006, y: 0.09690997, z: 0.09691009}
   m_Children:
   - {fileID: 4224969696721856}
   - {fileID: 4600779102418356}
@@ -124,7 +124,7 @@ Transform:
   - {fileID: 4579664277977284}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.193, y: 214.78, z: -4.3900003}
 --- !u!4 &4579664277977284
 Transform:
   m_ObjectHideFlags: 1
@@ -173,7 +173,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -214,7 +214,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 19490d3f28f70f94fae2f46be380114d, type: 2}
+  - {fileID: 2100000, guid: 51810a5eca5401a4ea826eef24bc1704, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -243,13 +243,13 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 19490d3f28f70f94fae2f46be380114d, type: 2}
+  - {fileID: 2100000, guid: 51810a5eca5401a4ea826eef24bc1704, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -278,13 +278,13 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 19490d3f28f70f94fae2f46be380114d, type: 2}
+  - {fileID: 2100000, guid: 51810a5eca5401a4ea826eef24bc1704, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

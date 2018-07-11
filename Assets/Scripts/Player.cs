@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
 
         vidasText.text = "Vidas: " + Lifes;
 
-        plyr = GameObject.FindWithTag("Player");
+        plyr = GameObject.Find("Player");
         rb_std = GetComponent<Rigidbody>();
         gameManager = GameObject.Find("GameManager");
         _gameManagerScript = gameManager.GetComponent<GameManager>();
@@ -107,10 +107,9 @@ public class Player : MonoBehaviour
     public void tongue(bool active)
     {
         Transform[] children = gameObject.transform.GetComponentsInChildren<Transform>(true);
-
         foreach (Transform child in children)
         {
-            if (child.tag == "Tongue")
+            if (child.name == "Bone004")
             {
                 child.GetComponent<Tongue>().ShowTongue(active);
             }

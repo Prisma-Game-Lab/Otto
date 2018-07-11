@@ -29,7 +29,6 @@ public class Control : MonoBehaviour {
         if (Input.GetKey(KeyCode.Q) || Input.GetMouseButton(0))
         {
             tongueControl(true);
-            Debug.Log("Yoshi!");
         } else
         {
             tongueControl(false);

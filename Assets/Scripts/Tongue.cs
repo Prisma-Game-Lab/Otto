@@ -6,19 +6,20 @@ using UnityStandardAssets.CrossPlatformInput;
 public class Tongue : MonoBehaviour {
 
     Transform intObject = null;
+    Vector3 aux;
 
     public Animator anim;
 
     [HideInInspector]
     public static bool Agarrado;
+    private GameObject coliderLingua;
 
     // Use this for initialization
     void Awake()
     {
-        //anim.SetBool("dentroBoca", false);
     }
     void Start () {
-        
+        coliderLingua = GameObject.Find("coliderLingua");
         Agarrado = false;
     }
     
@@ -26,21 +27,18 @@ public class Tongue : MonoBehaviour {
     void Update () {
         if (intObject != null){
             print(intObject);   
-        } else {
         }
     } 
 
     public void ShowTongue(bool active)
     {
-        gameObject.SetActive(active);
         if (active == false)
         {
-            anim.SetBool("dentroBoca", false);
             freeTongue();
+            anim.SetBool("dentroBoca", false);
+            
         } else {
-
             anim.SetBool("dentroBoca", true);
-            GetComponent<AudioSource>().Play();
         }
     }
 
@@ -52,8 +50,9 @@ public class Tongue : MonoBehaviour {
             {
                 InteragibleObjects obj = intObject.GetComponent<InteragibleObjects>();
 
-                if (obj.Fixed == false && obj.isFollowingPlayer)
+                if (obj.Fixed == false) //&& obj.isFollowingPlayer
                 {
+                    //print("liberou ");
                     obj.freeObjectFromtongue();
                     intObject = null;
                     Agarrado = false;
@@ -67,6 +66,7 @@ public class Tongue : MonoBehaviour {
         if (other.tag == "Objeto Interagível"){
             intObject = other.transform;
             checkObject(other);
+            //aux = intObject.localScale;
             Agarrado = true;
         }
     }
@@ -75,8 +75,8 @@ public class Tongue : MonoBehaviour {
     // Se ele largar fora do objeto nada acontece
     private void OnTriggerExit(Collider other)
     {
-        //intObject = null; 
-
+        intObject = null; 
+        //intObject.localScale = aux;
     }
 
     private void OnTriggerStay(Collider other)
@@ -91,12 +91,8 @@ public class Tongue : MonoBehaviour {
             InteragibleObjects obj = other.GetComponent<InteragibleObjects>();
 
             if (obj.Fixed == false)
-            {
-                obj.pullObject(this.transform.parent);
-            }
-            else if (obj.Fixed == true)
-            {
-                //obj.pullPlayer(this.transform.parent);
+            {     
+                obj.pullObject(this.transform.parent); //plyer.transform.parent
             }
         }
     }

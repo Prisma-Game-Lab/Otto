@@ -58,7 +58,6 @@ GameObject:
   - component: {fileID: 4865369586549784}
   - component: {fileID: 33447406944712202}
   - component: {fileID: 23875098302244894}
-  - component: {fileID: 95060496442468402}
   - component: {fileID: 65417968558605168}
   m_Layer: 0
   m_Name: cristal_rosa
@@ -162,7 +161,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1500194470362520}
   m_LocalRotation: {x: 0.69615555, y: 0.12396586, z: 0.12396582, w: -0.69615555}
-  m_LocalPosition: {x: -232.86717, y: 81.25711, z: -29.570906}
+  m_LocalPosition: {x: -232.8672, y: 81.25711, z: -29.57091}
   m_LocalScale: {x: 0.7640602, y: 0.7640609, z: 0.7640609}
   m_Children:
   - {fileID: 4865369586549784}
@@ -320,24 +319,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1049676, y: 1.088181, z: 1.4867562}
   m_Center: {x: -0.00003051925, y: 0.0169164, z: 0.03117795}
---- !u!95 &95060496442468402
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1679788503696002}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c076bd14c5d37bf409f20d8a00bef058, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95705629365950970
 Animator:
   serializedVersion: 3
@@ -345,9 +326,9 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1500194470362520}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c076bd14c5d37bf409f20d8a00bef058, type: 2}
+  m_Controller: {fileID: 9100000, guid: cd71d13ec679eb14fbb04c30dd636ca0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -592,7 +573,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.4223904, g: 0.8980392, b: 0.11372546, a: 1}
+      maxColor: {r: 0.13381095, g: 0.9150943, b: 0.14836423, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1690,7 +1671,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.31968376, g: 0.7264151, b: 0.065103225, a: 1}
+        key0: {r: 0.24909887, g: 0.7264151, b: 0.14733891, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 1, g: 1, b: 1, a: 1}
         key3: {r: 1, g: 1, b: 1, a: 1}

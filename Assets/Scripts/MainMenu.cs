@@ -32,7 +32,7 @@ public class MainMenu : MonoBehaviour {
     public void PlayGame()
     {
         Cursor.visible = false;
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
         this.gameObject.SetActive(false);
         Debug.Log("Comecou");
 

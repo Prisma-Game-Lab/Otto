@@ -15,16 +15,16 @@ public class Enemy : MonoBehaviour {
 
     private Rigidbody _rb;
 
-    private GameObject Player;
+    public GameObject Player;
     private Player _playerScript;
 
     // Use this for initialization
     void Start () {
-        Player=GameObject.FindGameObjectsWithTag("Player")[0];
+        //Player = GameObject.FindGameObjectsWithTag("Player");
         _playerScript = Player.GetComponent<Player>();
 
-		//transform.Rotate(0, 180, 0);
-		gameObject.layer = 11;
+        //transform.Rotate(0, 180, 0);
+        gameObject.layer = 11;
         /*
          * layer 9 e a do player quando nao esta camuflado
          * layer 11 e a layer dos enemies
@@ -34,9 +34,9 @@ public class Enemy : MonoBehaviour {
          **/
         _rb = GetComponent<Rigidbody>();
     }
-	
-	// FixedUpdate para mover o inimigo com RigidBody
-	void FixedUpdate () {
+    
+    // FixedUpdate para mover o inimigo com RigidBody
+    void FixedUpdate () {
 
         // Inimigo nao colide com player se ele estiver camuflado
         //if (Player.GetComponent<ChangeColor>().IsCamuflado())
@@ -56,12 +56,12 @@ public class Enemy : MonoBehaviour {
 
     public void AttackPlayer()
     {
-		Player[] components = FindObjectsOfType<Player>();
-		ChangeColor player ;
-		foreach (Player p in components)
-		{
-			player = p.GetComponent<ChangeColor>();
-			if (player.IsCamuflado())
+        Player[] components = FindObjectsOfType<Player>();
+        ChangeColor player ;
+        foreach (Player p in components)
+        {
+            player = p.GetComponent<ChangeColor>();
+            if (player.IsCamuflado())
             {
                 print("Player esta camuflado :P");
             }
@@ -71,7 +71,7 @@ public class Enemy : MonoBehaviour {
                 GetComponentInParent<Patrol>().GotoPlayer();
             }
 
-		}
+        }
     }
 
 
@@ -79,12 +79,12 @@ public class Enemy : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-		/* Se existe gameObject na variável publica "Player" do inimigo,
+        /* Se existe gameObject na variável publica "Player" do inimigo,
         * verifica se o GameObject do colider que encostou no inimigo (collision) possui a tag Player (para ver se foi o Player que encostou nele),
         * caso seja o player verifica se ele não está camuflado, se ele estiver camuflado ele não pode sofrer um ataque. 
         * Caso tudo seja verdade, o player perde uma vida e seja a ultima vida do player, chama a tela de gameOver  
         */
-		print("Player null? " + (Player == null));
+        print("Player null? " + (Player == null));
         if (Player != null)
         {
             if (collision.gameObject.tag == "Player" && !Player.GetComponent<ChangeColor>().IsCamuflado())
@@ -92,7 +92,7 @@ public class Enemy : MonoBehaviour {
                 _playerScript.loseLife();
                 if (_playerScript.Lifes == 0)
                 {
-                    SceneManager.LoadScene("LoseScene");
+                    //SceneManager.LoadScene("LoseScene");
                 }
             }
         }

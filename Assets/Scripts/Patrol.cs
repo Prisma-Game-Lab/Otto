@@ -10,7 +10,7 @@ public class Patrol : MonoBehaviour
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
-    private Transform player;
+    public Transform player;
 
     public float normalSpeed = 3;
     public float chaseSpeed = 3;
@@ -34,7 +34,7 @@ public class Patrol : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
+        //player = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         agent.speed = normalSpeed;
         agent.updatePosition = !stationary;

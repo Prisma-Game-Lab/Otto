@@ -116,8 +116,8 @@ public class GameManager : MonoBehaviour {
 
 	public void Reset()
 	{
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        MenuCanvas.GetComponent<MainMenu>().ResetGame();
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //MenuCanvas.GetComponent<MainMenu>().ResetGame();
 	}
 
 	public void Win()

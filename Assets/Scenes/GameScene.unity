@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1572104062}
-  m_IndirectSpecularColor: {r: 0.37108818, g: 1.3764733, b: 1.3110387, a: 1}
+  m_IndirectSpecularColor: {r: 0.3713466, g: 1.3763456, b: 1.3095759, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97504,6 +97504,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI_WinText: {fileID: 716429394}
   UI_LoseText: {fileID: 589271156}
+  Inimigos: {fileID: 103198705}
+  Player: {fileID: 1109116426}
+  JogoIniciou: {fileID: 1542878472}
 --- !u!4 &2038852403
 Transform:
   m_ObjectHideFlags: 0

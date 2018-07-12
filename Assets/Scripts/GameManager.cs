@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour {
     GameObject[] enemyV;
     Vector3[] enemy_chkpt;
 
+    public GameObject Inimigos;
+    public GameObject Player;
+
+    public Animator JogoIniciou;
+
     private void Awake()
     {
         if (instance == null)
@@ -108,17 +113,33 @@ public class GameManager : MonoBehaviour {
     {
         //Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        MenuCanvas.GetComponent<MainMenu>().PlayGame();
+
+        JogoIniciou.enabled = false;
+
+        MenuCanvas.SetActive(false);
+        Cursor.visible = false;
+        Time.timeScale = 1f;
+
+
+        Player.SetActive(true);
+        foreach (Transform child in Inimigos.GetComponentInChildren<Transform>())
+        {
+            child.gameObject.SetActive(true);
+        }
+
+
+
+       // MenuCanvas.GetComponent<MainMenu>().ResetGame();
        // Time.timeScale = 1f;
        // MenuCanvas.active = false;
        // SceneManager.LoadScene("GameScene");
     }
 
-	public void Reset()
+	/*public void Reset()
 	{
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //MenuCanvas.GetComponent<MainMenu>().ResetGame();
-	}
+	}*/
 
 	public void Win()
     {

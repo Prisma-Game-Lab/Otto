@@ -28,6 +28,7 @@ public class MainMenu : MonoBehaviour {
     }
     public void PlayGame()
     {
+        print("Inicia jogo");
         Cursor.visible = false;
         Time.timeScale = 1f;
         this.gameObject.SetActive(false);
@@ -42,7 +43,10 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void ResetGame(){
-        
+
+        print("Reinicia jogo");
+
+
         Cursor.visible = false;
         Time.timeScale = 1f;
         this.gameObject.SetActive(false);

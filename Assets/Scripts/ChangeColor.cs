@@ -47,7 +47,6 @@ public class ChangeColor : MonoBehaviour
         
        // rend.material.shader = Shader.Find("_Color");
 		_defaultMaterial = rend.material;
-		print("cor default: " + _defaultMaterial.ToString());
       //  rend.material.SetColor("_Color", Color.grey);
 
 //        rend.material.shader = Shader.Find("Specular");

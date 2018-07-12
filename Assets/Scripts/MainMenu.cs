@@ -11,6 +11,9 @@ public class MainMenu : MonoBehaviour {
 
     public Animator StartGame;
 
+    public GameObject menuaudio;
+    public GameObject principal;
+
 
 
     void Start()
@@ -28,6 +31,8 @@ public class MainMenu : MonoBehaviour {
     }
     public void PlayGame()
     {
+        menuaudio.SetActive(false);
+        principal.SetActive(true);
         Cursor.visible = false;
         Time.timeScale = 1f;
         this.gameObject.SetActive(false);

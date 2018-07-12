@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
     public GameObject UI_WinText;
     public GameObject UI_LoseText;
     private static GameObject MenuCanvas;
+    private GameObject hud;
     //public static Vector3 respawn_point = new Vector3(-3.12f, 0.10f, -16.65f);
     public static Vector3 respawn_point = new Vector3(-254.778f, 0.58f, -16.65002f);
     private GameObject plyr;
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour {
         }
         MenuCanvas= GameObject.Find("CanvasMenu");
         plyr = GameObject.Find("Player");
+        hud = GameObject.Find("HUD");
         enemyV = GameObject.FindGameObjectsWithTag("Enemy");
         enemy_chkpt = new Vector3[enemyV.Length];
 
@@ -71,6 +73,7 @@ public class GameManager : MonoBehaviour {
     {
         Cursor.visible = false;
         MenuCanvas.SetActive(false);
+        hud.SetActive(true);
         Time.timeScale = 1f;
        
     }
@@ -79,6 +82,7 @@ public class GameManager : MonoBehaviour {
     {
         Cursor.visible = true;
         MenuCanvas.SetActive(true);
+        hud.SetActive(false);
         Time.timeScale = 0f;
         
     }
@@ -111,45 +115,13 @@ public class GameManager : MonoBehaviour {
 
     public void restart()
     {
-        //Scene scene = SceneManager.GetActiveScene();
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
         Reset();
-
-
-       // MenuCanvas.GetComponent<MainMenu>().ResetGame();
-       // Time.timeScale = 1f;
-       // MenuCanvas.active = false;
-       // SceneManager.LoadScene("GameScene");
     }
 
 	public void Reset()
-	{
-        //JogoIniciou.enabled = false;
-        //DontDestroyOnLoad(JogoIniciou);
-
-
-        /* MenuCanvas.SetActive(false);
-         Cursor.visible = false;
-         Time.timeScale = 1f;
-         DontDestroyOnLoad(MenuCanvas);*/
+    {
         MenuCanvas.GetComponent<MainMenu>().changeInstanceGame(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
-
-        //MenuCanvas.SetActive(false);
-        //Cursor.visible = false;
-        //Time.timeScale = 1f;
-
-        //camera.GetComponent<Animator>().enabled = false;
-        //camera.transform.position = new Vector3(-657.5f,1243.6f,-1099.2f);
-       // camera.transform.rotation.ToEuler() = new Vector3(33f,0f,0f);
-
-        /*Player.SetActive(true);
-        foreach (Transform child in Inimigos.GetComponentInChildren<Transform>())
-        {
-            child.gameObject.SetActive(true);
-        }*/
-
 	}
 
 	public void Win()

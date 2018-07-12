@@ -15,9 +15,14 @@ public class MainMenu : MonoBehaviour {
     public static bool iniciouGame;
 
     public void changeInstanceGame(bool state){
-        iniciouGame = state;
+        if (state)
+        {
+            if (!iniciouGame)
+            {
+                iniciouGame = state;
+            }
+        }
     }
-
 
     void Start()
     {

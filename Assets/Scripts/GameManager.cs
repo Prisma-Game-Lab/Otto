@@ -111,45 +111,13 @@ public class GameManager : MonoBehaviour {
 
     public void restart()
     {
-        //Scene scene = SceneManager.GetActiveScene();
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
         Reset();
-
-
-       // MenuCanvas.GetComponent<MainMenu>().ResetGame();
-       // Time.timeScale = 1f;
-       // MenuCanvas.active = false;
-       // SceneManager.LoadScene("GameScene");
     }
 
 	public void Reset()
-	{
-        //JogoIniciou.enabled = false;
-        //DontDestroyOnLoad(JogoIniciou);
-
-
-        /* MenuCanvas.SetActive(false);
-         Cursor.visible = false;
-         Time.timeScale = 1f;
-         DontDestroyOnLoad(MenuCanvas);*/
+    {
         MenuCanvas.GetComponent<MainMenu>().changeInstanceGame(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
-
-        //MenuCanvas.SetActive(false);
-        //Cursor.visible = false;
-        //Time.timeScale = 1f;
-
-        //camera.GetComponent<Animator>().enabled = false;
-        //camera.transform.position = new Vector3(-657.5f,1243.6f,-1099.2f);
-       // camera.transform.rotation.ToEuler() = new Vector3(33f,0f,0f);
-
-        /*Player.SetActive(true);
-        foreach (Transform child in Inimigos.GetComponentInChildren<Transform>())
-        {
-            child.gameObject.SetActive(true);
-        }*/
-
 	}
 
 	public void Win()

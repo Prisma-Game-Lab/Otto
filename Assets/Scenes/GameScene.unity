@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1572104062}
-  m_IndirectSpecularColor: {r: 0.37116957, g: 1.3762332, b: 1.3096489, a: 1}
+  m_IndirectSpecularColor: {r: 0.3709826, g: 1.3760456, b: 1.3095981, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26617,6 +26617,8 @@ MonoBehaviour:
   playerawake: {fileID: 0}
   inimigos: {fileID: 0}
   Camera: {fileID: 0}
+  musica01: {fileID: 0}
+  musica02: {fileID: 0}
 --- !u!114 &589271160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32585,6 +32587,8 @@ MonoBehaviour:
   playerawake: {fileID: 0}
   inimigos: {fileID: 0}
   Camera: {fileID: 0}
+  musica01: {fileID: 0}
+  musica02: {fileID: 0}
 --- !u!114 &716429398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84206,6 +84210,16 @@ Prefab:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 1542878466}
+    - target: {fileID: 114671225783845206, guid: ca58952644be7944c9d044799ac19398,
+        type: 2}
+      propertyPath: musica01
+      value: 
+      objectReference: {fileID: 1171099107}
+    - target: {fileID: 114671225783845206, guid: ca58952644be7944c9d044799ac19398,
+        type: 2}
+      propertyPath: musica02
+      value: 
+      objectReference: {fileID: 1019526720}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca58952644be7944c9d044799ac19398, type: 2}
   m_IsPrefabParent: 0
@@ -96684,7 +96698,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025714932}
-  m_LocalRotation: {x: -0.28401527, y: -0, z: -0, w: 0.95881975}
+  m_LocalRotation: {x: -0.28401533, y: -0, z: -0, w: 0.95881975}
   m_LocalPosition: {x: 26.520569, y: -18.590187, z: -55.583008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

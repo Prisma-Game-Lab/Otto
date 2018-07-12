@@ -11,6 +11,9 @@ public class MainMenu : MonoBehaviour {
 
     public GameObject Camera;
 
+    public GameObject musica01;
+    public GameObject musica02;
+
     [HideInInspector]
     public static bool iniciouGame;
 
@@ -57,6 +60,9 @@ public class MainMenu : MonoBehaviour {
     }
     public void PlayGame()
     {
+
+        musica01.SetActive(false);
+        musica02.SetActive(true);
         print("Inicia jogo");
         Cursor.visible = false;
         Time.timeScale = 1f;

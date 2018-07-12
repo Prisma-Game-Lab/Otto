@@ -109,7 +109,7 @@ public class Player : MonoBehaviour
         Transform[] children = gameObject.transform.GetComponentsInChildren<Transform>(true);
         foreach (Transform child in children)
         {
-            if (child.name == "Bone004")
+            if (child.name == "tonguebones001")
             {
                 child.GetComponent<Tongue>().ShowTongue(active);
             }

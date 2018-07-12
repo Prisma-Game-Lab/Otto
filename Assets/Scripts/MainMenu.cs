@@ -9,14 +9,38 @@ public class MainMenu : MonoBehaviour {
     public GameObject playerawake;
     public GameObject inimigos;
 
-    public Animator StartGame;
+    public GameObject Camera;
 
+    [HideInInspector]
+    public static bool iniciouGame;
+
+    public void changeInstanceGame(bool state){
+        iniciouGame = state;
+    }
 
 
     void Start()
     {
+        if(iniciouGame){
+            this.gameObject.SetActive(false);
+            Cursor.visible = false;
+            Camera.GetComponent<Animator>().enabled = false;
+            Camera.GetComponent<Camera>().enabled = true;
+            Time.timeScale = 1f;
+            playerawake.SetActive(true);
+            foreach (Transform child in inimigos.GetComponentInChildren<Transform>())
+            {
+                child.gameObject.SetActive(true);
+            }
+
+
+        } else {
+            Cursor.visible = true;
+
+        }
+        //print(iniciouGame + " INICIOU");
         //  Time.timeScale = 0f;
-        Cursor.visible = true;
+        //Cursor.visible = true;
     }
     // Update is called once per frame
     void Update()
@@ -39,10 +63,10 @@ public class MainMenu : MonoBehaviour {
             child.gameObject.SetActive(true);
         }
 
-        StartGame.SetTrigger("StartGame");
+        Camera.GetComponent<Animator>().SetTrigger("StartGame");
     }
 
-    public void ResetGame(){
+   /* public void ResetGame(){
 
         print("Reinicia jogo");
 
@@ -59,7 +83,7 @@ public class MainMenu : MonoBehaviour {
         }
 
         //StartGame.SetTrigger("StartGame");
-    }
+    }*/
 
     public void QuitGame()
     {

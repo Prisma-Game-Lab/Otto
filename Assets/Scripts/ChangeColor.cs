@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class ChangeColor : MonoBehaviour
 {
-    public Animator animAmarelo;
-    public Animator animAzul;
-    public Animator animVerde;
 
     private List<Colored> _coloredEmContato = new List<Colored>();
                       /* A forma como trocamos a cor foi mudada

@@ -9,6 +9,7 @@ public class Colored : MonoBehaviour
 	public Material cor;
 	[Tooltip("Marque 'verdadeiro' se este objeto for capaz de dar ao camaleao uma nova cor")]
 	public bool ganhaCor = false;
+    public Animator corAnim;
 
     public enum Corenum
     {
@@ -22,24 +23,25 @@ public class Colored : MonoBehaviour
     // Use this for initialization
     void Start()
 	{
+        corAnim = GetComponent<Animator>();
 		if (cor == null)
 			cor = GetComponent<Renderer>().material;
 	}
 
-	private void OnCollisionEnter(Collision col)
+    void React()
     {
-		/*
-		Collider other = col.collider;
-        if (ganhaCor && other.tag == "Tongue")
-        {
-			other.GetComponent<ChangeColor>().AddColor(cor);
-            this.gameObject.SetActive(false);
-        }
-        */
+        corAnim.SetTrigger("explode");
     }
 
-	// Update is called once per frame
-	void Update()
+	private void OnCollisionEnter(Collision col)
+    {
+		Collider other = col.collider;
+        if (ganhaCor && other.tag == "Player")
+            React();
+    }
+
+    // Update is called once per frame
+    void Update()
 	{}
 
     /* 

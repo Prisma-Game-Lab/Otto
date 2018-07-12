@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     public float BlinkingCooldown = 1f;
 
     //Referencia para o ColorRing que esta no canvas que esta cena
-    public Stamina staminaHandler;
+	public StaminaRock staminaHandler;
     public float stamina;
     public float maxStamina = 20;
 

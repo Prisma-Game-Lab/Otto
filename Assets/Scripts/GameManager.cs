@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour {
     public GameObject UI_WinText;
     public GameObject UI_LoseText;
     private GameObject MenuCanvas;
-    private GameObject hud;
     //public static Vector3 respawn_point = new Vector3(-3.12f, 0.10f, -16.65f);
     public static Vector3 respawn_point = new Vector3(-254.778f, 0.58f, -16.65002f);
     private GameObject plyr;
@@ -17,11 +16,6 @@ public class GameManager : MonoBehaviour {
 
     GameObject[] enemyV;
     Vector3[] enemy_chkpt;
-
-    public GameObject Inimigos;
-    public GameObject Player;
-
-    public Animator JogoIniciou;
 
     private void Awake()
     {
@@ -36,7 +30,6 @@ public class GameManager : MonoBehaviour {
         }
         MenuCanvas= GameObject.Find("CanvasMenu");
         plyr = GameObject.Find("Player");
-        hud = GameObject.Find("HUD");
         enemyV = GameObject.FindGameObjectsWithTag("Enemy");
         enemy_chkpt = new Vector3[enemyV.Length];
 
@@ -73,7 +66,6 @@ public class GameManager : MonoBehaviour {
     {
         Cursor.visible = false;
         MenuCanvas.SetActive(false);
-        hud.SetActive(true);
         Time.timeScale = 1f;
        
     }
@@ -82,7 +74,6 @@ public class GameManager : MonoBehaviour {
     {
         Cursor.visible = true;
         MenuCanvas.SetActive(true);
-        hud.SetActive(false);
         Time.timeScale = 0f;
         
     }
@@ -117,33 +108,17 @@ public class GameManager : MonoBehaviour {
     {
         //Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
-        JogoIniciou.enabled = false;
-
-        MenuCanvas.SetActive(false);
-        Cursor.visible = false;
-        Time.timeScale = 1f;
-
-
-        Player.SetActive(true);
-        foreach (Transform child in Inimigos.GetComponentInChildren<Transform>())
-        {
-            child.gameObject.SetActive(true);
-        }
-
-
-
-       // MenuCanvas.GetComponent<MainMenu>().ResetGame();
+        MenuCanvas.GetComponent<MainMenu>().PlayGame();
        // Time.timeScale = 1f;
        // MenuCanvas.active = false;
        // SceneManager.LoadScene("GameScene");
     }
 
-	/*public void Reset()
+	public void Reset()
 	{
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //MenuCanvas.GetComponent<MainMenu>().ResetGame();
-	}*/
+	}
 
 	public void Win()
     {

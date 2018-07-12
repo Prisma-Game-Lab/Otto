@@ -26614,9 +26614,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45dd79ab945ddba45a9021cf607384db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerawake: {fileID: 1109116426}
-  inimigos: {fileID: 103198705}
-  Camera: {fileID: 1542878466}
+  playerawake: {fileID: 0}
+  inimigos: {fileID: 0}
+  Camera: {fileID: 0}
 --- !u!114 &589271160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32582,9 +32582,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45dd79ab945ddba45a9021cf607384db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerawake: {fileID: 1109116426}
-  inimigos: {fileID: 103198705}
-  Camera: {fileID: 1542878466}
+  playerawake: {fileID: 0}
+  inimigos: {fileID: 0}
+  Camera: {fileID: 0}
 --- !u!114 &716429398
 MonoBehaviour:
   m_ObjectHideFlags: 0

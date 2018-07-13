@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1572104062}
-  m_IndirectSpecularColor: {r: 0.37116957, g: 1.3762332, b: 1.3096489, a: 1}
+  m_IndirectSpecularColor: {r: 0.3709826, g: 1.3760456, b: 1.3095981, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19003,6 +19003,11 @@ Prefab:
       propertyPath: gm
       value: 
       objectReference: {fileID: 2038852402}
+    - target: {fileID: 82306599181785604, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0
@@ -24374,6 +24379,11 @@ Prefab:
       propertyPath: gm
       value: 
       objectReference: {fileID: 2038852402}
+    - target: {fileID: 82306599181785604, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0
@@ -27522,6 +27532,11 @@ Prefab:
       propertyPath: gm
       value: 
       objectReference: {fileID: 2038852402}
+    - target: {fileID: 82306599181785604, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0
@@ -39264,6 +39279,11 @@ Prefab:
       propertyPath: gm
       value: 
       objectReference: {fileID: 2038852402}
+    - target: {fileID: 82306599181785604, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0
@@ -53303,6 +53323,11 @@ Prefab:
       propertyPath: gm
       value: 
       objectReference: {fileID: 2038852402}
+    - target: {fileID: 82306599181785604, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0
@@ -58894,6 +58919,11 @@ Prefab:
       propertyPath: gm
       value: 
       objectReference: {fileID: 2038852402}
+    - target: {fileID: 82306599181785604, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0
@@ -80860,7 +80890,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1714255703}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 53aef2f50bb38459f822856359784826, type: 3}
@@ -97125,7 +97155,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025714932}
-  m_LocalRotation: {x: -0.28401527, y: -0, z: -0, w: 0.95881975}
+  m_LocalRotation: {x: -0.28401533, y: -0, z: -0, w: 0.95881975}
   m_LocalPosition: {x: 26.520569, y: -18.590187, z: -55.583008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -97901,6 +97931,11 @@ Prefab:
       propertyPath: gm
       value: 
       objectReference: {fileID: 2038852402}
+    - target: {fileID: 82306599181785604, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0

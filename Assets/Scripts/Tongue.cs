@@ -7,6 +7,8 @@ public class Tongue : MonoBehaviour {
 
     Transform intObject = null;
 
+    public GameObject SomDaLingua;
+
     public Animator anim;
     private GameObject player;
 
@@ -38,11 +40,13 @@ public class Tongue : MonoBehaviour {
             coliderLingua.enabled = false;
             freeTongue();
             anim.SetBool("dentroBoca", false);
+            SomDaLingua.SetActive(false);
 
             
         } else {
             coliderLingua.enabled = true;
             anim.SetBool("dentroBoca", true);
+            SomDaLingua.SetActive(true);
         }
     }
 

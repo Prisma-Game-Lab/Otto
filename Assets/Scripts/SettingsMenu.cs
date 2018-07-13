@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour {
     
     public AudioMixer audioMixer;
+    public GameObject som;
 
     Resolution[] resolutions;
 
@@ -14,6 +15,8 @@ public class SettingsMenu : MonoBehaviour {
 
     void Start()
     {
+        som = GameObject.Find("-----Audio-----");
+
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
 
@@ -55,6 +58,11 @@ public class SettingsMenu : MonoBehaviour {
     public void SetFullscreen (bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;
+    }
+
+    public void SetAudio(bool audion)
+    {
+        som.SetActive(audion);
     }
 
 }

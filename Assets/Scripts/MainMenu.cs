@@ -64,7 +64,7 @@ public class MainMenu : MonoBehaviour {
     }
     public void PlayGame()
     {
-        playercerteza.SetActive(true);
+        playerawake.SetActive(true);
         listener.SetActive(false);
         musica00.SetActive(false);
         musica01.SetActive(true);

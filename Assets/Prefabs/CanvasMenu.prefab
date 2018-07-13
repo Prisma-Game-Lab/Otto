@@ -1607,12 +1607,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1213332904623756}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f15176cd6d06924da25b85d5e93dc8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 986667d666169834c9a6cb9b6be4572b, type: 2}
+  som: {fileID: 0}
   resolutionDropdown: {fileID: 114781978705378034}
 --- !u!114 &114156373794186304
 MonoBehaviour:

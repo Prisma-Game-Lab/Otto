@@ -13,6 +13,11 @@ public class MainMenu : MonoBehaviour {
 
     public GameObject Camera;
 
+    public GameObject playercerteza;
+    public GameObject listener;
+    public GameObject musica00;
+    public GameObject musica01;
+
     [HideInInspector]
     public static bool iniciouGame;
 
@@ -39,6 +44,7 @@ public class MainMenu : MonoBehaviour {
             {
                 child.gameObject.SetActive(true);
             }
+            iniciouGame = false;
 
         } else {
             Cursor.visible = true;
@@ -58,6 +64,12 @@ public class MainMenu : MonoBehaviour {
     }
     public void PlayGame()
     {
+        playercerteza.SetActive(true);
+        listener.SetActive(false);
+        musica00.SetActive(false);
+        musica01.SetActive(true);
+
+        
         print("Inicia jogo");
         Cursor.visible = false;
         Time.timeScale = 1f;

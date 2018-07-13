@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
     public GameManager instance = null;
     public GameObject UI_WinText;
     public GameObject UI_LoseText;
+    public GameObject UI_Final;
+
     private static GameObject MenuCanvas;
     private GameObject hud;
     //public static Vector3 respawn_point = new Vector3(-3.12f, 0.10f, -16.65f);
@@ -18,7 +20,6 @@ public class GameManager : MonoBehaviour {
     Vector3[] enemy_chkpt;
 
     private GameObject Inimigos;
-
 
     public GameManager getInstance()
     {
@@ -116,10 +117,20 @@ public class GameManager : MonoBehaviour {
 
 	public void Win()
     {
-        Cursor.visible = true;
-        //Debug.Log("Entrou Win");
-        UI_WinText.SetActive(true);
-        Time.timeScale = 0f;
+
+        // Desativa inimigos
+        GameObject[] enm = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach(GameObject child in enm){
+            child.SetActive(false);
+        }
+
+        // Ativa a animacao de final, aparece o cubo enorme branco,
+        // aparece a animação, dentro da animacao ele não pode apertar nada,
+        // se ele apertar qualquer botão ele volta pro menu - playGame()
+
+        // inicia a animacao do final e 
+        // UI_Final
     }
 
     public void Lose()

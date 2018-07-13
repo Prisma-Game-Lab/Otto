@@ -48,8 +48,9 @@ public class Tongue : MonoBehaviour {
             anim.SetBool("dentroBoca", true);
             SomDaLingua.SetActive(true);
         }
-    }
 
+    }
+   
     private void freeTongue() {
         
         if (intObject != null)
@@ -60,7 +61,6 @@ public class Tongue : MonoBehaviour {
 
                 if (obj != null && obj.isFollowingPlayer && obj.Fixed == false  ) //
                 {
-                    print("liberou ");
                     obj.freeObjectFromtongue();
                     intObject = null;
                     Agarrado = false;
@@ -82,13 +82,17 @@ public class Tongue : MonoBehaviour {
     // Se ele largar fora do objeto nada acontece
     private void OnTriggerExit(Collider other)
     {
-        intObject = null; 
-        
+        if (other.tag == "Objeto Interagível")
+        {
+            freeTongue();
+            intObject = null;
+        }
+
     }
 
     private void OnTriggerStay(Collider other)
     {
-        checkObject(other);
+       // checkObject(other);
     }
 
     private void checkObject(Collider other)

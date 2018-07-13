@@ -34,11 +34,11 @@ public class MainMenu : MonoBehaviour {
             Camera.GetComponent<Animator>().enabled = false;
             Camera.GetComponent<Camera>().enabled = true;
             Time.timeScale = 1f;
-            /*playerawake.SetActive(true);
+            playerawake.SetActive(true);
             foreach (Transform child in inimigos.GetComponentInChildren<Transform>())
             {
                 child.gameObject.SetActive(true);
-            }*/
+            }
 
         } else {
             Cursor.visible = true;
@@ -63,11 +63,11 @@ public class MainMenu : MonoBehaviour {
         Time.timeScale = 1f;
         this.gameObject.SetActive(false);
 
-        playerawake.SetActive(true);
+        /*playerawake.SetActive(true);
 
         foreach(Transform child in inimigos.GetComponentInChildren<Transform>()){
             child.gameObject.SetActive(true);
-        }
+        }*/
 
         Camera.GetComponent<Animator>().SetTrigger("StartGame");
     }

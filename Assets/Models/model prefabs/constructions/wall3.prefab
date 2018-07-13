@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65589449594121258}
   - component: {fileID: 54430189937493394}
   - component: {fileID: 114797601901082966}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: wall3
   m_TagString: "Objeto Interag\xEDvel"
   m_Icon: {fileID: 0}
@@ -96,8 +96,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0

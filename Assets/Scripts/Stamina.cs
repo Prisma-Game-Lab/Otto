@@ -42,23 +42,23 @@ public class Stamina : MonoBehaviour {
 		 */
 		foreach (Transform t in transform)
 		{
-			print("verificando" + t.name);
+			//print("verificando" + t.name);
 			switch (t.name)
 			{
 				case "CentralColor":
-					print("==> encontrei! " + t.name);
+					//print("==> encontrei! " + t.name);
 					_centralColorMask = t.GetComponent<Image>();
 					break;
 				case "RedRing":
-                    print("==> encontrei! " + t.name);
+                   // print("==> encontrei! " + t.name);
                     _rings[0] = t.GetComponent<Image>();
 					break;
 				case "GreenRing":
-                    print("==> encontrei! " + t.name);
+                   // print("==> encontrei! " + t.name);
 					_rings[1] = t.GetComponent<Image>();
 					break;
 				case "BlueRing":
-                    print("==> encontrei! " + t.name);
+                   // print("==> encontrei! " + t.name);
                     _rings[2] = t.GetComponent<Image>();
 					break;
 			}
@@ -85,8 +85,8 @@ public class Stamina : MonoBehaviour {
         //Guardando os valores iniciais das posicoes para referencias futuras
         _baseY = _centralColorMask.rectTransform.localPosition.y;
         _baseHeight = _centralColorMask.rectTransform.sizeDelta.y;
-		print("bY: " + _baseY);
-		print("bHeight: " + _baseHeight);
+		//print("bY: " + _baseY);
+		//print("bHeight: " + _baseHeight);
 
         //Isso faz o circulo central sumir, so queremos ve-lo quando o camaleao estiver camuflado
 		setCentralColorToNull();

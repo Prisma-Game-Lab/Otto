@@ -140,13 +140,14 @@ GameObject:
   - component: {fileID: 114046996928698344}
   - component: {fileID: 54032670290949936}
   - component: {fileID: 65906563770389852}
+  - component: {fileID: 82306599181785604}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1482883895148206
 GameObject:
   m_ObjectHideFlags: 1
@@ -504,16 +505,16 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481417812722502}
-  m_LocalRotation: {x: -0.67762715, y: 0.27109665, z: 0.25879052, w: -0.6327366}
-  m_LocalPosition: {x: 451.18, y: -127.16, z: 31.19}
-  m_LocalScale: {x: 0.9962794, y: 0.98780185, z: 0.98772687}
+  m_LocalRotation: {x: 0.10781256, y: -0.6842661, z: -0.71730584, w: 0.07502554}
+  m_LocalPosition: {x: 371.38873, y: -96.45824, z: 17.825346}
+  m_LocalScale: {x: 0.9963045, y: 0.9878012, z: 0.98774743}
   m_Children:
   - {fileID: 4000119422767768}
   - {fileID: 4877261658999542}
   - {fileID: 4765401189301216}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -162.201, y: -441.762, z: -98.05701}
+  m_LocalEulerAnglesHint: {x: -105.099, y: -621.097, z: 78.41699}
 --- !u!4 &4301195226210894
 Transform:
   m_ObjectHideFlags: 1
@@ -1013,6 +1014,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &82306599181785604
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481417812722502}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 53aef2f50bb38459f822856359784826, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &95837409954295250
 Animator:
   serializedVersion: 3
@@ -1067,6 +1163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a131f92fb519f5409177c0596ee9b40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
 --- !u!114 &114744684117633988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1081,9 +1178,11 @@ MonoBehaviour:
   points:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   player: {fileID: 0}
-  normalSpeed: 7
-  chaseSpeed: 10
+  normalSpeed: 5
+  chaseSpeed: 8
   giveUpTime: 5
   stationary: 0
   AlertEyeMaterial: {fileID: 2100000, guid: 161ddba3ba250e8489193ff7dec0c6a7, type: 2}

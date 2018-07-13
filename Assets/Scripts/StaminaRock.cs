@@ -24,32 +24,32 @@ public class StaminaRock: MonoBehaviour {
 		 */
 		foreach (Transform t in transform)
 		{
-			print("verificando" + t.name);
+			//print("verificando" + t.name);
 			switch (t.name)
 			{
 				case "CentralImage":
-					print("==> encontrei! " + t.name);
+					//print("==> encontrei! " + t.name);
 					_centralRock = t.GetComponent<Image>();
 					break;
 				case "YellowImage":
-                    print("==> encontrei! " + t.name);
+                   // print("==> encontrei! " + t.name);
                     _rocks[0] = t.GetComponent<Image>();
 					break;
 				case "GreenImage":
-                    print("==> encontrei! " + t.name);
+                   // print("==> encontrei! " + t.name);
 					_rocks[1] = t.GetComponent<Image>();
 					break;
 				case "BlueImage":
-                    print("==> encontrei! " + t.name);
+                   // print("==> encontrei! " + t.name);
                     _rocks[2] = t.GetComponent<Image>();
 					break;
                     
 				case "sombraDeBaixoCentral":
-                    print("==> encontrei! " + t.name);
+                   // print("==> encontrei! " + t.name);
 					_sombraDeBaixo = t.GetComponent<Image>();
 					break;
 				case "sombraDeCimaCentral":
-                    print("==> encontrei! " + t.name);
+                   // print("==> encontrei! " + t.name);
 					_sombraDeCima = t.GetComponent<Image>();
                     break;
 			}
@@ -112,12 +112,12 @@ public class StaminaRock: MonoBehaviour {
 
 		foreach (Colored.Corenum cor in coresDisponiveis)
 		{
-            print("A: " + cor.ToString());
-            print("B: " + (int)cor);
-            print("C: " + Colored.GetColor(cor));
+            //print("A: " + cor.ToString());
+           // print("B: " + (int)cor);
+            //print("C: " + Colored.GetColor(cor));
 			if (_rocks[(int)cor].enabled == false)
 			{
-				print("ativando pedra " + cor.ToString());
+				//print("ativando pedra " + cor.ToString());
 				_rocks[(int)cor].enabled = true;
 				_rocks[(int)cor].fillAmount = 1;
 			}

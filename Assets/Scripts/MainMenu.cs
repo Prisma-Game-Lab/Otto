@@ -11,6 +11,8 @@ public class MainMenu : MonoBehaviour {
 
     public GameObject Camera;
 
+    public GameManager gm;
+
     [HideInInspector]
     public static bool iniciouGame;
 
@@ -43,9 +45,7 @@ public class MainMenu : MonoBehaviour {
             Cursor.visible = true;
 
         }
-        //print(iniciouGame + " INICIOU");
-        //  Time.timeScale = 0f;
-        //Cursor.visible = true;
+        
     }
     // Update is called once per frame
     void Update()
@@ -92,11 +92,10 @@ public class MainMenu : MonoBehaviour {
 
     public void QuitGame()
     {
-        Debug.Log("Quit");
         Application.Quit();
     }
     public void Restart()
     {
-        GameManager.instance.respawn();
+        gm.respawn();
     }
 }

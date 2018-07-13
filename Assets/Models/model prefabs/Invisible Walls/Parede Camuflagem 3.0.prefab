@@ -36,13 +36,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1175844894037928}
-  m_LocalRotation: {x: -0.70692945, y: 0.01583886, z: 0.015838906, w: 0.7069294}
-  m_LocalPosition: {x: -230.8, y: 10.32, z: 181.39}
-  m_LocalScale: {x: 2.6945183, y: 2.0485144, z: 2.728308}
+  m_LocalRotation: {x: -0.61257535, y: -0.3532018, z: -0.35320166, w: 0.61257535}
+  m_LocalPosition: {x: -385.54, y: 11.15979, z: 94.164185}
+  m_LocalScale: {x: 2.6945188, y: 2.0485148, z: 2.728309}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 2.5670002}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -59.934002}
 --- !u!23 &23149727831774490
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -58,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
+  - {fileID: 2100000, guid: 7e5f053b3ce046a488348df81fd79606, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95,7 +95,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4960142, y: 0.45083717, z: 2.6998885}
+  m_Size: {x: 0.78, y: 0.8, z: 2.6998885}
   m_Center: {x: -0.000000020233928, y: -0.00000001656603, z: 1.3499442}
 --- !u!114 &114009833498042590
 MonoBehaviour:
@@ -110,4 +110,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cor: {fileID: 2100000, guid: 0c5a4177cdad0c5419d9ff49c7258a13, type: 2}
   ganhaCor: 0
-  cores: 0
+  corAnim: {fileID: 0}
+  cores: 2

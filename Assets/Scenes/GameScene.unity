@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1572104062}
-  m_IndirectSpecularColor: {r: 0.3711054, g: 1.3761184, b: 1.3096542, a: 1}
+  m_IndirectSpecularColor: {r: 0.37117058, g: 1.3764431, b: 1.3110311, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -244,7 +244,7 @@ Transform:
   m_LocalScale: {x: 1.8939505, y: 2.2555203, z: 2.33091}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 255.236, y: -496.237, z: -608.74}
 --- !u!65 &4791017
 BoxCollider:
@@ -479,7 +479,7 @@ Transform:
   m_LocalScale: {x: 1.8939524, y: 2.2555203, z: 2.359363}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 174.509, y: -195.48601, z: -559.204}
 --- !u!65 &12560151
 BoxCollider:
@@ -715,7 +715,7 @@ Transform:
   m_LocalScale: {x: 1.9511007, y: 1.6301106, z: 2.8101203}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 5.7900004, y: -703.281, z: -82.12701}
 --- !u!65 &17477639
 BoxCollider:
@@ -1571,7 +1571,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
+  - {fileID: 2100000, guid: fba0e2e0f6c975a41b6b8e63bd36ec83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1985,7 +1985,7 @@ Transform:
   m_LocalScale: {x: 1.9511005, y: 1.951102, z: 2.810123}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -1.8330001, y: -892.511, z: 173.82101}
 --- !u!65 &59234335
 BoxCollider:
@@ -2249,7 +2249,7 @@ Transform:
   m_LocalScale: {x: 5.154513, y: 2.977743, z: 4.685753}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: -2.7700002, y: 683.557, z: 94.428}
 --- !u!65 &64960600
 BoxCollider:
@@ -2339,7 +2339,7 @@ Transform:
   m_LocalScale: {x: 2.70605, y: 3.2226613, z: 3.3303819}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 100.031006, y: -356.256, z: -649.44}
 --- !u!65 &70587955
 BoxCollider:
@@ -3375,7 +3375,7 @@ Transform:
   m_LocalScale: {x: 1.951101, y: 1.6301106, z: 2.8101227}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 9.453, y: -742.576, z: -87.551}
 --- !u!65 &91287294
 BoxCollider:
@@ -4431,7 +4431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &103198706
 Transform:
   m_ObjectHideFlags: 0
@@ -10928,7 +10928,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4882770645539246, guid: 0bc8d29f96ad6fc4aabce4b6d9ca2d4c, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4882770645539246, guid: 0bc8d29f96ad6fc4aabce4b6d9ca2d4c, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -10959,6 +10959,10 @@ Prefab:
     - target: {fileID: 4882770645539246, guid: 0bc8d29f96ad6fc4aabce4b6d9ca2d4c, type: 2}
       propertyPath: m_LocalScale.z
       value: 2.728309
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175844894037928, guid: 0bc8d29f96ad6fc4aabce4b6d9ca2d4c, type: 2}
+      propertyPath: m_Name
+      value: Parede Camuflagem Azul 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bc8d29f96ad6fc4aabce4b6d9ca2d4c, type: 2}
@@ -11251,7 +11255,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1560159392250792, guid: 90422636eb5c7d449b6e163a2e315533, type: 2}
       propertyPath: m_Name
-      value: Parede Camuflagem 4.0 (1)
+      value: Parede Camuflagem Azul 1
       objectReference: {fileID: 0}
     - target: {fileID: 114777185778273556, guid: 90422636eb5c7d449b6e163a2e315533,
         type: 2}
@@ -12185,7 +12189,7 @@ Transform:
   m_LocalScale: {x: 2.6670406, y: 2.6993103, z: 1.7994803}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -130.22, y: 410.924, z: -2.2879944}
 --- !u!65 &297692126
 BoxCollider:
@@ -12432,7 +12436,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4882770645539246, guid: 0bc8d29f96ad6fc4aabce4b6d9ca2d4c, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4882770645539246, guid: 0bc8d29f96ad6fc4aabce4b6d9ca2d4c, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -12464,6 +12468,15 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114009833498042590, guid: 0bc8d29f96ad6fc4aabce4b6d9ca2d4c,
+        type: 2}
+      propertyPath: cores
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175844894037928, guid: 0bc8d29f96ad6fc4aabce4b6d9ca2d4c, type: 2}
+      propertyPath: m_Name
+      value: Parede Camuflagem Azul 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bc8d29f96ad6fc4aabce4b6d9ca2d4c, type: 2}
@@ -18208,6 +18221,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.5090001
       objectReference: {fileID: 0}
+    - target: {fileID: 114270812727903936, guid: 4e3e25f5027dfc44aa473f18ab742282,
+        type: 2}
+      propertyPath: cores
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e3e25f5027dfc44aa473f18ab742282, type: 2}
   m_IsPrefabParent: 0
@@ -20149,7 +20167,7 @@ Transform:
   m_LocalScale: {x: 1.3449312, y: 1.6016918, z: 1.6552306}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 92.84299, y: -364.862, z: -759.829}
 --- !u!65 &430932994
 BoxCollider:
@@ -22390,7 +22408,7 @@ GameObject:
   - component: {fileID: 488211734}
   - component: {fileID: 488211733}
   m_Layer: 0
-  m_Name: Parede Camuflagem 5.0 (1)
+  m_Name: Parede Camuflagem Amarelo 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22403,17 +22421,17 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 488211731}
-  m_LocalRotation: {x: 0.0311991, y: -0.9852226, z: -0.02248812, w: -0.16690555}
-  m_LocalPosition: {x: -68.824585, y: 12.795777, z: 116.485886}
-  m_LocalScale: {x: 0.07578005, y: 0.07578004, z: 0.075780086}
+  m_LocalRotation: {x: 0.028561207, y: -0.98198575, z: -0.035024464, w: 0.18347129}
+  m_LocalPosition: {x: -363.85, y: 13.09, z: 187.67}
+  m_LocalScale: {x: 0.10927911, y: 0.089481615, z: 0.10936028}
   m_Children:
   - {fileID: 1519857225}
   - {fileID: 42727222}
   - {fileID: 826355015}
   - {fileID: 1954970097}
-  m_Father: {fileID: 1531088029}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -4.026, y: -169.539, z: -3.2630002}
+  m_Father: {fileID: 2138576031}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: -3.3430002, y: -158.718, z: -3.9600003}
 --- !u!114 &488211733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26933,7 +26951,7 @@ Transform:
   m_LocalScale: {x: 1.8939503, y: 2.2555203, z: 2.33091}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 254.151, y: -736.849, z: -615.038}
 --- !u!65 &594191942
 BoxCollider:
@@ -32806,8 +32824,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 723194832}
-  m_LocalRotation: {x: -0.03272176, y: 0.1552736, z: 0.10835952, w: 0.9813652}
-  m_LocalPosition: {x: 2.0767365, y: -11.310167, z: 1.920516}
+  m_LocalRotation: {x: 0.06307337, y: 0.2983045, z: 0.1663869, w: 0.93773746}
+  m_LocalPosition: {x: 23.115906, y: -64.51767, z: 91.729706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2025714933}
@@ -35757,7 +35775,7 @@ Transform:
   m_LocalScale: {x: 3.607622, y: 2.0841115, z: 3.2795436}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -83.675, y: 329.146, z: 103.69401}
 --- !u!65 &781548527
 BoxCollider:
@@ -36683,8 +36701,8 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 805946477}
-  m_LocalRotation: {x: -0.31009698, y: 0.17965516, z: 0.059797168, w: 0.93165886}
-  m_LocalPosition: {x: 28.597305, y: -27.029705, z: -47.81237}
+  m_LocalRotation: {x: -0.20585579, y: 0.3332767, z: 0.07481202, w: 0.91703504}
+  m_LocalPosition: {x: 59.5804, y: -24.615913, z: 11.812301}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2008817048}
@@ -37643,7 +37661,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
+  - {fileID: 2100000, guid: fba0e2e0f6c975a41b6b8e63bd36ec83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39593,7 +39611,7 @@ Transform:
   m_LocalScale: {x: 2.70605, y: 3.2226565, z: 3.330377}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 135.342, y: -399.17798, z: -717.651}
 --- !u!65 &889687452
 BoxCollider:
@@ -43477,7 +43495,7 @@ Transform:
   m_LocalScale: {x: 2.70605, y: 3.2226613, z: 3.3303819}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 147.763, y: -474.624, z: -733.794}
 --- !u!65 &984426847
 BoxCollider:
@@ -43732,7 +43750,7 @@ Transform:
   m_LocalScale: {x: 1.9381623, y: 1.9511026, z: 2.8101232}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: -1.616, y: -1139.258, z: 175.794}
 --- !u!65 &995281965
 BoxCollider:
@@ -60447,6 +60465,87 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1325738269}
   m_Mesh: {fileID: 4300000, guid: 6bdff81f0db62e34daf6fdf34ae775eb, type: 3}
+--- !u!1001 &1328282324
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2138576031}
+    m_Modifications:
+    - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -377.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 171.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.63326937
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.3145951
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.3145952
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.6332691
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 9.929888
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3.9005518
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 4.093092
+      objectReference: {fileID: 0}
+    - target: {fileID: 114780713589267216, guid: c7c4cc276414a5d47ab9fac2cb6ceca7,
+        type: 2}
+      propertyPath: cores
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 23330317002964668, guid: c7c4cc276414a5d47ab9fac2cb6ceca7,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e5f053b3ce046a488348df81fd79606, type: 2}
+    - target: {fileID: 1736378033832598, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_Name
+      value: Parede Camuflagem Azul 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -52.835003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1328282325 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1328282324}
 --- !u!1 &1329127730
 GameObject:
   m_ObjectHideFlags: 0
@@ -62001,7 +62100,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4879685244124054, guid: 90422636eb5c7d449b6e163a2e315533, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560159392250792, guid: 90422636eb5c7d449b6e163a2e315533, type: 2}
+      propertyPath: m_Name
+      value: Parede Camuflagem Verde 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777185778273556, guid: 90422636eb5c7d449b6e163a2e315533,
+        type: 2}
+      propertyPath: cores
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114943356274496604, guid: 90422636eb5c7d449b6e163a2e315533,
+        type: 2}
+      propertyPath: cores
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654492964833612, guid: 90422636eb5c7d449b6e163a2e315533,
+        type: 2}
+      propertyPath: cores
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90422636eb5c7d449b6e163a2e315533, type: 2}
@@ -62841,7 +62959,7 @@ Transform:
   m_LocalScale: {x: 3.6076214, y: 2.0841115, z: 3.2795417}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -6.477, y: 514.088, z: 89.757}
 --- !u!65 &1385837614
 BoxCollider:
@@ -66302,7 +66420,7 @@ Transform:
   m_LocalScale: {x: 1.9381604, y: 1.9511014, z: 2.81012}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: -3.7840002, y: -1175.331, z: 177.55101}
 --- !u!65 &1452904061
 BoxCollider:
@@ -66414,7 +66532,7 @@ Transform:
   m_LocalScale: {x: 1.3449297, y: 1.6016903, z: 1.5395538}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 92.843994, y: -364.862, z: -709.86}
 --- !u!65 &1459691565
 BoxCollider:
@@ -66724,8 +66842,8 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1465844664}
-  m_LocalRotation: {x: 0.27165067, y: 0.27379304, z: 0.080961354, w: -0.9190694}
-  m_LocalPosition: {x: 25.453064, y: -8.637579, z: -39.51416}
+  m_LocalRotation: {x: 0.34340855, y: 0.46073374, z: 0.19933042, w: -0.7937647}
+  m_LocalPosition: {x: 13.063751, y: -43.637203, z: 97.826385}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2008817048}
@@ -68198,7 +68316,7 @@ Transform:
   m_LocalScale: {x: 1.9795, y: 1.1435499, z: 1.7994803}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -15.918001, y: 504.12402, z: 11.863001}
 --- !u!65 &1488691455
 BoxCollider:
@@ -68628,7 +68746,7 @@ Transform:
   m_LocalScale: {x: 1.9794999, y: 1.1435499, z: 1.7994803}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -14.404, y: 257.089, z: 13.190001}
 --- !u!65 &1498459224
 BoxCollider:
@@ -68719,7 +68837,7 @@ Transform:
   m_LocalScale: {x: 1.285512, y: 1, z: 1.5729938}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: -0.042000003, y: -128.112, z: 0.27400002}
 --- !u!64 &1498534567
 MeshCollider:
@@ -70104,7 +70222,6 @@ Transform:
   m_LocalPosition: {x: 17.854492, y: 2.2, z: 51.8}
   m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
   m_Children:
-  - {fileID: 488211732}
   - {fileID: 4791016}
   - {fileID: 91287293}
   - {fileID: 12560150}
@@ -71611,7 +71728,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
       propertyPath: m_LocalScale.x
@@ -71641,6 +71758,10 @@ Prefab:
         type: 2}
       propertyPath: cores
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610456536160756, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_Name
+      value: Parede Camuflagem Verde 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
@@ -72779,8 +72900,8 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1550251819}
-  m_LocalRotation: {x: -0.31009698, y: 0.17965516, z: 0.059797168, w: 0.93165886}
-  m_LocalPosition: {x: 28.597305, y: -27.029705, z: -47.81237}
+  m_LocalRotation: {x: -0.20585579, y: 0.3332767, z: 0.07481202, w: 0.91703504}
+  m_LocalPosition: {x: 14.455292, y: -24.26197, z: 128.34865}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2008817048}
@@ -74785,7 +74906,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -74807,6 +74928,10 @@ Prefab:
     - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
       propertyPath: m_LocalScale.y
       value: 4.7318087
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736378033832598, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_Name
+      value: Parede Camuflagem Verde 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
@@ -74906,6 +75031,101 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1588128939}
   m_Mesh: {fileID: 4300000, guid: 6bdff81f0db62e34daf6fdf34ae775eb, type: 3}
+--- !u!1001 &1589162692
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2138576031}
+    m_Modifications:
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -420.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 127.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.04249364
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.83289367
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.015386613
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.5515847
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.10630998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.106309995
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.106309995
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -4.158
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 246.91699
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 3.0930002
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987852828526642, guid: c4c97a3c02e92134caabae7ac76d315a,
+        type: 2}
+      propertyPath: cores
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610456536160756, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+      propertyPath: m_Name
+      value: Parede Camuflagem Azul 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 23461101931098402, guid: c4c97a3c02e92134caabae7ac76d315a,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e5f053b3ce046a488348df81fd79606, type: 2}
+    - target: {fileID: 23824041023909636, guid: c4c97a3c02e92134caabae7ac76d315a,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e5f053b3ce046a488348df81fd79606, type: 2}
+    - target: {fileID: 23945020589815716, guid: c4c97a3c02e92134caabae7ac76d315a,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e5f053b3ce046a488348df81fd79606, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c4c97a3c02e92134caabae7ac76d315a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1589162693 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4170600227922400, guid: c4c97a3c02e92134caabae7ac76d315a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1589162692}
 --- !u!1 &1590716439
 GameObject:
   m_ObjectHideFlags: 0
@@ -77973,7 +78193,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1156992
+  m_Name: pb_Mesh-26776
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -79209,8 +79429,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1673210488}
-  m_LocalRotation: {x: -0.03272176, y: 0.1552736, z: 0.10835952, w: 0.9813652}
-  m_LocalPosition: {x: 2.0767365, y: -11.310167, z: 1.920516}
+  m_LocalRotation: {x: 0.06307337, y: 0.2983045, z: 0.1663869, w: 0.93773746}
+  m_LocalPosition: {x: -12.065277, y: -104.93309, z: 151.169}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2025714933}
@@ -83901,7 +84121,7 @@ Transform:
   m_LocalScale: {x: 2.7060513, y: 3.2226498, z: 3.3303685}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 186.23, y: -219.94101, z: -542.31396}
 --- !u!65 &1801053035
 BoxCollider:
@@ -85222,7 +85442,7 @@ Transform:
   m_LocalScale: {x: 1.9511, y: 1.6301103, z: 2.8101196}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 8.275001, y: -989.513, z: -89.16601}
 --- !u!65 &1824654902
 BoxCollider:
@@ -87454,8 +87674,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1883859640}
-  m_LocalRotation: {x: -0.03272176, y: 0.1552736, z: 0.10835952, w: 0.9813652}
-  m_LocalPosition: {x: 0.63420105, y: -23.969856, z: 3.6774616}
+  m_LocalRotation: {x: 0.03663445, y: 0.14274937, z: 0.08533316, w: 0.98539275}
+  m_LocalPosition: {x: -35.477936, y: -82.69822, z: 112.623184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2025714933}
@@ -92872,7 +93092,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
+  - {fileID: 2100000, guid: fba0e2e0f6c975a41b6b8e63bd36ec83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93021,7 +93241,7 @@ Transform:
   m_LocalScale: {x: 3.6076205, y: 2.0841105, z: 3.2795417}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: -5.209, y: 267.244, z: 91.29}
 --- !u!65 &1960075889
 BoxCollider:
@@ -99094,7 +99314,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4879094761710150, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
       propertyPath: m_LocalScale.x
@@ -99118,6 +99338,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7e5f053b3ce046a488348df81fd79606, type: 2}
+    - target: {fileID: 1736378033832598, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
+      propertyPath: m_Name
+      value: Parede Camuflagem Azul 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7c4cc276414a5d47ab9fac2cb6ceca7, type: 2}
   m_IsPrefabParent: 0
@@ -100402,7 +100626,7 @@ Transform:
   m_LocalScale: {x: 3.6543744, y: 2.084111, z: 3.2795417}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -84.869, y: 458.38202, z: -272.30798}
 --- !u!65 &2100709940
 BoxCollider:
@@ -101694,12 +101918,15 @@ Transform:
   - {fileID: 1595145777}
   - {fileID: 2056705439}
   - {fileID: 1181899903}
-  - {fileID: 1364569008}
-  - {fileID: 1538839310}
+  - {fileID: 1589162693}
   - {fileID: 1110368493}
   - {fileID: 486398572}
-  - {fileID: 1586071609}
   - {fileID: 1251095262}
+  - {fileID: 1328282325}
+  - {fileID: 1364569008}
+  - {fileID: 1538839310}
+  - {fileID: 1586071609}
+  - {fileID: 488211732}
   m_Father: {fileID: 653970582}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -101739,7 +101966,7 @@ Transform:
   m_LocalScale: {x: 2.6670415, y: 2.6993117, z: 1.7994809}
   m_Children: []
   m_Father: {fileID: 1531088029}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -128.297, y: 658.206, z: -3.0559692}
 --- !u!65 &2139393125
 BoxCollider:

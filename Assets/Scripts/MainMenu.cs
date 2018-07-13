@@ -6,16 +6,12 @@ public class MainMenu : MonoBehaviour {
 
     // pegar pela tag os inimigos
 
-    public GameObject playerawake;
-    public GameObject inimigos;
-    public GameObject Listener01;
-
-    public GameObject Camera;
-
     public GameManager gm;
 
-    public GameObject Musica00;
-    public GameObject Musica01;
+    public GameObject playerawake;
+    public GameObject inimigos;
+
+    public GameObject Camera;
 
     [HideInInspector]
     public static bool iniciouGame;
@@ -38,18 +34,19 @@ public class MainMenu : MonoBehaviour {
             Camera.GetComponent<Animator>().enabled = false;
             Camera.GetComponent<Camera>().enabled = true;
             Time.timeScale = 1f;
-            playerawake.SetActive(true);
+            /*playerawake.SetActive(true);
             foreach (Transform child in inimigos.GetComponentInChildren<Transform>())
             {
                 child.gameObject.SetActive(true);
-            }
-
+            }*/
 
         } else {
             Cursor.visible = true;
 
         }
-        
+        //print(iniciouGame + " INICIOU");
+        //  Time.timeScale = 0f;
+        //Cursor.visible = true;
     }
     // Update is called once per frame
     void Update()
@@ -61,11 +58,7 @@ public class MainMenu : MonoBehaviour {
     }
     public void PlayGame()
     {
-
-        Listener01.SetActive(false);
         print("Inicia jogo");
-        Musica00.SetActive(false);
-        Musica01.SetActive(true);
         Cursor.visible = false;
         Time.timeScale = 1f;
         this.gameObject.SetActive(false);
@@ -100,6 +93,7 @@ public class MainMenu : MonoBehaviour {
 
     public void QuitGame()
     {
+        Debug.Log("Quit");
         Application.Quit();
     }
     public void Restart()

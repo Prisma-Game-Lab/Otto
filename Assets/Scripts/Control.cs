@@ -14,7 +14,6 @@ public class Control : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //print("apertei espaco");
             GetComponent<ChangeColor>().SetCamufla(true);
             
         }
@@ -22,7 +21,6 @@ public class Control : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            //print("soltei espaco");
             GetComponent<ChangeColor>().SetCamufla(false);
         }
 
@@ -42,7 +40,7 @@ public class Control : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            restart(); // será apagado depois que o desenvolvimento terminar, só está aqui para facilitar o Debug
+            //restart(); // será apagado depois que o desenvolvimento terminar, só está aqui para facilitar o Debug
         }
 
     }

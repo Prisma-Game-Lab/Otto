@@ -129,7 +129,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560159392250792}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -272.46, y: -0.54, z: -8.12}
+  m_LocalPosition: {x: -381.31003, y: 11.479736, z: 88.79419}
   m_LocalScale: {x: 5.01957, y: 5.019573, z: 5.019573}
   m_Children:
   - {fileID: 4387306397386906}
@@ -153,7 +153,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
+  - {fileID: 2100000, guid: 7e5f053b3ce046a488348df81fd79606, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -188,7 +188,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
+  - {fileID: 2100000, guid: 7e5f053b3ce046a488348df81fd79606, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -223,7 +223,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 52f50b9e7b5720149a1a2b91690ba6ec, type: 2}
+  - {fileID: 2100000, guid: 7e5f053b3ce046a488348df81fd79606, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -313,7 +313,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cor: {fileID: 2100000, guid: 0c5a4177cdad0c5419d9ff49c7258a13, type: 2}
   ganhaCor: 0
-  cores: 0
+  corAnim: {fileID: 0}
+  cores: 2
 --- !u!114 &114777185778273556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -327,7 +328,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cor: {fileID: 2100000, guid: 0c5a4177cdad0c5419d9ff49c7258a13, type: 2}
   ganhaCor: 0
-  cores: 0
+  corAnim: {fileID: 0}
+  cores: 2
 --- !u!114 &114943356274496604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -341,4 +343,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cor: {fileID: 2100000, guid: 0c5a4177cdad0c5419d9ff49c7258a13, type: 2}
   ganhaCor: 0
-  cores: 0
+  corAnim: {fileID: 0}
+  cores: 2

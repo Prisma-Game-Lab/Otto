@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Control : MonoBehaviour {
 
+    [HideInInspector]
+    public bool isOnCredits = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,37 +14,29 @@ public class Control : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if(!isOnCredits){
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                GetComponent<ChangeColor>().SetCamufla(true);
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GetComponent<ChangeColor>().SetCamufla(true);
-            
+            }
+
+
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                GetComponent<ChangeColor>().SetCamufla(false);
+            }
+
+            if (Input.GetKey(KeyCode.E))
+            {
+                tongueControl(true);
+            }
+            else
+            {
+                tongueControl(false);
+            }
         }
 
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            GetComponent<ChangeColor>().SetCamufla(false);
-        }
-
-        if (Input.GetKey(KeyCode.Q) || Input.GetMouseButton(0))
-        {
-            tongueControl(true);
-        } else
-        {
-            tongueControl(false);
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            pause();
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            //restart(); // será apagado depois que o desenvolvimento terminar, só está aqui para facilitar o Debug
-        }
 
     }
 

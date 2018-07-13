@@ -29,6 +29,10 @@ public class GameManager : MonoBehaviour {
          return instance;
     }
 
+    public void IniciaGame(){
+        MenuCanvas.GetComponent<MainMenu>().PlayGame();
+    }
+
     private void Awake()
     {
         if (Time.timeScale == 0)
@@ -63,10 +67,6 @@ public class GameManager : MonoBehaviour {
             } 
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Win();
-        }
     }
 
     public void Resume()
@@ -124,6 +124,8 @@ public class GameManager : MonoBehaviour {
         foreach(GameObject child in enm){
             child.SetActive(false);
         }
+
+        UI_Final.SetActive(true);
 
         // Ativa a animacao de final, aparece o cubo enorme branco,
         // aparece a animação, dentro da animacao ele não pode apertar nada,

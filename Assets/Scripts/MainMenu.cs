@@ -70,7 +70,6 @@ public class MainMenu : MonoBehaviour {
         musica01.SetActive(true);
 
         
-        print("Inicia jogo");
         Cursor.visible = false;
         Time.timeScale = 1f;
         this.gameObject.SetActive(false);

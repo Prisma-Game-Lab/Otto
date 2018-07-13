@@ -125,7 +125,6 @@ public class GameManager : MonoBehaviour {
     public void Lose()
     {
         respawn();
-        print("morri");
         //UI_LoseText.SetActive(true);
         //Cursor.visible = true;
         //UI_LoseText.SetActive(true);

@@ -37,7 +37,10 @@ public class Colored : MonoBehaviour
     {
 		Collider other = col.collider;
         if (ganhaCor && other.tag == "Player")
+        {
+            this.GetComponent<Collider>().enabled = false;
             React();
+        }
     }
 
     // Update is called once per frame

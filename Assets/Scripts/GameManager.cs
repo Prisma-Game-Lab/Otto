@@ -93,16 +93,7 @@ public class GameManager : MonoBehaviour {
     public void respawn()
     {
         Cursor.visible = true;
-        /*lifePoints -= 1;
-
-        if (lifePoints <= 0)
-            restart();*/
-
-       // plyr.transform.position = respawn_point;
-        /*for (int i = 0; i < enemyV.Length; i++)
-        {
-            enemyV[i].transform.position = enemy_chkpt[i];
-        }*/
+        
         restart();
 
         if (UI_LoseText.active == true)
@@ -137,9 +128,11 @@ public class GameManager : MonoBehaviour {
 
     public void Lose()
     {
+        respawn();
         print("morri");
-        Cursor.visible = true;
-        UI_LoseText.SetActive(true);
-        Time.timeScale = 0f;
+        //UI_LoseText.SetActive(true);
+        //Cursor.visible = true;
+        //UI_LoseText.SetActive(true);
+        //Time.timeScale = 0f;
     }
 }

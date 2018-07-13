@@ -27644,6 +27644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 986667d666169834c9a6cb9b6be4572b, type: 2}
+  som: {fileID: 0}
   resolutionDropdown: {fileID: 0}
 --- !u!114 &589271159
 MonoBehaviour:
@@ -33780,6 +33781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 986667d666169834c9a6cb9b6be4572b, type: 2}
+  som: {fileID: 0}
   resolutionDropdown: {fileID: 0}
 --- !u!114 &716429397
 MonoBehaviour:
@@ -44808,7 +44810,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 969882673}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 986667d666169834c9a6cb9b6be4572b,
     type: 2}
@@ -100749,6 +100751,7 @@ MonoBehaviour:
   instance: {fileID: 0}
   UI_WinText: {fileID: 716429394}
   UI_LoseText: {fileID: 589271156}
+  UI_Final: {fileID: 0}
 --- !u!4 &2038852403
 Transform:
   m_ObjectHideFlags: 0

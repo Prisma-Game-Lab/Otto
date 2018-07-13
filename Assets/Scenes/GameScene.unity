@@ -61398,6 +61398,11 @@ Prefab:
       propertyPath: _gameManagerScript
       value: 
       objectReference: {fileID: 2038852402}
+    - target: {fileID: 114758518792303146, guid: fcf61026be828ae47b5117a6d63e84cb,
+        type: 2}
+      propertyPath: Lifes
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fcf61026be828ae47b5117a6d63e84cb, type: 2}
   m_IsPrefabParent: 0
@@ -97445,9 +97450,9 @@ MonoBehaviour:
   instance: {fileID: 0}
   UI_WinText: {fileID: 716429394}
   UI_LoseText: {fileID: 589271156}
-  Inimigos: {fileID: 0}
-  Player: {fileID: 0}
-  camera: {fileID: 0}
+  Inimigos: {fileID: 103198705}
+  Player: {fileID: 1109116426}
+  camera: {fileID: 1542878466}
 --- !u!4 &2038852403
 Transform:
   m_ObjectHideFlags: 0

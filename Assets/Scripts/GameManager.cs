@@ -137,6 +137,7 @@ public class GameManager : MonoBehaviour {
 
     public void Lose()
     {
+        print("morri");
         Cursor.visible = true;
         UI_LoseText.SetActive(true);
         Time.timeScale = 0f;

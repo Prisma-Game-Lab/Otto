@@ -14,6 +14,9 @@ public class MainMenu : MonoBehaviour {
 
     public GameManager gm;
 
+    public GameObject Musica00;
+    public GameObject Musica01;
+
     [HideInInspector]
     public static bool iniciouGame;
 
@@ -58,8 +61,11 @@ public class MainMenu : MonoBehaviour {
     }
     public void PlayGame()
     {
+
         Listener01.SetActive(false);
         print("Inicia jogo");
+        Musica00.SetActive(false);
+        Musica01.SetActive(true);
         Cursor.visible = false;
         Time.timeScale = 1f;
         this.gameObject.SetActive(false);

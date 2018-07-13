@@ -6526,7 +6526,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e80d491b2cf564de19b6e7da2d2b62fe, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.03
+  m_Volume: 0.015
   m_Pitch: 1.4
   Loop: 0
   Mute: 0
@@ -27137,6 +27137,8 @@ MonoBehaviour:
   Listener01: {fileID: 0}
   Camera: {fileID: 1542878466}
   gm: {fileID: 0}
+  Musica00: {fileID: 0}
+  Musica01: {fileID: 0}
 --- !u!114 &589271160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33233,6 +33235,8 @@ MonoBehaviour:
   Listener01: {fileID: 0}
   Camera: {fileID: 1542878466}
   gm: {fileID: 0}
+  Musica00: {fileID: 0}
+  Musica01: {fileID: 0}
 --- !u!114 &716429398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53852,6 +53856,7 @@ Transform:
   - {fileID: 1019526722}
   - {fileID: 399168354}
   - {fileID: 1855892124}
+  - {fileID: 1411189187}
   - {fileID: 1171099108}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -54217,9 +54222,8 @@ Transform:
   m_Children:
   - {fileID: 1048416946}
   - {fileID: 1744135330}
-  - {fileID: 1411189187}
   m_Father: {fileID: 1162433049}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1171099109
 AudioSource:
@@ -54227,7 +54231,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1171099107}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ed7dd4912e46f4183b882c4e015d8dbb, type: 3}
@@ -66695,12 +66699,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1411189186}
-  m_LocalRotation: {x: -0, y: -0, z: 0.000000007450581, w: 1}
-  m_LocalPosition: {x: -442.5357, y: -333.83865, z: -10.359589}
+  m_LocalRotation: {x: -0.3836889, y: -0.20908678, z: -0.08963559, w: -0.8950034}
+  m_LocalPosition: {x: 162.83467, y: 112.89636, z: 65.179924}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1171099108}
-  m_RootOrder: 2
+  m_Father: {fileID: 1162433049}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1411189188
 AudioSource:
@@ -86484,6 +86488,16 @@ Prefab:
       propertyPath: Listener01
       value: 
       objectReference: {fileID: 218250399}
+    - target: {fileID: 114671225783845206, guid: ca58952644be7944c9d044799ac19398,
+        type: 2}
+      propertyPath: Musica01
+      value: 
+      objectReference: {fileID: 1019526720}
+    - target: {fileID: 114671225783845206, guid: ca58952644be7944c9d044799ac19398,
+        type: 2}
+      propertyPath: Musica00
+      value: 
+      objectReference: {fileID: 1171099107}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca58952644be7944c9d044799ac19398, type: 2}
   m_IsPrefabParent: 0

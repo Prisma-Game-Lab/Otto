@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour {
 
     public GameObject playerawake;
     public GameObject inimigos;
+    public GameObject Listener01;
 
     public GameObject Camera;
 
@@ -57,6 +58,7 @@ public class MainMenu : MonoBehaviour {
     }
     public void PlayGame()
     {
+        Listener01.SetActive(false);
         print("Inicia jogo");
         Cursor.visible = false;
         Time.timeScale = 1f;

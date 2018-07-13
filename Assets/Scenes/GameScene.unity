@@ -1876,7 +1876,7 @@ Transform:
   - {fileID: 983661581}
   - {fileID: 920647355}
   m_Father: {fileID: 1114593246}
-  m_RootOrder: 40
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 67.477005, z: 0}
 --- !u!1 &58288112
 GameObject:
@@ -49827,6 +49827,13 @@ GameObject:
   m_PrefabParentObject: {fileID: 1615407103622860, guid: fcf61026be828ae47b5117a6d63e84cb,
     type: 2}
   m_PrefabInternal: {fileID: 1342253049}
+--- !u!81 &1109116427
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1109116426}
+  m_Enabled: 1
 --- !u!4 &1109116435 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4783795833303074, guid: fcf61026be828ae47b5117a6d63e84cb,
@@ -50051,10 +50058,10 @@ Transform:
   - {fileID: 174799319}
   - {fileID: 1232589000}
   - {fileID: 703616805}
+  - {fileID: 53476616}
   - {fileID: 477212235}
   - {fileID: 1971165457}
   - {fileID: 1062626717}
-  - {fileID: 53476616}
   - {fileID: 2120437699}
   - {fileID: 864795265}
   - {fileID: 1272300638}
@@ -72903,7 +72910,6 @@ GameObject:
   - component: {fileID: 190472187}
   - component: {fileID: 1542878471}
   - component: {fileID: 1542878470}
-  - component: {fileID: 1542878469}
   - component: {fileID: 1542878468}
   - component: {fileID: 1542878467}
   - component: {fileID: 1542878472}
@@ -72939,14 +72945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e38ea8c2272d8408f0843cd488eccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!81 &1542878469
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 81908268371889996, guid: ea9559a0bcedc004e82b90bf6cc48a15,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1542878466}
-  m_Enabled: 1
 --- !u!124 &1542878470
 Behaviour:
   m_ObjectHideFlags: 0

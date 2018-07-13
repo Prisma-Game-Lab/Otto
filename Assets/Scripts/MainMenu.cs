@@ -11,6 +11,8 @@ public class MainMenu : MonoBehaviour {
 
     public GameObject Camera;
 
+    public GameManager gm;
+
     [HideInInspector]
     public static bool iniciouGame;
 
@@ -97,6 +99,6 @@ public class MainMenu : MonoBehaviour {
     }
     public void Restart()
     {
-        GameManager.instance.respawn();
+        gm.respawn();
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    public static GameManager instance = null;
+    public GameManager instance = null;
     public GameObject UI_WinText;
     public GameObject UI_LoseText;
     private static GameObject MenuCanvas;
@@ -23,13 +23,16 @@ public class GameManager : MonoBehaviour {
 
     public GameObject camera;
 
-    private void Awake()
+    public GameManager getInstance()
     {
         if (instance == null)
             instance = this;
-        else if (instance != null)
-            Destroy(gameObject);
 
+         return instance;
+    }
+
+    private void Awake()
+    {
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1;

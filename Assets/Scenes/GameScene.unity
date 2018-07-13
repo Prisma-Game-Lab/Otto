@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1572104062}
-  m_IndirectSpecularColor: {r: 0.37117058, g: 1.3764431, b: 1.3110311, a: 1}
+  m_IndirectSpecularColor: {r: 0.37116957, g: 1.3762332, b: 1.3096489, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4431,7 +4431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &103198706
 Transform:
   m_ObjectHideFlags: 0
@@ -18709,7 +18709,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1481417812722502, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4765007424598788, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
       propertyPath: m_LocalRotation.x
@@ -18998,6 +18998,11 @@ Prefab:
       propertyPath: chaseSpeed
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 114046996928698344, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2038852402}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0
@@ -24364,6 +24369,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114046996928698344, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2038852402}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0
@@ -26635,6 +26645,7 @@ MonoBehaviour:
   playerawake: {fileID: 1109116426}
   inimigos: {fileID: 103198705}
   Camera: {fileID: 1542878466}
+  gm: {fileID: 2038852402}
 --- !u!114 &589271160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27506,6 +27517,11 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1109116435}
+    - target: {fileID: 114046996928698344, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2038852402}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0
@@ -32603,6 +32619,7 @@ MonoBehaviour:
   playerawake: {fileID: 1109116426}
   inimigos: {fileID: 103198705}
   Camera: {fileID: 1542878466}
+  gm: {fileID: 2038852402}
 --- !u!114 &716429398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32824,8 +32841,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 723194832}
-  m_LocalRotation: {x: -0.10964517, y: 0.5191143, z: 0.46390712, w: 0.70942825}
-  m_LocalPosition: {x: -33.984924, y: -100.23953, z: 136.67642}
+  m_LocalRotation: {x: -0.000083372935, y: 0.83814067, z: 0.54253376, w: -0.05636837}
+  m_LocalPosition: {x: -13.684998, y: -27.39782, z: 48.99208}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2025714933}
@@ -36701,8 +36718,8 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 805946477}
-  m_LocalRotation: {x: -0.14249426, y: 0.8459614, z: 0.43112344, w: 0.27960217}
-  m_LocalPosition: {x: 2.528473, y: -24.586609, z: 127.2812}
+  m_LocalRotation: {x: 0.015929539, y: 0.95771366, z: 0.28214735, w: -0.054070782}
+  m_LocalPosition: {x: 12.835571, y: -14.884944, z: 0.4271307}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2008817048}
@@ -37453,6 +37470,11 @@ Prefab:
       propertyPath: chaseSpeed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114046996928698344, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2038852402}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0
@@ -39237,6 +39259,11 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1109116435}
+    - target: {fileID: 114046996928698344, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2038852402}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0
@@ -53271,6 +53298,11 @@ Prefab:
       propertyPath: chaseSpeed
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 114046996928698344, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2038852402}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0
@@ -58857,6 +58889,11 @@ Prefab:
       propertyPath: chaseSpeed
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 114046996928698344, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2038852402}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0
@@ -82848,6 +82885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a131f92fb519f5409177c0596ee9b40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
 --- !u!65 &1756360377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -84604,6 +84642,11 @@ Prefab:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 1542878466}
+    - target: {fileID: 114671225783845206, guid: ca58952644be7944c9d044799ac19398,
+        type: 2}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2038852402}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca58952644be7944c9d044799ac19398, type: 2}
   m_IsPrefabParent: 0
@@ -97399,6 +97442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f560681fd84d45a57a755220b62c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   UI_WinText: {fileID: 716429394}
   UI_LoseText: {fileID: 589271156}
   Inimigos: {fileID: 0}
@@ -97852,6 +97896,11 @@ Prefab:
       propertyPath: chaseSpeed
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 114046996928698344, guid: 819b2b2bc18089441820abf9068283b2,
+        type: 2}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2038852402}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819b2b2bc18089441820abf9068283b2, type: 2}
   m_IsPrefabParent: 0

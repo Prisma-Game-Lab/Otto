@@ -124,10 +124,9 @@ public class GameManager : MonoBehaviour {
 
     public void Lose()
     {
-        respawn();
-        //UI_LoseText.SetActive(true);
-        //Cursor.visible = true;
-        //UI_LoseText.SetActive(true);
-        //Time.timeScale = 0f;
+        //respawn();
+        UI_LoseText.SetActive(true);
+        Cursor.visible = true;
+        Time.timeScale = 0f;
     }
 }

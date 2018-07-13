@@ -116,7 +116,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void loseLife()
+   /* public void loseLife()
     {
         if (!_wasAttacked)
         {
@@ -125,11 +125,11 @@ public class Player : MonoBehaviour
 
             // Se o Player for atacado ele vai dar um salto para trás e piscar durante x segundos
             _wasAttacked = true;
-            StartCoroutine("BlinkingPlayer");
-            _gameManagerScript.Lose();
+            //StartCoroutine("BlinkingPlayer");
+            //_gameManagerScript.Lose();
             //_gameManagerScript.respawn();
         }
-    }
+    }*/
 
 	private void StaminaUpdate()
     {

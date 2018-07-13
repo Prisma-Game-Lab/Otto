@@ -89,7 +89,7 @@ public class Enemy : MonoBehaviour {
         {
             if (collision.gameObject.tag == "Player" && !Player.GetComponent<ChangeColor>().IsCamuflado())
             {
-                _playerScript.loseLife();
+               // _playerScript.loseLife();
                 if (_playerScript.Lifes == 0)
                 {
                     //SceneManager.LoadScene("LoseScene");

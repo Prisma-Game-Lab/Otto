@@ -11,17 +11,14 @@ public class GameManager : MonoBehaviour {
     private GameObject hud;
     //public static Vector3 respawn_point = new Vector3(-3.12f, 0.10f, -16.65f);
     public static Vector3 respawn_point = new Vector3(-254.778f, 0.58f, -16.65002f);
-    private GameObject plyr;
     public static int lifePoints;
     float delayTime;
 
     GameObject[] enemyV;
     Vector3[] enemy_chkpt;
 
-    public GameObject Inimigos;
-    public GameObject Player;
+    private GameObject Inimigos;
 
-    public GameObject camera;
 
     public GameManager getInstance()
     {
@@ -38,7 +35,6 @@ public class GameManager : MonoBehaviour {
             Time.timeScale = 1;
         }
         MenuCanvas= GameObject.Find("CanvasMenu");
-        plyr = GameObject.Find("Player");
         hud = GameObject.Find("HUD");
         enemyV = GameObject.FindGameObjectsWithTag("Enemy");
         enemy_chkpt = new Vector3[enemyV.Length];

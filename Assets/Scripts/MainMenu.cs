@@ -44,6 +44,7 @@ public class MainMenu : MonoBehaviour {
             {
                 child.gameObject.SetActive(true);
             }
+            iniciouGame = false;
 
         } else {
             Cursor.visible = true;

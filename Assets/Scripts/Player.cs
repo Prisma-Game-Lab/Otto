@@ -44,8 +44,6 @@ public class Player : MonoBehaviour
     {
         stamina = maxStamina;
 
-        vidasText.text = "Vidas: " + Lifes;
-
         plyr = GameObject.Find("Player");
         rb_std = GetComponent<Rigidbody>();
         gameManager = GameObject.Find("GameManager");

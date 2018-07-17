@@ -36,6 +36,8 @@ public class Control : MonoBehaviour {
                 tongueControl(false);
             }
 
+        } else
+        {
             this.GetComponent<Player>().canMove = false;
         }
     }

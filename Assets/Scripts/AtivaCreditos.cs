@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class AtivaCreditos : MonoBehaviour {
 
-    public GameObject creditos;
+    public Control controle;
+    public GameManager gm;
 
 	// Use this for initialization
 	void Start () {
 
-        //creditos.GetComponent<Animator>().SetTrigger("AAAA");
-
+        controle.isOnCredits = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+        if (Input.anyKeyDown)
+        { 
+            gm.IniciaGame();
+        }
+
+        if (this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Branco")){
+            gm.IniciaGame();
+        }
+
+    }
 }

@@ -37,6 +37,9 @@ public class Player : MonoBehaviour
     public GameObject gameManager;
     public GameManager _gameManagerScript;
 
+    [HideInInspector]
+    public bool canMove = true;
+
     private void Start()
     {
         stamina = maxStamina;
@@ -57,7 +60,12 @@ public class Player : MonoBehaviour
             rb_std.mass = rb_new;
         }
         else
-            move();
+        {
+            if (canMove)
+            {
+                move();
+            }
+        }
         StaminaUpdate();
     }
 

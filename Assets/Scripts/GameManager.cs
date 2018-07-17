@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void IniciaGame(){
-        MenuCanvas.GetComponent<MainMenu>().PlayGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 
     private void Awake()

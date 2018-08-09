@@ -40,6 +40,11 @@ public class MainMenu : MonoBehaviour {
             Camera.GetComponent<Camera>().enabled = true;
             Time.timeScale = 1f;
             playerawake.SetActive(true);
+
+            listener.SetActive(false);
+            musica00.SetActive(false);
+            musica01.SetActive(true);
+
             foreach (Transform child in inimigos.GetComponentInChildren<Transform>())
             {
                 child.gameObject.SetActive(true);

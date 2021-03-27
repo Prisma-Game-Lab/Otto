@@ -82,7 +82,6 @@ public class GameManager : MonoBehaviour {
     {
         Cursor.visible = true;
         MenuCanvas.SetActive(true);
-        hud.SetActive(false);
         Time.timeScale = 0f;
         
     }

@@ -21,9 +21,9 @@ public class AtivaCreditos : MonoBehaviour {
             gm.IniciaGame();
         }
 
-        if (this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Branco")){
-            gm.IniciaGame();
-        }
+        //if (this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Branco")){
+            //gm.IniciaGame();
+        //}
 
     }
 }
